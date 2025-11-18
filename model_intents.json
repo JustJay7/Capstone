@@ -1,0 +1,158 @@
+{
+  "blackbox_models": {
+    "infrastructure": {
+      "yolov8_crack": {
+        "weights": "yolov8_crack/model.pt",
+        "intent_id": "infrastructure-yolov8-crack"
+      },
+      "crackformer": {
+        "weights": "CrackFormer-II/crack537.pth",
+        "intent_id": "infrastructure-crackformer"
+      },
+      "deepcrack": {
+        "weights": "DeepCrack_CT260_FT1/DeepCrack_CT260_FT1.pth",
+        "intent_id": "infrastructure-deepcrack"
+      },
+      "sdnet": {
+        "weights": "sdnet/crack537.pth",
+        "intent_id": "infrastructure-sdnet"
+      }
+    },
+
+    "object": {
+      "yolov8_nano": {
+        "weights": "yolov8n_object_yolov8.pt",
+        "intent_id": "object-yolov8-nano"
+      },
+      "yolov8_small": {
+        "weights": "yolov8s_object_yolov8.pt",
+        "intent_id": "object-yolov8-small"
+      },
+      "yolov8_medium": {
+        "weights": "yolov8m_object_yolov8.pt",
+        "intent_id": "object-yolov8-medium"
+      },
+      "yolov8_large": {
+        "weights": "yolov8l_object_yolov8.pt",
+        "intent_id": "object-yolov8-large"
+      },
+      "yolov8_xlarge": {
+        "weights": "yolov8x_object_yolov8.pt",
+        "intent_id": "object-yolov8-xlarge"
+      },
+      "groundingdino_swinb": {
+        "weights": "groundingdino_swinb_cogcoor_object_GroundingDINO.pth",
+        "intent_id": "object-groundingdino-swinb"
+      },
+      "groundingdino_swint": {
+        "weights": "groundingdino_swint_ogc_object_GroundingDINO.pth",
+        "intent_id": "object-groundingdino-swint"
+      },
+      "detr": {
+        "weights": "model_object_detr.safetensors",
+        "intent_id": "object-detr"
+      },
+      "sam_vit_base": {
+        "weights": "model_object_segment-anything_sam-vit-base.safetensors",
+        "intent_id": "object-sam-vit-base"
+      },
+      "sam_vit_large": {
+        "weights": "model_object_segment-anything_sam-vit-large.safetensors",
+        "intent_id": "object-sam-vit-large"
+      },
+      "sam_vit_huge": {
+        "weights": "model_object_segment-anything_sam-vit-huge.safetensors",
+        "intent_id": "object-sam-vit-huge"
+      }
+    },
+
+    "satellite": {
+      "satclip": {
+        "weights": "satclip-vit16-l40_satellite_satclip.ckpt",
+        "intent_id": "satellite-environmental-analysis"
+      },
+      "prithvi": {
+        "weights": "Prithvi_EO_V1_100M_satellite_prithvi.pt",
+        "intent_id": "satellite-damage-assessment"
+      }
+    },
+
+    "weather": {
+      "climax_highres": {
+        "weights": "1.40625deg_weather_ClimaX.ckpt",
+        "intent_id": "weather-forecasting"
+      },
+      "climax_lowres": {
+        "weights": "5.625deg_weather_ClimaX.ckpt",
+        "intent_id": "weather-forecasting"
+      },
+      "satmae_base": {
+        "weights": "model_weather_satmae.safetensors",
+        "intent_id": "weather-precipitation-detection"
+      },
+      "satmae_prithvi_100m": {
+        "weights": "Prithvi_100M_weather_satmae.pt",
+        "intent_id": "weather-precipitation-detection"
+      },
+      "satmae_prithvi_eo": {
+        "weights": "Prithvi_EO_V1_100M_weather_satmae.pt",
+        "intent_id": "weather-precipitation-detection"
+      }
+    },
+
+    "nature": {
+      "dinov2_safetensors": {
+        "weights": "model_nature_dinov2.safetensors",
+        "intent_id": "nature-ecology-analysis"
+      },
+      "dinov2_vit_base": {
+        "weights": "vit_base_patch14_dinov2.lvd142m_nature_dinov2.pth",
+        "intent_id": "nature-ecology-analysis"
+      },
+      "openclip_inat": {
+        "weights": "open_clip_pytorch_model_nature_openclip_inat.bin",
+        "intent_id": "nature-ecology-analysis"
+      },
+      "convnext_xlarge": {
+        "weights": "pytorch_model_nature_convnext_xlarge_22k.bin",
+        "intent_id": "nature-ecology-analysis"
+      }
+    },
+
+    "medical": {
+      "extras": {
+        "chexnet": {
+          "weights": "chexnet_model_medical_CheXNet.pt",
+          "intent_id": "medical-chest-xray-chexnet"
+        },
+        "biomedclip": {
+          "weights": "open_clip_pytorch_mode_medical_biomedclipl.bin",
+          "intent_id": "medical-biomedclip-embedding"
+        },
+        "medsam": {
+          "weights": "pytorch_model_medical_MONAI_medsam.bin",
+          "intent_id": "medical-medsam-segmentation"
+        }
+      },
+      "nnunet_2d": {
+        "Task001_BrainTumour": "medical-brain-tumor-segmentation",
+        "Task002_Heart": "medical-heart-segmentation",
+        "Task003_Liver": "medical-liver-segmentation",
+        "Task004_Hippocampus": "medical-hippocampus-segmentation",
+        "Task005_Prostate": "medical-prostate-segmentation",
+        "Task006_Lung": "medical-lung-segmentation",
+        "Task007_Pancreas": "medical-pancreas-segmentation",
+        "Task009_Spleen": "medical-spleen-segmentation",
+        "Task010_Colon": "medical-colon-segmentation",
+        "Task017_AbdominalOrganSegmentation": "medical-abdominal-organ-segmentation",
+        "Task024_Promise": "medical-prostate-promise",
+        "Task029_LITS": "medical-liver-tumor-segmentation",
+        "Task035_ISBILesionSegmentation": "medical-brain-lesion-segmentation",
+        "Task038_CHAOS_Task_3_5_Variant2": "medical-chaos-segmentation",
+        "Task048_KiTS_clean": "medical-kidney-segmentation",
+        "Task055_SegTHOR": "medical-thoracic-segmentation",
+        "Task089_Fluo-N2DH-SIM_thickborder_time": "medical-cell-tracking-segmentation"
+      }
+    }
+  }
+}
