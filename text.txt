@@ -1,0 +1,4818 @@
+Folder PATH listing
+Volume serial number is 000000BA 3E20:FC7B
+D:\CAPSTONE_RESEARCH\MODELS
+│   download_models.py
+│   download_summary.txt
+│   missing_models.txt
+│   
+├───generalist
+│   ├───clip
+│   │   │   .gitattributes
+│   │   │   config.json
+│   │   │   flax_model.msgpack
+│   │   │   merges.txt
+│   │   │   preprocessor_config.json
+│   │   │   pytorch_model.bin
+│   │   │   README.md
+│   │   │   special_tokens_map.json
+│   │   │   tf_model.h5
+│   │   │   tokenizer.json
+│   │   │   tokenizer_config.json
+│   │   │   vocab.json
+│   │   │   
+│   │   └───.cache
+│   │       └───huggingface
+│   │           │   .gitignore
+│   │           │   
+│   │           └───download
+│   │                   .gitattributes.metadata
+│   │                   config.json.metadata
+│   │                   flax_model.msgpack.metadata
+│   │                   merges.txt.metadata
+│   │                   preprocessor_config.json.metadata
+│   │                   pytorch_model.bin.metadata
+│   │                   README.md.metadata
+│   │                   special_tokens_map.json.metadata
+│   │                   tf_model.h5.metadata
+│   │                   tokenizer.json.metadata
+│   │                   tokenizer_config.json.metadata
+│   │                   vocab.json.metadata
+│   │                   
+│   └───florence-2
+│       │   .gitattributes
+│       │   CODE_OF_CONDUCT.md
+│       │   config.json
+│       │   configuration_florence2.py
+│       │   generation_config.json
+│       │   LICENSE
+│       │   model.safetensors
+│       │   modeling_florence2.py
+│       │   preprocessor_config.json
+│       │   processing_florence2.py
+│       │   pytorch_model.bin
+│       │   README.md
+│       │   sample_inference.ipynb
+│       │   SECURITY.md
+│       │   SUPPORT.md
+│       │   tokenizer.json
+│       │   tokenizer_config.json
+│       │   vocab.json
+│       │   
+│       └───.cache
+│           └───huggingface
+│               │   .gitignore
+│               │   
+│               └───download
+│                       .gitattributes.metadata
+│                       CODE_OF_CONDUCT.md.metadata
+│                       config.json.metadata
+│                       configuration_florence2.py.metadata
+│                       generation_config.json.metadata
+│                       LICENSE.metadata
+│                       model.safetensors.metadata
+│                       modeling_florence2.py.metadata
+│                       preprocessor_config.json.metadata
+│                       processing_florence2.py.metadata
+│                       pytorch_model.bin.metadata
+│                       README.md.metadata
+│                       sample_inference.ipynb.metadata
+│                       SECURITY.md.metadata
+│                       SUPPORT.md.metadata
+│                       tokenizer.json.metadata
+│                       tokenizer_config.json.metadata
+│                       vocab.json.metadata
+│                       
+├───infrastructure
+│   ├───DeepCrack
+│   │   │   README.md
+│   │   │   
+│   │   ├───dataset
+│   │   │       DeepCrack.zip
+│   │   │       
+│   │   ├───figures
+│   │   │       architecture.jpg
+│   │   │       dataset-overview.jpg
+│   │   │       
+│   │   └───paper
+│   │           DeepCrack-Neurocomputing-2019.pdf
+│   │           
+│   └───RoadNet
+│       │   README.md
+│       │   RoadNet-TGRS-2019.pdf
+│       │   
+│       └───figures
+│               demo.jpg
+│               demo2.jpg
+│               roadnet-dataset.jpg
+│               
+├───medical
+│   ├───CheXNet
+│   │   │   .gitattributes
+│   │   │   model.pth.tar
+│   │   │   model.py
+│   │   │   README.md
+│   │   │   read_data.py
+│   │   │   
+│   │   ├───ChestX-ray14
+│   │   │   ├───images
+│   │   │   │       .keep
+│   │   │   │       
+│   │   │   └───labels
+│   │   │           test_list.txt
+│   │   │           train_list.txt
+│   │   │           val_list.txt
+│   │   │           
+│   │   └───localization
+│   │           00008473_009-3.png
+│   │           00008473_011-3.png
+│   │           00030605_000.jpg
+│   │           
+│   ├───MONAI
+│   │   │   .clang-format
+│   │   │   .coderabbit.yaml
+│   │   │   .deepsource.toml
+│   │   │   .dockerignore
+│   │   │   .gitattributes
+│   │   │   .gitignore
+│   │   │   .pre-commit-config.yaml
+│   │   │   .readthedocs.yml
+│   │   │   CHANGELOG.md
+│   │   │   CITATION.cff
+│   │   │   CODE_OF_CONDUCT.md
+│   │   │   CONTRIBUTING.md
+│   │   │   Dockerfile
+│   │   │   environment-dev.yml
+│   │   │   LICENSE
+│   │   │   MANIFEST.in
+│   │   │   pyproject.toml
+│   │   │   README.md
+│   │   │   requirements-dev.txt
+│   │   │   requirements-min.txt
+│   │   │   requirements.txt
+│   │   │   runtests.sh
+│   │   │   SECURITY.md
+│   │   │   setup.cfg
+│   │   │   setup.py
+│   │   │   versioneer.py
+│   │   │   
+│   │   ├───.github
+│   │   │   │   codecov.yml
+│   │   │   │   CODEOWNERS
+│   │   │   │   dco.yml
+│   │   │   │   dependabot.yml
+│   │   │   │   pull_request_template.md
+│   │   │   │   
+│   │   │   ├───ISSUE_TEMPLATE
+│   │   │   │       bug_report.md
+│   │   │   │       feature_request.md
+│   │   │   │       question.md
+│   │   │   │       
+│   │   │   └───workflows
+│   │   │           blossom-ci.yml
+│   │   │           chatops.yml
+│   │   │           codeql-analysis.yml
+│   │   │           conda.yml
+│   │   │           cron-ngc-bundle.yml
+│   │   │           cron.yml
+│   │   │           docker.yml
+│   │   │           integration.yml
+│   │   │           pythonapp-gpu.yml
+│   │   │           pythonapp-min.yml
+│   │   │           pythonapp.yml
+│   │   │           release.yml
+│   │   │           setupapp.yml
+│   │   │           weekly-preview.yml
+│   │   │           
+│   │   ├───docs
+│   │   │   │   .readthedocs.yaml
+│   │   │   │   Makefile
+│   │   │   │   requirements.txt
+│   │   │   │   
+│   │   │   ├───images
+│   │   │   │       3d_paired.png
+│   │   │   │       affine.png
+│   │   │   │       amp_training_a100.png
+│   │   │   │       amp_training_v100.png
+│   │   │   │       arch_modules.png
+│   │   │   │       auto3dseg.png
+│   │   │   │       blend.png
+│   │   │   │       blend_images.png
+│   │   │   │       brats_distributed.png
+│   │   │   │       BTCV_organs.png
+│   │   │   │       cache_dataset.png
+│   │   │   │       cam.png
+│   │   │   │       coplenet.png
+│   │   │   │       datasets_speed.png
+│   │   │   │       dataset_progress.png
+│   │   │   │       decollate_batch.png
+│   │   │   │       deepedit.png
+│   │   │   │       deepgrow.png
+│   │   │   │       deepgrow_scheme.png
+│   │   │   │       detection.png
+│   │   │   │       dints-overview.png
+│   │   │   │       exp_mgmt.png
+│   │   │   │       fast_training.png
+│   │   │   │       favicon.ico
+│   │   │   │       federated.svg
+│   │   │   │       gmm_feature_set_comparison_s.png
+│   │   │   │       hovernet_diagram.png
+│   │   │   │       invert_transforms.png
+│   │   │   │       lazy_resampling_apply_pending_example.svg
+│   │   │   │       lazy_resampling_homogeneous_matrices.svg
+│   │   │   │       lazy_resampling_lazy_example_1.svg
+│   │   │   │       lazy_resampling_none_example.svg
+│   │   │   │       lazy_resampling_trad_example_1.svg
+│   │   │   │       lr_finder.png
+│   │   │   │       maisi_infer.png
+│   │   │   │       maisi_train.png
+│   │   │   │       matshow3d.png
+│   │   │   │       medical_transforms.png
+│   │   │   │       metrics_report.png
+│   │   │   │       mil-patches.jpg
+│   │   │   │       models_ensemble.png
+│   │   │   │       MONAI-logo-color.png
+│   │   │   │       MONAI_arch.png
+│   │   │   │       MONAI_bundle_cloud.png
+│   │   │   │       MONAI_clouds.png
+│   │   │   │       MONAI_map_cloud.png
+│   │   │   │       mri_recon.png
+│   │   │   │       nsight_comparison.png
+│   │   │   │       nuclick.png
+│   │   │   │       pathology-meta.png
+│   │   │   │       pathology.png
+│   │   │   │       postprocessing_transforms.png
+│   │   │   │       precision_options.png
+│   │   │   │       python.svg
+│   │   │   │       sliding_window.png
+│   │   │   │       ssl_overview.png
+│   │   │   │       swin_unetr.png
+│   │   │   │       threaddataloader.png
+│   │   │   │       transfer_mmar.png
+│   │   │   │       tta.png
+│   │   │   │       unet-pipe.png
+│   │   │   │       UNETR.png
+│   │   │   │       vista2d.png
+│   │   │   │       vista3d.png
+│   │   │   │       workflows.png
+│   │   │   │       
+│   │   │   ├───source
+│   │   │   │   │   api.rst
+│   │   │   │   │   applications.md
+│   │   │   │   │   apps.rst
+│   │   │   │   │   auto3dseg.rst
+│   │   │   │   │   bundle.rst
+│   │   │   │   │   bundle_intro.rst
+│   │   │   │   │   conf.py
+│   │   │   │   │   config_syntax.md
+│   │   │   │   │   contrib.rst
+│   │   │   │   │   data.rst
+│   │   │   │   │   engines.rst
+│   │   │   │   │   fl.rst
+│   │   │   │   │   handlers.rst
+│   │   │   │   │   highlights.rst
+│   │   │   │   │   index.rst
+│   │   │   │   │   inferers.rst
+│   │   │   │   │   installation.md
+│   │   │   │   │   lazy_resampling.rst
+│   │   │   │   │   losses.rst
+│   │   │   │   │   mb_properties.rst
+│   │   │   │   │   mb_specification.rst
+│   │   │   │   │   metrics.rst
+│   │   │   │   │   modules.md
+│   │   │   │   │   MONAI-logo-color.png
+│   │   │   │   │   networks.rst
+│   │   │   │   │   optimizers.rst
+│   │   │   │   │   precision_accelerating.md
+│   │   │   │   │   transforms.rst
+│   │   │   │   │   transforms_idx.rst
+│   │   │   │   │   utils.rst
+│   │   │   │   │   visualize.rst
+│   │   │   │   │   whatsnew.rst
+│   │   │   │   │   whatsnew_0_5.md
+│   │   │   │   │   whatsnew_0_6.md
+│   │   │   │   │   whatsnew_0_7.md
+│   │   │   │   │   whatsnew_0_8.md
+│   │   │   │   │   whatsnew_0_9.md
+│   │   │   │   │   whatsnew_1_0.md
+│   │   │   │   │   whatsnew_1_1.md
+│   │   │   │   │   whatsnew_1_2.md
+│   │   │   │   │   whatsnew_1_3.md
+│   │   │   │   │   whatsnew_1_4.md
+│   │   │   │   │   whatsnew_1_5.md
+│   │   │   │   │   
+│   │   │   │   └───apidocs
+│   │   │   │           modules.rst
+│   │   │   │           monai.rst
+│   │   │   │           
+│   │   │   └───_static
+│   │   │           custom.css
+│   │   │           
+│   │   ├───monai
+│   │   │   │   py.typed
+│   │   │   │   README.md
+│   │   │   │   torch.patch
+│   │   │   │   _version.py
+│   │   │   │   __init__.py
+│   │   │   │   
+│   │   │   ├───apps
+│   │   │   │   │   datasets.py
+│   │   │   │   │   utils.py
+│   │   │   │   │   __init__.py
+│   │   │   │   │   
+│   │   │   │   ├───auto3dseg
+│   │   │   │   │       auto_runner.py
+│   │   │   │   │       bundle_gen.py
+│   │   │   │   │       data_analyzer.py
+│   │   │   │   │       ensemble_builder.py
+│   │   │   │   │       hpo_gen.py
+│   │   │   │   │       transforms.py
+│   │   │   │   │       utils.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       __main__.py
+│   │   │   │   │       
+│   │   │   │   ├───deepedit
+│   │   │   │   │       interaction.py
+│   │   │   │   │       transforms.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───deepgrow
+│   │   │   │   │       dataset.py
+│   │   │   │   │       interaction.py
+│   │   │   │   │       transforms.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───detection
+│   │   │   │   │   │   __init__.py
+│   │   │   │   │   │   
+│   │   │   │   │   ├───metrics
+│   │   │   │   │   │       coco.py
+│   │   │   │   │   │       matching.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───networks
+│   │   │   │   │   │       retinanet_detector.py
+│   │   │   │   │   │       retinanet_network.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───transforms
+│   │   │   │   │   │       array.py
+│   │   │   │   │   │       box_ops.py
+│   │   │   │   │   │       dictionary.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   └───utils
+│   │   │   │   │           anchor_utils.py
+│   │   │   │   │           ATSS_matcher.py
+│   │   │   │   │           box_coder.py
+│   │   │   │   │           box_selector.py
+│   │   │   │   │           detector_utils.py
+│   │   │   │   │           hard_negative_sampler.py
+│   │   │   │   │           predict_utils.py
+│   │   │   │   │           __init__.py
+│   │   │   │   │           
+│   │   │   │   ├───generation
+│   │   │   │   │   │   __init__.py
+│   │   │   │   │   │   
+│   │   │   │   │   └───maisi
+│   │   │   │   │       │   __init__.py
+│   │   │   │   │       │   
+│   │   │   │   │       └───networks
+│   │   │   │   │               autoencoderkl_maisi.py
+│   │   │   │   │               controlnet_maisi.py
+│   │   │   │   │               diffusion_model_unet_maisi.py
+│   │   │   │   │               __init__.py
+│   │   │   │   │               
+│   │   │   │   ├───mmars
+│   │   │   │   │       mmars.py
+│   │   │   │   │       model_desc.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───nnunet
+│   │   │   │   │       nnunetv2_runner.py
+│   │   │   │   │       nnunet_bundle.py
+│   │   │   │   │       utils.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       __main__.py
+│   │   │   │   │       
+│   │   │   │   ├───nuclick
+│   │   │   │   │       transforms.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───pathology
+│   │   │   │   │   │   utils.py
+│   │   │   │   │   │   __init__.py
+│   │   │   │   │   │   
+│   │   │   │   │   ├───engines
+│   │   │   │   │   │       utils.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───handlers
+│   │   │   │   │   │       utils.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───inferers
+│   │   │   │   │   │       inferer.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───losses
+│   │   │   │   │   │       hovernet_loss.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   ├───metrics
+│   │   │   │   │   │       lesion_froc.py
+│   │   │   │   │   │       __init__.py
+│   │   │   │   │   │       
+│   │   │   │   │   └───transforms
+│   │   │   │   │       │   __init__.py
+│   │   │   │   │       │   
+│   │   │   │   │       ├───post
+│   │   │   │   │       │       array.py
+│   │   │   │   │       │       dictionary.py
+│   │   │   │   │       │       __init__.py
+│   │   │   │   │       │       
+│   │   │   │   │       └───stain
+│   │   │   │   │               array.py
+│   │   │   │   │               dictionary.py
+│   │   │   │   │               __init__.py
+│   │   │   │   │               
+│   │   │   │   ├───reconstruction
+│   │   │   │   │   │   complex_utils.py
+│   │   │   │   │   │   fastmri_reader.py
+│   │   │   │   │   │   mri_utils.py
+│   │   │   │   │   │   __init__.py
+│   │   │   │   │   │   
+│   │   │   │   │   ├───networks
+│   │   │   │   │   │   │   __init__.py
+│   │   │   │   │   │   │   
+│   │   │   │   │   │   ├───blocks
+│   │   │   │   │   │   │       varnetblock.py
+│   │   │   │   │   │   │       __init__.py
+│   │   │   │   │   │   │       
+│   │   │   │   │   │   └───nets
+│   │   │   │   │   │           coil_sensitivity_model.py
+│   │   │   │   │   │           complex_unet.py
+│   │   │   │   │   │           utils.py
+│   │   │   │   │   │           varnet.py
+│   │   │   │   │   │           __init__.py
+│   │   │   │   │   │           
+│   │   │   │   │   └───transforms
+│   │   │   │   │           array.py
+│   │   │   │   │           dictionary.py
+│   │   │   │   │           __init__.py
+│   │   │   │   │           
+│   │   │   │   ├───tcia
+│   │   │   │   │       label_desc.py
+│   │   │   │   │       utils.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   └───vista3d
+│   │   │   │           inferer.py
+│   │   │   │           sampler.py
+│   │   │   │           transforms.py
+│   │   │   │           __init__.py
+│   │   │   │           
+│   │   │   ├───auto3dseg
+│   │   │   │       algo_gen.py
+│   │   │   │       analyzer.py
+│   │   │   │       operations.py
+│   │   │   │       seg_summarizer.py
+│   │   │   │       utils.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───bundle
+│   │   │   │       config_item.py
+│   │   │   │       config_parser.py
+│   │   │   │       properties.py
+│   │   │   │       reference_resolver.py
+│   │   │   │       scripts.py
+│   │   │   │       utils.py
+│   │   │   │       workflows.py
+│   │   │   │       __init__.py
+│   │   │   │       __main__.py
+│   │   │   │       
+│   │   │   ├───config
+│   │   │   │       deviceconfig.py
+│   │   │   │       type_definitions.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───csrc
+│   │   │   │   │   ext.cpp
+│   │   │   │   │   
+│   │   │   │   ├───filtering
+│   │   │   │   │   │   filtering.h
+│   │   │   │   │   │   
+│   │   │   │   │   ├───bilateral
+│   │   │   │   │   │       bilateral.cpp
+│   │   │   │   │   │       bilateral.h
+│   │   │   │   │   │       bilateralfilter_cpu.cpp
+│   │   │   │   │   │       bilateralfilter_cpu_phl.cpp
+│   │   │   │   │   │       bilateralfilter_cuda.cu
+│   │   │   │   │   │       bilateralfilter_cuda_phl.cu
+│   │   │   │   │   │       
+│   │   │   │   │   ├───permutohedral
+│   │   │   │   │   │       hash_table.cuh
+│   │   │   │   │   │       permutohedral.cpp
+│   │   │   │   │   │       permutohedral.h
+│   │   │   │   │   │       permutohedral_cpu.cpp
+│   │   │   │   │   │       permutohedral_cuda.cu
+│   │   │   │   │   │       
+│   │   │   │   │   ├───trainable_bilateral
+│   │   │   │   │   │       bf_layer_cpu_backward.cpp
+│   │   │   │   │   │       bf_layer_cpu_forward.cpp
+│   │   │   │   │   │       bf_layer_gpu_backward.cu
+│   │   │   │   │   │       bf_layer_gpu_forward.cu
+│   │   │   │   │   │       trainable_bilateral.cpp
+│   │   │   │   │   │       trainable_bilateral.h
+│   │   │   │   │   │       
+│   │   │   │   │   └───trainable_joint_bilateral
+│   │   │   │   │           jbf_layer_cpu_backward.cpp
+│   │   │   │   │           jbf_layer_cpu_forward.cpp
+│   │   │   │   │           jbf_layer_gpu_backward.cu
+│   │   │   │   │           jbf_layer_gpu_forward.cu
+│   │   │   │   │           trainable_joint_bilateral.cpp
+│   │   │   │   │           trainable_joint_bilateral.h
+│   │   │   │   │           
+│   │   │   │   ├───lltm
+│   │   │   │   │       lltm.h
+│   │   │   │   │       lltm_cpu.cpp
+│   │   │   │   │       lltm_cuda.cu
+│   │   │   │   │       
+│   │   │   │   ├───resample
+│   │   │   │   │       bounds_common.h
+│   │   │   │   │       interpolation_common.h
+│   │   │   │   │       pushpull.h
+│   │   │   │   │       pushpull_cpu.cpp
+│   │   │   │   │       pushpull_cuda.cu
+│   │   │   │   │       
+│   │   │   │   └───utils
+│   │   │   │           common_utils.h
+│   │   │   │           meta_macros.h
+│   │   │   │           resample_utils.h
+│   │   │   │           tensor_description.h
+│   │   │   │           tensor_indexing.h
+│   │   │   │           
+│   │   │   ├───data
+│   │   │   │       box_utils.py
+│   │   │   │       csv_saver.py
+│   │   │   │       dataloader.py
+│   │   │   │       dataset.py
+│   │   │   │       dataset_summary.py
+│   │   │   │       decathlon_datalist.py
+│   │   │   │       fft_utils.py
+│   │   │   │       folder_layout.py
+│   │   │   │       grid_dataset.py
+│   │   │   │       image_dataset.py
+│   │   │   │       image_reader.py
+│   │   │   │       image_writer.py
+│   │   │   │       iterable_dataset.py
+│   │   │   │       itk_torch_bridge.py
+│   │   │   │       meta_obj.py
+│   │   │   │       meta_tensor.py
+│   │   │   │       samplers.py
+│   │   │   │       synthetic.py
+│   │   │   │       test_time_augmentation.py
+│   │   │   │       thread_buffer.py
+│   │   │   │       torchscript_utils.py
+│   │   │   │       ultrasound_confidence_map.py
+│   │   │   │       utils.py
+│   │   │   │       video_dataset.py
+│   │   │   │       wsi_datasets.py
+│   │   │   │       wsi_reader.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───engines
+│   │   │   │       evaluator.py
+│   │   │   │       trainer.py
+│   │   │   │       utils.py
+│   │   │   │       workflow.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───fl
+│   │   │   │   │   __init__.py
+│   │   │   │   │   
+│   │   │   │   ├───client
+│   │   │   │   │       client_algo.py
+│   │   │   │   │       monai_algo.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   └───utils
+│   │   │   │           constants.py
+│   │   │   │           exchange_object.py
+│   │   │   │           filters.py
+│   │   │   │           __init__.py
+│   │   │   │           
+│   │   │   ├───handlers
+│   │   │   │       average_precision.py
+│   │   │   │       checkpoint_loader.py
+│   │   │   │       checkpoint_saver.py
+│   │   │   │       classification_saver.py
+│   │   │   │       clearml_handlers.py
+│   │   │   │       confusion_matrix.py
+│   │   │   │       decollate_batch.py
+│   │   │   │       earlystop_handler.py
+│   │   │   │       garbage_collector.py
+│   │   │   │       hausdorff_distance.py
+│   │   │   │       ignite_metric.py
+│   │   │   │       logfile_handler.py
+│   │   │   │       lr_schedule_handler.py
+│   │   │   │       mean_dice.py
+│   │   │   │       mean_iou.py
+│   │   │   │       metrics_reloaded_handler.py
+│   │   │   │       metrics_saver.py
+│   │   │   │       metric_logger.py
+│   │   │   │       mlflow_handler.py
+│   │   │   │       nvtx_handlers.py
+│   │   │   │       panoptic_quality.py
+│   │   │   │       parameter_scheduler.py
+│   │   │   │       postprocessing.py
+│   │   │   │       probability_maps.py
+│   │   │   │       regression_metrics.py
+│   │   │   │       roc_auc.py
+│   │   │   │       smartcache_handler.py
+│   │   │   │       stats_handler.py
+│   │   │   │       surface_distance.py
+│   │   │   │       tensorboard_handlers.py
+│   │   │   │       trt_handler.py
+│   │   │   │       utils.py
+│   │   │   │       validation_handler.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───inferers
+│   │   │   │       inferer.py
+│   │   │   │       merger.py
+│   │   │   │       splitter.py
+│   │   │   │       utils.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───losses
+│   │   │   │       adversarial_loss.py
+│   │   │   │       barlow_twins.py
+│   │   │   │       cldice.py
+│   │   │   │       contrastive.py
+│   │   │   │       deform.py
+│   │   │   │       dice.py
+│   │   │   │       ds_loss.py
+│   │   │   │       focal_loss.py
+│   │   │   │       giou_loss.py
+│   │   │   │       hausdorff_loss.py
+│   │   │   │       image_dissimilarity.py
+│   │   │   │       multi_scale.py
+│   │   │   │       nacl_loss.py
+│   │   │   │       perceptual.py
+│   │   │   │       spatial_mask.py
+│   │   │   │       spectral_loss.py
+│   │   │   │       ssim_loss.py
+│   │   │   │       sure_loss.py
+│   │   │   │       tversky.py
+│   │   │   │       unified_focal_loss.py
+│   │   │   │       utils.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───metrics
+│   │   │   │       active_learning_metrics.py
+│   │   │   │       average_precision.py
+│   │   │   │       confusion_matrix.py
+│   │   │   │       cumulative_average.py
+│   │   │   │       fid.py
+│   │   │   │       froc.py
+│   │   │   │       f_beta_score.py
+│   │   │   │       generalized_dice.py
+│   │   │   │       hausdorff_distance.py
+│   │   │   │       loss_metric.py
+│   │   │   │       meandice.py
+│   │   │   │       meaniou.py
+│   │   │   │       metric.py
+│   │   │   │       mmd.py
+│   │   │   │       panoptic_quality.py
+│   │   │   │       regression.py
+│   │   │   │       rocauc.py
+│   │   │   │       surface_dice.py
+│   │   │   │       surface_distance.py
+│   │   │   │       utils.py
+│   │   │   │       wrapper.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───networks
+│   │   │   │   │   trt_compiler.py
+│   │   │   │   │   utils.py
+│   │   │   │   │   __init__.py
+│   │   │   │   │   
+│   │   │   │   ├───blocks
+│   │   │   │   │       activation.py
+│   │   │   │   │       acti_norm.py
+│   │   │   │   │       aspp.py
+│   │   │   │   │       attention_utils.py
+│   │   │   │   │       backbone_fpn_utils.py
+│   │   │   │   │       cablock.py
+│   │   │   │   │       convolutions.py
+│   │   │   │   │       crf.py
+│   │   │   │   │       crossattention.py
+│   │   │   │   │       denseblock.py
+│   │   │   │   │       dints_block.py
+│   │   │   │   │       downsample.py
+│   │   │   │   │       dynunet_block.py
+│   │   │   │   │       encoder.py
+│   │   │   │   │       fcn.py
+│   │   │   │   │       feature_pyramid_network.py
+│   │   │   │   │       fft_utils_t.py
+│   │   │   │   │       localnet_block.py
+│   │   │   │   │       mednext_block.py
+│   │   │   │   │       mlp.py
+│   │   │   │   │       patchembedding.py
+│   │   │   │   │       pos_embed_utils.py
+│   │   │   │   │       regunet_block.py
+│   │   │   │   │       rel_pos_embedding.py
+│   │   │   │   │       segresnet_block.py
+│   │   │   │   │       selfattention.py
+│   │   │   │   │       spade_norm.py
+│   │   │   │   │       spatialattention.py
+│   │   │   │   │       squeeze_and_excitation.py
+│   │   │   │   │       text_embedding.py
+│   │   │   │   │       transformerblock.py
+│   │   │   │   │       unetr_block.py
+│   │   │   │   │       upsample.py
+│   │   │   │   │       warp.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───layers
+│   │   │   │   │       conjugate_gradient.py
+│   │   │   │   │       convutils.py
+│   │   │   │   │       drop_path.py
+│   │   │   │   │       factories.py
+│   │   │   │   │       filtering.py
+│   │   │   │   │       gmm.py
+│   │   │   │   │       simplelayers.py
+│   │   │   │   │       spatial_transforms.py
+│   │   │   │   │       utils.py
+│   │   │   │   │       vector_quantizer.py
+│   │   │   │   │       weight_init.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───nets
+│   │   │   │   │       ahnet.py
+│   │   │   │   │       attentionunet.py
+│   │   │   │   │       autoencoder.py
+│   │   │   │   │       autoencoderkl.py
+│   │   │   │   │       basic_unet.py
+│   │   │   │   │       basic_unetplusplus.py
+│   │   │   │   │       cell_sam_wrapper.py
+│   │   │   │   │       classifier.py
+│   │   │   │   │       controlnet.py
+│   │   │   │   │       daf3d.py
+│   │   │   │   │       densenet.py
+│   │   │   │   │       diffusion_model_unet.py
+│   │   │   │   │       dints.py
+│   │   │   │   │       dynunet.py
+│   │   │   │   │       efficientnet.py
+│   │   │   │   │       flexible_unet.py
+│   │   │   │   │       fullyconnectednet.py
+│   │   │   │   │       generator.py
+│   │   │   │   │       highresnet.py
+│   │   │   │   │       hovernet.py
+│   │   │   │   │       masked_autoencoder_vit.py
+│   │   │   │   │       mednext.py
+│   │   │   │   │       milmodel.py
+│   │   │   │   │       netadapter.py
+│   │   │   │   │       patchgan_discriminator.py
+│   │   │   │   │       quicknat.py
+│   │   │   │   │       regressor.py
+│   │   │   │   │       regunet.py
+│   │   │   │   │       resnet.py
+│   │   │   │   │       restormer.py
+│   │   │   │   │       segresnet.py
+│   │   │   │   │       segresnet_ds.py
+│   │   │   │   │       senet.py
+│   │   │   │   │       spade_autoencoderkl.py
+│   │   │   │   │       spade_diffusion_model_unet.py
+│   │   │   │   │       spade_network.py
+│   │   │   │   │       swin_unetr.py
+│   │   │   │   │       torchvision_fc.py
+│   │   │   │   │       transchex.py
+│   │   │   │   │       transformer.py
+│   │   │   │   │       unet.py
+│   │   │   │   │       unetr.py
+│   │   │   │   │       varautoencoder.py
+│   │   │   │   │       vista3d.py
+│   │   │   │   │       vit.py
+│   │   │   │   │       vitautoenc.py
+│   │   │   │   │       vnet.py
+│   │   │   │   │       voxelmorph.py
+│   │   │   │   │       vqvae.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   └───schedulers
+│   │   │   │           ddim.py
+│   │   │   │           ddpm.py
+│   │   │   │           pndm.py
+│   │   │   │           rectified_flow.py
+│   │   │   │           scheduler.py
+│   │   │   │           __init__.py
+│   │   │   │           
+│   │   │   ├───optimizers
+│   │   │   │       lr_finder.py
+│   │   │   │       lr_scheduler.py
+│   │   │   │       novograd.py
+│   │   │   │       utils.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───transforms
+│   │   │   │   │   adaptors.py
+│   │   │   │   │   compose.py
+│   │   │   │   │   inverse.py
+│   │   │   │   │   inverse_batch_transform.py
+│   │   │   │   │   nvtx.py
+│   │   │   │   │   traits.py
+│   │   │   │   │   transform.py
+│   │   │   │   │   utils.py
+│   │   │   │   │   utils_create_transform_ims.py
+│   │   │   │   │   utils_morphological_ops.py
+│   │   │   │   │   utils_pytorch_numpy_unification.py
+│   │   │   │   │   __init__.py
+│   │   │   │   │   
+│   │   │   │   ├───croppad
+│   │   │   │   │       array.py
+│   │   │   │   │       batch.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       functional.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───intensity
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───io
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───lazy
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       functional.py
+│   │   │   │   │       utils.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───meta_utility
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───post
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───regularization
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───signal
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───smooth_field
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   ├───spatial
+│   │   │   │   │       array.py
+│   │   │   │   │       dictionary.py
+│   │   │   │   │       functional.py
+│   │   │   │   │       __init__.py
+│   │   │   │   │       
+│   │   │   │   └───utility
+│   │   │   │           array.py
+│   │   │   │           dictionary.py
+│   │   │   │           __init__.py
+│   │   │   │           
+│   │   │   ├───utils
+│   │   │   │       component_store.py
+│   │   │   │       decorators.py
+│   │   │   │       deprecate_utils.py
+│   │   │   │       dist.py
+│   │   │   │       enums.py
+│   │   │   │       jupyter_utils.py
+│   │   │   │       misc.py
+│   │   │   │       module.py
+│   │   │   │       nvtx.py
+│   │   │   │       ordering.py
+│   │   │   │       profiling.py
+│   │   │   │       state_cacher.py
+│   │   │   │       tf32.py
+│   │   │   │       type_conversion.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   ├───visualize
+│   │   │   │       class_activation_maps.py
+│   │   │   │       gradient_based.py
+│   │   │   │       img2tensorboard.py
+│   │   │   │       occlusion_sensitivity.py
+│   │   │   │       utils.py
+│   │   │   │       visualizer.py
+│   │   │   │       __init__.py
+│   │   │   │       
+│   │   │   └───_extensions
+│   │   │       │   loader.py
+│   │   │       │   __init__.py
+│   │   │       │   
+│   │   │       └───gmm
+│   │   │               gmm.cpp
+│   │   │               gmm.h
+│   │   │               gmm_cpu.cpp
+│   │   │               gmm_cuda.cu
+│   │   │               gmm_cuda_linalg.cuh
+│   │   │               
+│   │   └───tests
+│   │       │   clang_format_utils.py
+│   │       │   croppers.py
+│   │       │   hvd_evenly_divisible_all_gather.py
+│   │       │   lazy_transforms_utils.py
+│   │       │   min_tests.py
+│   │       │   nonconfig_workflow.py
+│   │       │   padders.py
+│   │       │   runner.py
+│   │       │   test_call_dist.py
+│   │       │   test_query_memory.py
+│   │       │   test_timedcall_dist.py
+│   │       │   test_utils.py
+│   │       │   __init__.py
+│   │       │   
+│   │       ├───apps
+│   │       │   │   test_auto3dseg.py
+│   │       │   │   test_auto3dseg_bundlegen.py
+│   │       │   │   test_check_hash.py
+│   │       │   │   test_cross_validation.py
+│   │       │   │   test_decathlondataset.py
+│   │       │   │   test_download_and_extract.py
+│   │       │   │   test_download_url_yandex.py
+│   │       │   │   test_mednistdataset.py
+│   │       │   │   test_mmar_download.py
+│   │       │   │   test_tciadataset.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───deepedit
+│   │       │   │       test_deepedit_transforms.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───deepgrow
+│   │       │   │   │   test_deepgrow_dataset.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   └───transforms
+│   │       │   │           test_deepgrow_interaction.py
+│   │       │   │           test_deepgrow_transforms.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───detection
+│   │       │   │   │   test_box_transform.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   ├───metrics
+│   │       │   │   │       test_detection_coco_metrics.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   ├───networks
+│   │       │   │   │       test_retinanet.py
+│   │       │   │   │       test_retinanet_detector.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   └───utils
+│   │       │   │           test_anchor_box.py
+│   │       │   │           test_atss_box_matcher.py
+│   │       │   │           test_box_coder.py
+│   │       │   │           test_detector_boxselector.py
+│   │       │   │           test_detector_utils.py
+│   │       │   │           test_hardnegsampler.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───maisi
+│   │       │   │   └───networks
+│   │       │   │           test_autoencoderkl_maisi.py
+│   │       │   │           test_controlnet_maisi.py
+│   │       │   │           test_diffusion_model_unet_maisi.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───nuclick
+│   │       │   │       test_nuclick_transforms.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───pathology
+│   │       │   │   │   test_lesion_froc.py
+│   │       │   │   │   test_pathology_prob_nms.py
+│   │       │   │   │   test_prepare_batch_hovernet.py
+│   │       │   │   │   test_sliding_window_hovernet_inference.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   ├───handlers
+│   │       │   │   │       test_from_engine_hovernet.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   └───transforms
+│   │       │   │       │   test_pathology_he_stain.py
+│   │       │   │       │   test_pathology_he_stain_dict.py
+│   │       │   │       │   __init__.py
+│   │       │   │       │   
+│   │       │   │       └───post
+│   │       │   │               test_generate_distance_map.py
+│   │       │   │               test_generate_distance_mapd.py
+│   │       │   │               test_generate_instance_border.py
+│   │       │   │               test_generate_instance_borderd.py
+│   │       │   │               test_generate_instance_centroid.py
+│   │       │   │               test_generate_instance_centroidd.py
+│   │       │   │               test_generate_instance_contour.py
+│   │       │   │               test_generate_instance_contourd.py
+│   │       │   │               test_generate_instance_type.py
+│   │       │   │               test_generate_instance_typed.py
+│   │       │   │               test_generate_succinct_contour.py
+│   │       │   │               test_generate_succinct_contourd.py
+│   │       │   │               test_generate_watershed_markers.py
+│   │       │   │               test_generate_watershed_markersd.py
+│   │       │   │               test_generate_watershed_mask.py
+│   │       │   │               test_generate_watershed_maskd.py
+│   │       │   │               test_hovernet_instance_map_post_processing.py
+│   │       │   │               test_hovernet_instance_map_post_processingd.py
+│   │       │   │               test_hovernet_nuclear_type_post_processing.py
+│   │       │   │               test_watershed.py
+│   │       │   │               test_watershedd.py
+│   │       │   │               __init__.py
+│   │       │   │               
+│   │       │   ├───reconstruction
+│   │       │   │   │   test_complex_utils.py
+│   │       │   │   │   test_fastmri_reader.py
+│   │       │   │   │   test_mri_utils.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   ├───nets
+│   │       │   │   │       test_recon_net_utils.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   └───transforms
+│   │       │   │           test_kspace_mask.py
+│   │       │   │           test_reference_based_normalize_intensity.py
+│   │       │   │           test_reference_based_spatial_cropd.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   └───vista3d
+│   │       │           test_point_based_window_inferer.py
+│   │       │           test_vista3d_sampler.py
+│   │       │           test_vista3d_transforms.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───bundle
+│   │       │       test_bundle_ckpt_export.py
+│   │       │       test_bundle_download.py
+│   │       │       test_bundle_get_data.py
+│   │       │       test_bundle_push_to_hf_hub.py
+│   │       │       test_bundle_trt_export.py
+│   │       │       test_bundle_utils.py
+│   │       │       test_bundle_verify_metadata.py
+│   │       │       test_bundle_verify_net.py
+│   │       │       test_bundle_workflow.py
+│   │       │       test_component_locator.py
+│   │       │       test_config_item.py
+│   │       │       test_config_parser.py
+│   │       │       test_reference_resolver.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───config
+│   │       │       test_cv2_dist.py
+│   │       │       test_print_info.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───data
+│   │       │   │   test_arraydataset.py
+│   │       │   │   test_box_utils.py
+│   │       │   │   test_cachedataset.py
+│   │       │   │   test_cachedataset_parallel.py
+│   │       │   │   test_cachedataset_persistent_workers.py
+│   │       │   │   test_cachentransdataset.py
+│   │       │   │   test_check_missing_files.py
+│   │       │   │   test_create_cross_validation_datalist.py
+│   │       │   │   test_csv_dataset.py
+│   │       │   │   test_csv_iterable_dataset.py
+│   │       │   │   test_csv_saver.py
+│   │       │   │   test_dataloader.py
+│   │       │   │   test_dataset.py
+│   │       │   │   test_dataset_func.py
+│   │       │   │   test_dataset_summary.py
+│   │       │   │   test_fft_utils.py
+│   │       │   │   test_folder_layout.py
+│   │       │   │   test_gdsdataset.py
+│   │       │   │   test_grid_dataset.py
+│   │       │   │   test_handler_smartcache.py
+│   │       │   │   test_hashing.py
+│   │       │   │   test_header_correct.py
+│   │       │   │   test_image_dataset.py
+│   │       │   │   test_image_rw.py
+│   │       │   │   test_init_reader.py
+│   │       │   │   test_is_supported_format.py
+│   │       │   │   test_iterable_dataset.py
+│   │       │   │   test_itk_torch_bridge.py
+│   │       │   │   test_itk_writer.py
+│   │       │   │   test_list_data_collate.py
+│   │       │   │   test_lmdbdataset.py
+│   │       │   │   test_lmdbdataset_dist.py
+│   │       │   │   test_load_decathlon_datalist.py
+│   │       │   │   test_make_nifti.py
+│   │       │   │   test_mapping_file.py
+│   │       │   │   test_masked_patch_wsi_dataset.py
+│   │       │   │   test_nifti_header_revise.py
+│   │       │   │   test_nifti_rw.py
+│   │       │   │   test_npzdictitemdataset.py
+│   │       │   │   test_nrrd_reader.py
+│   │       │   │   test_numpy_reader.py
+│   │       │   │   test_partition_dataset.py
+│   │       │   │   test_partition_dataset_classes.py
+│   │       │   │   test_patch_dataset.py
+│   │       │   │   test_patch_wsi_dataset.py
+│   │       │   │   test_persistentdataset.py
+│   │       │   │   test_persistentdataset_dist.py
+│   │       │   │   test_pil_reader.py
+│   │       │   │   test_png_rw.py
+│   │       │   │   test_resample_datalist.py
+│   │       │   │   test_sampler_dist.py
+│   │       │   │   test_select_cross_validation_folds.py
+│   │       │   │   test_shuffle_buffer.py
+│   │       │   │   test_sliding_patch_wsi_dataset.py
+│   │       │   │   test_smartcachedataset.py
+│   │       │   │   test_synthetic.py
+│   │       │   │   test_threadcontainer.py
+│   │       │   │   test_thread_buffer.py
+│   │       │   │   test_video_datasets.py
+│   │       │   │   test_weighted_random_sampler_dist.py
+│   │       │   │   test_zipdataset.py
+│   │       │   │   
+│   │       │   ├───meta_tensor
+│   │       │   │       test_meta_tensor.py
+│   │       │   │       test_to_from_meta_tensord.py
+│   │       │   │       
+│   │       │   └───utils
+│   │       │           test_decollate.py
+│   │       │           test_dev_collate.py
+│   │       │           test_file_basename.py
+│   │       │           test_ori_ras_lps.py
+│   │       │           test_zoom_affine.py
+│   │       │           
+│   │       ├───engines
+│   │       │       test_ensemble_evaluator.py
+│   │       │       test_prepare_batch_default.py
+│   │       │       test_prepare_batch_default_dist.py
+│   │       │       test_prepare_batch_diffusion.py
+│   │       │       test_prepare_batch_extra_input.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───fl
+│   │       │   │   test_fl_monai_algo_stats.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───monai_algo
+│   │       │   │       test_fl_monai_algo.py
+│   │       │   │       test_fl_monai_algo_dist.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───utils
+│   │       │           test_fl_exchange_object.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───handlers
+│   │       │       test_handler_average_precision.py
+│   │       │       test_handler_checkpoint_loader.py
+│   │       │       test_handler_checkpoint_saver.py
+│   │       │       test_handler_classification_saver.py
+│   │       │       test_handler_classification_saver_dist.py
+│   │       │       test_handler_clearml_image.py
+│   │       │       test_handler_clearml_stats.py
+│   │       │       test_handler_confusion_matrix.py
+│   │       │       test_handler_confusion_matrix_dist.py
+│   │       │       test_handler_decollate_batch.py
+│   │       │       test_handler_early_stop.py
+│   │       │       test_handler_garbage_collector.py
+│   │       │       test_handler_hausdorff_distance.py
+│   │       │       test_handler_ignite_metric.py
+│   │       │       test_handler_lr_scheduler.py
+│   │       │       test_handler_mean_dice.py
+│   │       │       test_handler_mean_iou.py
+│   │       │       test_handler_metrics_reloaded.py
+│   │       │       test_handler_metrics_saver.py
+│   │       │       test_handler_metrics_saver_dist.py
+│   │       │       test_handler_mlflow.py
+│   │       │       test_handler_nvtx.py
+│   │       │       test_handler_panoptic_quality.py
+│   │       │       test_handler_parameter_scheduler.py
+│   │       │       test_handler_post_processing.py
+│   │       │       test_handler_prob_map_producer.py
+│   │       │       test_handler_regression_metrics.py
+│   │       │       test_handler_regression_metrics_dist.py
+│   │       │       test_handler_rocauc.py
+│   │       │       test_handler_rocauc_dist.py
+│   │       │       test_handler_stats.py
+│   │       │       test_handler_surface_distance.py
+│   │       │       test_handler_tb_image.py
+│   │       │       test_handler_tb_stats.py
+│   │       │       test_handler_validation.py
+│   │       │       test_trt_compile.py
+│   │       │       test_write_metrics_reports.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───inferers
+│   │       │       test_avg_merger.py
+│   │       │       test_controlnet_inferers.py
+│   │       │       test_diffusion_inferer.py
+│   │       │       test_latent_diffusion_inferer.py
+│   │       │       test_patch_inferer.py
+│   │       │       test_saliency_inferer.py
+│   │       │       test_slice_inferer.py
+│   │       │       test_sliding_window_inference.py
+│   │       │       test_sliding_window_splitter.py
+│   │       │       test_wsi_sliding_window_splitter.py
+│   │       │       test_zarr_avg_merger.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───integration
+│   │       │       test_auto3dseg_ensemble.py
+│   │       │       test_auto3dseg_hpo.py
+│   │       │       test_deepedit_interaction.py
+│   │       │       test_hovernet_nuclear_type_post_processingd.py
+│   │       │       test_integration_autorunner.py
+│   │       │       test_integration_bundle_run.py
+│   │       │       test_integration_classification_2d.py
+│   │       │       test_integration_determinism.py
+│   │       │       test_integration_fast_train.py
+│   │       │       test_integration_gpu_customization.py
+│   │       │       test_integration_lazy_samples.py
+│   │       │       test_integration_nnunetv2_runner.py
+│   │       │       test_integration_nnunet_bundle.py
+│   │       │       test_integration_segmentation_3d.py
+│   │       │       test_integration_sliding_window.py
+│   │       │       test_integration_stn.py
+│   │       │       test_integration_unet_2d.py
+│   │       │       test_integration_workers.py
+│   │       │       test_integration_workflows.py
+│   │       │       test_integration_workflows_adversarial.py
+│   │       │       test_integration_workflows_gan.py
+│   │       │       test_loader_semaphore.py
+│   │       │       test_mapping_filed.py
+│   │       │       test_metatensor_integration.py
+│   │       │       test_meta_affine.py
+│   │       │       test_module_list.py
+│   │       │       test_one_of.py
+│   │       │       test_pad_collation.py
+│   │       │       test_reg_loss_integration.py
+│   │       │       test_retinanet_predict_utils.py
+│   │       │       test_seg_loss_integration.py
+│   │       │       test_spatial_combine_transforms.py
+│   │       │       test_testtimeaugmentation.py
+│   │       │       test_vista3d_utils.py
+│   │       │       test_vis_gradbased.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───losses
+│   │       │   │   test_adversarial_loss.py
+│   │       │   │   test_barlow_twins_loss.py
+│   │       │   │   test_cldice_loss.py
+│   │       │   │   test_contrastive_loss.py
+│   │       │   │   test_dice_ce_loss.py
+│   │       │   │   test_dice_focal_loss.py
+│   │       │   │   test_dice_loss.py
+│   │       │   │   test_ds_loss.py
+│   │       │   │   test_focal_loss.py
+│   │       │   │   test_generalized_dice_focal_loss.py
+│   │       │   │   test_generalized_dice_loss.py
+│   │       │   │   test_generalized_wasserstein_dice_loss.py
+│   │       │   │   test_giou_loss.py
+│   │       │   │   test_hausdorff_loss.py
+│   │       │   │   test_masked_dice_loss.py
+│   │       │   │   test_masked_loss.py
+│   │       │   │   test_multi_scale.py
+│   │       │   │   test_nacl_loss.py
+│   │       │   │   test_perceptual_loss.py
+│   │       │   │   test_spectral_loss.py
+│   │       │   │   test_ssim_loss.py
+│   │       │   │   test_sure_loss.py
+│   │       │   │   test_tversky_loss.py
+│   │       │   │   test_unified_focal_loss.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───deform
+│   │       │   │       test_bending_energy.py
+│   │       │   │       test_diffusion_loss.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───image_dissimilarity
+│   │       │           test_global_mutual_information_loss.py
+│   │       │           test_local_normalized_cross_correlation_loss.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───metrics
+│   │       │       test_compute_average_precision.py
+│   │       │       test_compute_confusion_matrix.py
+│   │       │       test_compute_fid_metric.py
+│   │       │       test_compute_froc.py
+│   │       │       test_compute_f_beta.py
+│   │       │       test_compute_generalized_dice.py
+│   │       │       test_compute_meandice.py
+│   │       │       test_compute_meaniou.py
+│   │       │       test_compute_mmd_metric.py
+│   │       │       test_compute_multiscalessim_metric.py
+│   │       │       test_compute_panoptic_quality.py
+│   │       │       test_compute_regression_metrics.py
+│   │       │       test_compute_roc_auc.py
+│   │       │       test_compute_variance.py
+│   │       │       test_cumulative.py
+│   │       │       test_cumulative_average.py
+│   │       │       test_cumulative_average_dist.py
+│   │       │       test_hausdorff_distance.py
+│   │       │       test_label_quality_score.py
+│   │       │       test_loss_metric.py
+│   │       │       test_metrics_reloaded.py
+│   │       │       test_ssim_metric.py
+│   │       │       test_surface_dice.py
+│   │       │       test_surface_distance.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───networks
+│   │       │   │   test_bundle_onnx_export.py
+│   │       │   │   test_convert_to_onnx.py
+│   │       │   │   test_convert_to_torchscript.py
+│   │       │   │   test_convert_to_trt.py
+│   │       │   │   test_save_state.py
+│   │       │   │   test_to_onehot.py
+│   │       │   │   test_varnet.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───blocks
+│   │       │   │   │   test_adn.py
+│   │       │   │   │   test_CABlock.py
+│   │       │   │   │   test_convolutions.py
+│   │       │   │   │   test_crf_cpu.py
+│   │       │   │   │   test_crf_cuda.py
+│   │       │   │   │   test_crossattention.py
+│   │       │   │   │   test_denseblock.py
+│   │       │   │   │   test_downsample_block.py
+│   │       │   │   │   test_dynunet_block.py
+│   │       │   │   │   test_fpn_block.py
+│   │       │   │   │   test_localnet_block.py
+│   │       │   │   │   test_mlp.py
+│   │       │   │   │   test_patchembedding.py
+│   │       │   │   │   test_regunet_block.py
+│   │       │   │   │   test_segresnet_block.py
+│   │       │   │   │   test_selfattention.py
+│   │       │   │   │   test_se_block.py
+│   │       │   │   │   test_se_blocks.py
+│   │       │   │   │   test_simple_aspp.py
+│   │       │   │   │   test_spatialattention.py
+│   │       │   │   │   test_subpixel_upsample.py
+│   │       │   │   │   test_text_encoding.py
+│   │       │   │   │   test_transformerblock.py
+│   │       │   │   │   test_unetr_block.py
+│   │       │   │   │   test_upsample_block.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   ├───dints_block
+│   │       │   │   │       test_acn_block.py
+│   │       │   │   │       test_factorized_increase.py
+│   │       │   │   │       test_factorized_reduce.py
+│   │       │   │   │       test_p3d_block.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   └───warp
+│   │       │   │           test_dvf2ddf.py
+│   │       │   │           test_warp.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───layers
+│   │       │   │   │   test_affine_transform.py
+│   │       │   │   │   test_apply_filter.py
+│   │       │   │   │   test_channel_pad.py
+│   │       │   │   │   test_conjugate_gradient.py
+│   │       │   │   │   test_drop_path.py
+│   │       │   │   │   test_gaussian.py
+│   │       │   │   │   test_gaussian_filter.py
+│   │       │   │   │   test_get_layers.py
+│   │       │   │   │   test_gmm.py
+│   │       │   │   │   test_grid_pull.py
+│   │       │   │   │   test_hilbert_transform.py
+│   │       │   │   │   test_lltm.py
+│   │       │   │   │   test_median_filter.py
+│   │       │   │   │   test_polyval.py
+│   │       │   │   │   test_preset_filters.py
+│   │       │   │   │   test_savitzky_golay_filter.py
+│   │       │   │   │   test_separable_filter.py
+│   │       │   │   │   test_skip_connection.py
+│   │       │   │   │   test_vector_quantizer.py
+│   │       │   │   │   test_weight_init.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   └───filtering
+│   │       │   │           test_bilateral_approx_cpu.py
+│   │       │   │           test_bilateral_approx_cuda.py
+│   │       │   │           test_bilateral_precise.py
+│   │       │   │           test_phl_cpu.py
+│   │       │   │           test_phl_cuda.py
+│   │       │   │           test_trainable_bilateral.py
+│   │       │   │           test_trainable_joint_bilateral.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───nets
+│   │       │   │   │   test_ahnet.py
+│   │       │   │   │   test_attentionunet.py
+│   │       │   │   │   test_autoencoder.py
+│   │       │   │   │   test_autoencoderkl.py
+│   │       │   │   │   test_basic_unet.py
+│   │       │   │   │   test_basic_unetplusplus.py
+│   │       │   │   │   test_bundle_init_bundle.py
+│   │       │   │   │   test_cell_sam_wrapper.py
+│   │       │   │   │   test_controlnet.py
+│   │       │   │   │   test_daf3d.py
+│   │       │   │   │   test_densenet.py
+│   │       │   │   │   test_diffusion_model_unet.py
+│   │       │   │   │   test_dints_network.py
+│   │       │   │   │   test_discriminator.py
+│   │       │   │   │   test_dynunet.py
+│   │       │   │   │   test_efficientnet.py
+│   │       │   │   │   test_flexible_unet.py
+│   │       │   │   │   test_fullyconnectednet.py
+│   │       │   │   │   test_generator.py
+│   │       │   │   │   test_globalnet.py
+│   │       │   │   │   test_highresnet.py
+│   │       │   │   │   test_hovernet.py
+│   │       │   │   │   test_masked_autoencoder_vit.py
+│   │       │   │   │   test_mednext.py
+│   │       │   │   │   test_milmodel.py
+│   │       │   │   │   test_network_consistency.py
+│   │       │   │   │   test_net_adapter.py
+│   │       │   │   │   test_patch_gan_dicriminator.py
+│   │       │   │   │   test_quicknat.py
+│   │       │   │   │   test_resnet.py
+│   │       │   │   │   test_restormer.py
+│   │       │   │   │   test_segresnet.py
+│   │       │   │   │   test_segresnet_ds.py
+│   │       │   │   │   test_senet.py
+│   │       │   │   │   test_spade_autoencoderkl.py
+│   │       │   │   │   test_spade_diffusion_model_unet.py
+│   │       │   │   │   test_spade_vaegan.py
+│   │       │   │   │   test_swin_unetr.py
+│   │       │   │   │   test_torchvision_fc_model.py
+│   │       │   │   │   test_transchex.py
+│   │       │   │   │   test_transformer.py
+│   │       │   │   │   test_unet.py
+│   │       │   │   │   test_unetr.py
+│   │       │   │   │   test_varautoencoder.py
+│   │       │   │   │   test_vista3d.py
+│   │       │   │   │   test_vit.py
+│   │       │   │   │   test_vitautoenc.py
+│   │       │   │   │   test_vnet.py
+│   │       │   │   │   test_voxelmorph.py
+│   │       │   │   │   test_vqvae.py
+│   │       │   │   │   test_vqvaetransformer_inferer.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   ├───dints
+│   │       │   │   │       test_dints_cell.py
+│   │       │   │   │       test_dints_mixop.py
+│   │       │   │   │       __init__.py
+│   │       │   │   │       
+│   │       │   │   └───regunet
+│   │       │   │           test_localnet.py
+│   │       │   │           test_regunet.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───schedulers
+│   │       │   │       test_scheduler_ddim.py
+│   │       │   │       test_scheduler_ddpm.py
+│   │       │   │       test_scheduler_pndm.py
+│   │       │   │       test_scheduler_rflow.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───utils
+│   │       │           test_copy_model_state.py
+│   │       │           test_eval_mode.py
+│   │       │           test_freeze_layers.py
+│   │       │           test_pixelunshuffle.py
+│   │       │           test_replace_module.py
+│   │       │           test_train_mode.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───optimizers
+│   │       │       test_generate_param_groups.py
+│   │       │       test_lr_finder.py
+│   │       │       test_lr_scheduler.py
+│   │       │       test_optim_novograd.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───profile_subclass
+│   │       │       cprofile_profiling.py
+│   │       │       min_classes.py
+│   │       │       profiling.py
+│   │       │       pyspy_profiling.py
+│   │       │       README.md
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───testing_data
+│   │       │   │   1D_BP_bwd.txt
+│   │       │   │   1D_BP_fwd.txt
+│   │       │   │   anatomical.nii
+│   │       │   │   anatomical_label.nii.gz
+│   │       │   │   bundle_test_network.py
+│   │       │   │   config_fl_evaluate.json
+│   │       │   │   config_fl_filters.json
+│   │       │   │   config_fl_stats_1.json
+│   │       │   │   config_fl_stats_2.json
+│   │       │   │   config_fl_train.json
+│   │       │   │   cpp_resample_answers.py
+│   │       │   │   data_config.json
+│   │       │   │   fl_infer_properties.json
+│   │       │   │   image0.jpeg
+│   │       │   │   image1.jpeg
+│   │       │   │   inference.json
+│   │       │   │   inference.yaml
+│   │       │   │   integration_answers.py
+│   │       │   │   kitty_test.jpg
+│   │       │   │   logging.conf
+│   │       │   │   matshow3d_patch_test.png
+│   │       │   │   matshow3d_rgb_test.png
+│   │       │   │   matshow3d_test.png
+│   │       │   │   metadata.json
+│   │       │   │   multi_gpu_evaluate.json
+│   │       │   │   multi_gpu_train.json
+│   │       │   │   python_workflow_properties.json
+│   │       │   │   reoriented_anat_moved.nii
+│   │       │   │   reoriented_anat_moved_label.nii.gz
+│   │       │   │   responsive_inference.json
+│   │       │   │   signal.npy
+│   │       │   │   threadcontainer_plot_test.png
+│   │       │   │   transform_metatensor_cases.yaml
+│   │       │   │   
+│   │       │   ├───CT_DICOM
+│   │       │   │       7106
+│   │       │   │       7136
+│   │       │   │       7166
+│   │       │   │       7196
+│   │       │   │       
+│   │       │   └───ultrasound_confidence_map
+│   │       │           femur_input.png
+│   │       │           femur_result.npy
+│   │       │           neck_input.png
+│   │       │           neck_result.npy
+│   │       │           
+│   │       ├───transforms
+│   │       │   │   test_activations.py
+│   │       │   │   test_activationsd.py
+│   │       │   │   test_adaptors.py
+│   │       │   │   test_add_coordinate_channels.py
+│   │       │   │   test_add_coordinate_channelsd.py
+│   │       │   │   test_add_extreme_points_channel.py
+│   │       │   │   test_add_extreme_points_channeld.py
+│   │       │   │   test_adjust_contrast.py
+│   │       │   │   test_adjust_contrastd.py
+│   │       │   │   test_affine.py
+│   │       │   │   test_affined.py
+│   │       │   │   test_affine_grid.py
+│   │       │   │   test_as_channel_last.py
+│   │       │   │   test_as_channel_lastd.py
+│   │       │   │   test_as_discrete.py
+│   │       │   │   test_as_discreted.py
+│   │       │   │   test_border_pad.py
+│   │       │   │   test_border_padd.py
+│   │       │   │   test_bounding_rect.py
+│   │       │   │   test_bounding_rectd.py
+│   │       │   │   test_cast_to_type.py
+│   │       │   │   test_cast_to_typed.py
+│   │       │   │   test_center_scale_crop.py
+│   │       │   │   test_center_scale_cropd.py
+│   │       │   │   test_center_spatial_crop.py
+│   │       │   │   test_center_spatial_cropd.py
+│   │       │   │   test_classes_to_indices.py
+│   │       │   │   test_classes_to_indicesd.py
+│   │       │   │   test_clip_intensity_percentiles.py
+│   │       │   │   test_clip_intensity_percentilesd.py
+│   │       │   │   test_compose_get_number_conversions.py
+│   │       │   │   test_concat_itemsd.py
+│   │       │   │   test_convert_to_multi_channel.py
+│   │       │   │   test_convert_to_multi_channeld.py
+│   │       │   │   test_copy_itemsd.py
+│   │       │   │   test_create_grid_and_affine.py
+│   │       │   │   test_crop_foreground.py
+│   │       │   │   test_crop_foregroundd.py
+│   │       │   │   test_cucim_dict_transform.py
+│   │       │   │   test_cucim_transform.py
+│   │       │   │   test_data_stats.py
+│   │       │   │   test_data_statsd.py
+│   │       │   │   test_delete_itemsd.py
+│   │       │   │   test_detect_envelope.py
+│   │       │   │   test_distance_transform_edt.py
+│   │       │   │   test_divisible_pad.py
+│   │       │   │   test_divisible_padd.py
+│   │       │   │   test_ensure_channel_first.py
+│   │       │   │   test_ensure_channel_firstd.py
+│   │       │   │   test_ensure_type.py
+│   │       │   │   test_ensure_typed.py
+│   │       │   │   test_fg_bg_to_indices.py
+│   │       │   │   test_fg_bg_to_indicesd.py
+│   │       │   │   test_fill_holes.py
+│   │       │   │   test_fill_holesd.py
+│   │       │   │   test_flatten_sub_keysd.py
+│   │       │   │   test_flip.py
+│   │       │   │   test_flipd.py
+│   │       │   │   test_fourier.py
+│   │       │   │   test_gaussian_sharpen.py
+│   │       │   │   test_gaussian_sharpend.py
+│   │       │   │   test_gaussian_smooth.py
+│   │       │   │   test_gaussian_smoothd.py
+│   │       │   │   test_generate_label_classes_crop_centers.py
+│   │       │   │   test_generate_pos_neg_label_crop_centers.py
+│   │       │   │   test_generate_spatial_bounding_box.py
+│   │       │   │   test_get_extreme_points.py
+│   │       │   │   test_gibbs_noise.py
+│   │       │   │   test_gibbs_noised.py
+│   │       │   │   test_grid_distortion.py
+│   │       │   │   test_grid_distortiond.py
+│   │       │   │   test_grid_split.py
+│   │       │   │   test_grid_splitd.py
+│   │       │   │   test_histogram_normalize.py
+│   │       │   │   test_histogram_normalized.py
+│   │       │   │   test_image_filter.py
+│   │       │   │   test_intensity_stats.py
+│   │       │   │   test_intensity_statsd.py
+│   │       │   │   test_inverse_collation.py
+│   │       │   │   test_keep_largest_connected_component.py
+│   │       │   │   test_keep_largest_connected_componentd.py
+│   │       │   │   test_k_space_spike_noise.py
+│   │       │   │   test_k_space_spike_noised.py
+│   │       │   │   test_label_filter.py
+│   │       │   │   test_label_to_contour.py
+│   │       │   │   test_label_to_contourd.py
+│   │       │   │   test_label_to_mask.py
+│   │       │   │   test_label_to_maskd.py
+│   │       │   │   test_load_image.py
+│   │       │   │   test_load_imaged.py
+│   │       │   │   test_load_spacing_orientation.py
+│   │       │   │   test_map_and_generate_sampling_centers.py
+│   │       │   │   test_map_binary_to_indices.py
+│   │       │   │   test_map_classes_to_indices.py
+│   │       │   │   test_map_label_value.py
+│   │       │   │   test_map_label_valued.py
+│   │       │   │   test_map_transform.py
+│   │       │   │   test_mask_intensity.py
+│   │       │   │   test_mask_intensityd.py
+│   │       │   │   test_mean_ensemble.py
+│   │       │   │   test_mean_ensembled.py
+│   │       │   │   test_median_smooth.py
+│   │       │   │   test_median_smoothd.py
+│   │       │   │   test_morphological_ops.py
+│   │       │   │   test_nifti_endianness.py
+│   │       │   │   test_normalize_intensity.py
+│   │       │   │   test_normalize_intensityd.py
+│   │       │   │   test_nvtx_decorator.py
+│   │       │   │   test_nvtx_transform.py
+│   │       │   │   test_orientation.py
+│   │       │   │   test_orientationd.py
+│   │       │   │   test_randidentity.py
+│   │       │   │   test_random_order.py
+│   │       │   │   test_randtorchvisiond.py
+│   │       │   │   test_rand_adjust_contrast.py
+│   │       │   │   test_rand_adjust_contrastd.py
+│   │       │   │   test_rand_affine.py
+│   │       │   │   test_rand_affined.py
+│   │       │   │   test_rand_affine_grid.py
+│   │       │   │   test_rand_axis_flip.py
+│   │       │   │   test_rand_axis_flipd.py
+│   │       │   │   test_rand_bias_field.py
+│   │       │   │   test_rand_bias_fieldd.py
+│   │       │   │   test_rand_coarse_dropout.py
+│   │       │   │   test_rand_coarse_dropoutd.py
+│   │       │   │   test_rand_coarse_shuffle.py
+│   │       │   │   test_rand_coarse_shuffled.py
+│   │       │   │   test_rand_crop_by_label_classes.py
+│   │       │   │   test_rand_crop_by_label_classesd.py
+│   │       │   │   test_rand_crop_by_pos_neg_label.py
+│   │       │   │   test_rand_crop_by_pos_neg_labeld.py
+│   │       │   │   test_rand_cucim_dict_transform.py
+│   │       │   │   test_rand_cucim_transform.py
+│   │       │   │   test_rand_deform_grid.py
+│   │       │   │   test_rand_elasticd_2d.py
+│   │       │   │   test_rand_elasticd_3d.py
+│   │       │   │   test_rand_elastic_2d.py
+│   │       │   │   test_rand_elastic_3d.py
+│   │       │   │   test_rand_flip.py
+│   │       │   │   test_rand_flipd.py
+│   │       │   │   test_rand_gaussian_noise.py
+│   │       │   │   test_rand_gaussian_noised.py
+│   │       │   │   test_rand_gaussian_sharpen.py
+│   │       │   │   test_rand_gaussian_sharpend.py
+│   │       │   │   test_rand_gaussian_smooth.py
+│   │       │   │   test_rand_gaussian_smoothd.py
+│   │       │   │   test_rand_gibbs_noise.py
+│   │       │   │   test_rand_gibbs_noised.py
+│   │       │   │   test_rand_grid_distortion.py
+│   │       │   │   test_rand_grid_distortiond.py
+│   │       │   │   test_rand_histogram_shift.py
+│   │       │   │   test_rand_k_space_spike_noise.py
+│   │       │   │   test_rand_k_space_spike_noised.py
+│   │       │   │   test_rand_rician_noise.py
+│   │       │   │   test_rand_rician_noised.py
+│   │       │   │   test_rand_rotate.py
+│   │       │   │   test_rand_rotate90.py
+│   │       │   │   test_rand_rotate90d.py
+│   │       │   │   test_rand_rotated.py
+│   │       │   │   test_rand_scale_crop.py
+│   │       │   │   test_rand_scale_cropd.py
+│   │       │   │   test_rand_scale_intensity.py
+│   │       │   │   test_rand_scale_intensityd.py
+│   │       │   │   test_rand_scale_intensity_fixed_mean.py
+│   │       │   │   test_rand_scale_intensity_fixed_meand.py
+│   │       │   │   test_rand_shift_intensity.py
+│   │       │   │   test_rand_shift_intensityd.py
+│   │       │   │   test_rand_simulate_low_resolution.py
+│   │       │   │   test_rand_simulate_low_resolutiond.py
+│   │       │   │   test_rand_spatial_crop.py
+│   │       │   │   test_rand_spatial_cropd.py
+│   │       │   │   test_rand_spatial_crop_samples.py
+│   │       │   │   test_rand_spatial_crop_samplesd.py
+│   │       │   │   test_rand_std_shift_intensity.py
+│   │       │   │   test_rand_std_shift_intensityd.py
+│   │       │   │   test_rand_torchio.py
+│   │       │   │   test_rand_torchiod.py
+│   │       │   │   test_rand_zoom.py
+│   │       │   │   test_rand_zoomd.py
+│   │       │   │   test_regularization.py
+│   │       │   │   test_remove_repeated_channel.py
+│   │       │   │   test_remove_repeated_channeld.py
+│   │       │   │   test_repeat_channel.py
+│   │       │   │   test_repeat_channeld.py
+│   │       │   │   test_resampler.py
+│   │       │   │   test_resample_backends.py
+│   │       │   │   test_resample_to_match.py
+│   │       │   │   test_resample_to_matchd.py
+│   │       │   │   test_resize.py
+│   │       │   │   test_resized.py
+│   │       │   │   test_resize_with_pad_or_crop.py
+│   │       │   │   test_resize_with_pad_or_cropd.py
+│   │       │   │   test_rotate.py
+│   │       │   │   test_rotate90.py
+│   │       │   │   test_rotate90d.py
+│   │       │   │   test_rotated.py
+│   │       │   │   test_save_classificationd.py
+│   │       │   │   test_save_image.py
+│   │       │   │   test_save_imaged.py
+│   │       │   │   test_savitzky_golay_smooth.py
+│   │       │   │   test_savitzky_golay_smoothd.py
+│   │       │   │   test_scale_intensity.py
+│   │       │   │   test_scale_intensityd.py
+│   │       │   │   test_scale_intensity_fixed_mean.py
+│   │       │   │   test_scale_intensity_range.py
+│   │       │   │   test_scale_intensity_ranged.py
+│   │       │   │   test_select_itemsd.py
+│   │       │   │   test_shift_intensity.py
+│   │       │   │   test_shift_intensityd.py
+│   │       │   │   test_signal_continuouswavelet.py
+│   │       │   │   test_signal_fillempty.py
+│   │       │   │   test_signal_fillemptyd.py
+│   │       │   │   test_signal_rand_add_gaussiannoise.py
+│   │       │   │   test_signal_rand_add_sine.py
+│   │       │   │   test_signal_rand_add_sine_partial.py
+│   │       │   │   test_signal_rand_add_squarepulse.py
+│   │       │   │   test_signal_rand_add_squarepulse_partial.py
+│   │       │   │   test_signal_rand_drop.py
+│   │       │   │   test_signal_rand_scale.py
+│   │       │   │   test_signal_rand_shift.py
+│   │       │   │   test_signal_remove_frequency.py
+│   │       │   │   test_smooth_field.py
+│   │       │   │   test_sobel_gradient.py
+│   │       │   │   test_sobel_gradientd.py
+│   │       │   │   test_spacing.py
+│   │       │   │   test_spacingd.py
+│   │       │   │   test_spatial_crop.py
+│   │       │   │   test_spatial_cropd.py
+│   │       │   │   test_spatial_pad.py
+│   │       │   │   test_spatial_padd.py
+│   │       │   │   test_spatial_resample.py
+│   │       │   │   test_squeezedim.py
+│   │       │   │   test_squeezedimd.py
+│   │       │   │   test_std_shift_intensity.py
+│   │       │   │   test_std_shift_intensityd.py
+│   │       │   │   test_threshold_intensity.py
+│   │       │   │   test_threshold_intensityd.py
+│   │       │   │   test_torchio.py
+│   │       │   │   test_torchiod.py
+│   │       │   │   test_torchvision.py
+│   │       │   │   test_torchvisiond.py
+│   │       │   │   test_to_contiguous.py
+│   │       │   │   test_to_cupy.py
+│   │       │   │   test_to_cupyd.py
+│   │       │   │   test_to_device.py
+│   │       │   │   test_to_deviced.py
+│   │       │   │   test_to_numpy.py
+│   │       │   │   test_to_numpyd.py
+│   │       │   │   test_to_pil.py
+│   │       │   │   test_to_pild.py
+│   │       │   │   test_to_tensor.py
+│   │       │   │   test_to_tensord.py
+│   │       │   │   test_transform.py
+│   │       │   │   test_transpose.py
+│   │       │   │   test_transposed.py
+│   │       │   │   test_ultrasound_confidence_map_transform.py
+│   │       │   │   test_utils_pytorch_numpy_unification.py
+│   │       │   │   test_vote_ensemble.py
+│   │       │   │   test_vote_ensembled.py
+│   │       │   │   test_with_allow_missing_keys.py
+│   │       │   │   test_zoom.py
+│   │       │   │   test_zoomd.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───compose
+│   │       │   │       test_compose.py
+│   │       │   │       test_some_of.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───croppad
+│   │       │   │       test_rand_weighted_crop.py
+│   │       │   │       test_rand_weighted_cropd.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───functional
+│   │       │   │       test_apply.py
+│   │       │   │       test_resample.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───intensity
+│   │       │   │       test_compute_ho_ver_maps.py
+│   │       │   │       test_compute_ho_ver_maps_d.py
+│   │       │   │       test_foreground_mask.py
+│   │       │   │       test_foreground_maskd.py
+│   │       │   │       test_rand_histogram_shiftd.py
+│   │       │   │       test_scale_intensity_range_percentiles.py
+│   │       │   │       test_scale_intensity_range_percentilesd.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───inverse
+│   │       │   │       test_inverse.py
+│   │       │   │       test_inverse_array.py
+│   │       │   │       test_inverse_dict.py
+│   │       │   │       test_invert.py
+│   │       │   │       test_invertd.py
+│   │       │   │       test_traceable_transform.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───post
+│   │       │   │       test_label_filterd.py
+│   │       │   │       test_probnms.py
+│   │       │   │       test_probnmsd.py
+│   │       │   │       test_remove_small_objects.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───spatial
+│   │       │   │       test_convert_box_points.py
+│   │       │   │       test_grid_patch.py
+│   │       │   │       test_grid_patchd.py
+│   │       │   │       test_rand_grid_patch.py
+│   │       │   │       test_rand_grid_patchd.py
+│   │       │   │       test_spatial_resampled.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───transform
+│   │       │   │       test_randomizable.py
+│   │       │   │       test_randomizable_transform_type.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───utility
+│   │       │   │       test_apply_transform_to_points.py
+│   │       │   │       test_apply_transform_to_pointsd.py
+│   │       │   │       test_identity.py
+│   │       │   │       test_identityd.py
+│   │       │   │       test_lambda.py
+│   │       │   │       test_lambdad.py
+│   │       │   │       test_rand_lambda.py
+│   │       │   │       test_rand_lambdad.py
+│   │       │   │       test_simulatedelay.py
+│   │       │   │       test_simulatedelayd.py
+│   │       │   │       test_splitdim.py
+│   │       │   │       test_splitdimd.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───utils
+│   │       │           test_correct_crop_centers.py
+│   │       │           test_get_unique_labels.py
+│   │       │           test_print_transform_backends.py
+│   │       │           test_soft_clip.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───utils
+│   │       │   │   test_alias.py
+│   │       │   │   test_component_store.py
+│   │       │   │   test_deprecated.py
+│   │       │   │   test_enum_bound_interp.py
+│   │       │   │   test_evenly_divisible_all_gather_dist.py
+│   │       │   │   test_get_package_version.py
+│   │       │   │   test_handler_logfile.py
+│   │       │   │   test_handler_metric_logger.py
+│   │       │   │   test_list_to_dict.py
+│   │       │   │   test_look_up_option.py
+│   │       │   │   test_optional_import.py
+│   │       │   │   test_pad_mode.py
+│   │       │   │   test_profiling.py
+│   │       │   │   test_rankfilter_dist.py
+│   │       │   │   test_require_pkg.py
+│   │       │   │   test_sample_slices.py
+│   │       │   │   test_set_determinism.py
+│   │       │   │   test_squeeze_unsqueeze.py
+│   │       │   │   test_state_cacher.py
+│   │       │   │   test_torchscript_utils.py
+│   │       │   │   test_version.py
+│   │       │   │   test_version_after.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───enums
+│   │       │   │       test_hovernet_loss.py
+│   │       │   │       test_ordering.py
+│   │       │   │       test_wsireader.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───misc
+│   │       │   │       test_ensure_tuple.py
+│   │       │   │       test_monai_env_vars.py
+│   │       │   │       test_monai_utils_misc.py
+│   │       │   │       test_str2bool.py
+│   │       │   │       test_str2list.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───type_conversion
+│   │       │           test_convert_data_type.py
+│   │       │           test_get_equivalent_dtype.py
+│   │       │           test_safe_dtype_range.py
+│   │       │           __init__.py
+│   │       │           
+│   │       └───visualize
+│   │           │   test_img2tensorboard.py
+│   │           │   test_occlusion_sensitivity.py
+│   │           │   test_plot_2d_or_3d_image.py
+│   │           │   test_vis_cam.py
+│   │           │   test_vis_gradcam.py
+│   │           │   __init__.py
+│   │           │   
+│   │           └───utils
+│   │                   test_blend_images.py
+│   │                   test_matshow3d.py
+│   │                   __init__.py
+│   │                   
+│   └───nnUNet
+│       │   .gitignore
+│       │   LICENSE
+│       │   pyproject.toml
+│       │   readme.md
+│       │   setup.py
+│       │   
+│       ├───.github
+│       │   └───workflows
+│       │           codespell.yml
+│       │           run_tests_nnunet.yml
+│       │           
+│       ├───documentation
+│       │   │   benchmarking.md
+│       │   │   changelog.md
+│       │   │   convert_msd_dataset.md
+│       │   │   dataset_format.md
+│       │   │   dataset_format_inference.md
+│       │   │   explanation_normalization.md
+│       │   │   explanation_plans_files.md
+│       │   │   extending_nnunet.md
+│       │   │   how_to_use_nnunet.md
+│       │   │   ignore_label.md
+│       │   │   installation_instructions.md
+│       │   │   manual_data_splits.md
+│       │   │   pretraining_and_finetuning.md
+│       │   │   region_based_training.md
+│       │   │   resenc_presets.md
+│       │   │   run_inference_with_pretrained_models.md
+│       │   │   setting_up_paths.md
+│       │   │   set_environment_variables.md
+│       │   │   tldr_migration_guide_from_v1.md
+│       │   │   __init__.py
+│       │   │   
+│       │   ├───assets
+│       │   │       amos2022_sparseseg10.png
+│       │   │       amos2022_sparseseg10_2d.png
+│       │   │       dkfz_logo.png
+│       │   │       HI_Logo.png
+│       │   │       nnU-Net_overview.png
+│       │   │       nnUNetMagician.png
+│       │   │       regions_vs_labels.png
+│       │   │       scribble_example.png
+│       │   │       sparse_annotation_amos.png
+│       │   │       
+│       │   └───competitions
+│       │       │   AortaSeg24.md
+│       │       │   AutoPETII.md
+│       │       │   __init__.py
+│       │       │   
+│       │       ├───FLARE24
+│       │       │   │   __init__.py
+│       │       │   │   
+│       │       │   ├───Task_1
+│       │       │   │       inference_flare_task1.py
+│       │       │   │       readme.md
+│       │       │   │       __init__.py
+│       │       │   │       
+│       │       │   └───Task_2
+│       │       │           inference_flare_task2.py
+│       │       │           readme.md
+│       │       │           __init__.py
+│       │       │           
+│       │       └───Toothfairy2
+│       │               inference_script_semseg_only_customInf2.py
+│       │               readme.md
+│       │               __init__.py
+│       │               
+│       └───nnunetv2
+│           │   configuration.py
+│           │   paths.py
+│           │   __init__.py
+│           │   
+│           ├───batch_running
+│           │   │   collect_results_custom_Decathlon.py
+│           │   │   collect_results_custom_Decathlon_2d.py
+│           │   │   generate_lsf_runs_customDecathlon.py
+│           │   │   jobs.sh
+│           │   │   __init__.py
+│           │   │   
+│           │   ├───benchmarking
+│           │   │       generate_benchmarking_commands.py
+│           │   │       summarize_benchmark_results.py
+│           │   │       __init__.py
+│           │   │       
+│           │   └───release_trainings
+│           │       │   __init__.py
+│           │       │   
+│           │       └───nnunetv2_v1
+│           │               collect_results.py
+│           │               generate_lsf_commands.py
+│           │               __init__.py
+│           │               
+│           ├───dataset_conversion
+│           │   │   convert_MSD_dataset.py
+│           │   │   convert_raw_dataset_from_old_nnunet_format.py
+│           │   │   Dataset015_018_RibFrac_RibSeg.py
+│           │   │   Dataset021_CTAAorta.py
+│           │   │   Dataset023_AbdomenAtlas1_1Mini.py
+│           │   │   Dataset027_ACDC.py
+│           │   │   Dataset042_BraTS18.py
+│           │   │   Dataset043_BraTS19.py
+│           │   │   Dataset073_Fluo_C3DH_A549_SIM.py
+│           │   │   Dataset114_MNMs.py
+│           │   │   Dataset115_EMIDEC.py
+│           │   │   Dataset119_ToothFairy2_All.py
+│           │   │   Dataset120_RoadSegmentation.py
+│           │   │   Dataset137_BraTS21.py
+│           │   │   Dataset218_Amos2022_task1.py
+│           │   │   Dataset219_Amos2022_task2.py
+│           │   │   Dataset220_KiTS2023.py
+│           │   │   Dataset221_AutoPETII_2023.py
+│           │   │   Dataset223_AMOS2022postChallenge.py
+│           │   │   Dataset224_AbdomenAtlas1.0.py
+│           │   │   Dataset226_BraTS2024-BraTS-GLI.py
+│           │   │   Dataset227_TotalSegmentatorMRI.py
+│           │   │   Dataset987_dummyDataset4.py
+│           │   │   Dataset989_dummyDataset4_2.py
+│           │   │   generate_dataset_json.py
+│           │   │   __init__.py
+│           │   │   
+│           │   └───datasets_for_integration_tests
+│           │           Dataset996_IntegrationTest_Hippocampus_regions_ignore.py
+│           │           Dataset997_IntegrationTest_Hippocampus_regions.py
+│           │           Dataset998_IntegrationTest_Hippocampus_ignore.py
+│           │           Dataset999_IntegrationTest_Hippocampus.py
+│           │           __init__.py
+│           │           
+│           ├───ensembling
+│           │       ensemble.py
+│           │       __init__.py
+│           │       
+│           ├───evaluation
+│           │       accumulate_cv_results.py
+│           │       evaluate_predictions.py
+│           │       find_best_configuration.py
+│           │       __init__.py
+│           │       
+│           ├───experiment_planning
+│           │   │   plan_and_preprocess_api.py
+│           │   │   plan_and_preprocess_entrypoints.py
+│           │   │   verify_dataset_integrity.py
+│           │   │   __init__.py
+│           │   │   
+│           │   ├───dataset_fingerprint
+│           │   │       fingerprint_extractor.py
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───experiment_planners
+│           │   │   │   default_experiment_planner.py
+│           │   │   │   network_topology.py
+│           │   │   │   resencUNet_planner.py
+│           │   │   │   __init__.py
+│           │   │   │   
+│           │   │   ├───resampling
+│           │   │   │       planners_no_resampling.py
+│           │   │   │       resample_with_torch.py
+│           │   │   │       __init__.py
+│           │   │   │       
+│           │   │   └───residual_unets
+│           │   │           residual_encoder_unet_planners.py
+│           │   │           __init__.py
+│           │   │           
+│           │   └───plans_for_pretraining
+│           │           move_plans_between_datasets.py
+│           │           __init__.py
+│           │           
+│           ├───imageio
+│           │       base_reader_writer.py
+│           │       natural_image_reader_writer.py
+│           │       nibabel_reader_writer.py
+│           │       reader_writer_registry.py
+│           │       readme.md
+│           │       simpleitk_reader_writer.py
+│           │       tif_reader_writer.py
+│           │       __init__.py
+│           │       
+│           ├───inference
+│           │       data_iterators.py
+│           │       examples.py
+│           │       export_prediction.py
+│           │       JHU_inference.py
+│           │       predict_from_raw_data.py
+│           │       readme.md
+│           │       sliding_window_prediction.py
+│           │       __init__.py
+│           │       
+│           ├───model_sharing
+│           │       entry_points.py
+│           │       model_download.py
+│           │       model_export.py
+│           │       model_import.py
+│           │       __init__.py
+│           │       
+│           ├───postprocessing
+│           │       remove_connected_components.py
+│           │       __init__.py
+│           │       
+│           ├───preprocessing
+│           │   │   __init__.py
+│           │   │   
+│           │   ├───cropping
+│           │   │       cropping.py
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───normalization
+│           │   │       default_normalization_schemes.py
+│           │   │       map_channel_name_to_normalization.py
+│           │   │       readme.md
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───preprocessors
+│           │   │       default_preprocessor.py
+│           │   │       __init__.py
+│           │   │       
+│           │   └───resampling
+│           │           default_resampling.py
+│           │           no_resampling.py
+│           │           resample_torch.py
+│           │           utils.py
+│           │           __init__.py
+│           │           
+│           ├───run
+│           │       load_pretrained_weights.py
+│           │       run_training.py
+│           │       __init__.py
+│           │       
+│           ├───tests
+│           │   │   __init__.py
+│           │   │   
+│           │   ├───example_data
+│           │   │       example_ct_sm.nii.gz
+│           │   │       example_ct_sm_T300_output.nii.gz
+│           │   │       
+│           │   └───integration_tests
+│           │           add_lowres_and_cascade.py
+│           │           cleanup_integration_test.py
+│           │           lsf_commands.sh
+│           │           prepare_integration_tests.sh
+│           │           readme.md
+│           │           run_integration_test.sh
+│           │           run_integration_test_bestconfig_inference.py
+│           │           run_integration_test_trainingOnly_DDP.sh
+│           │           run_nnunet_inference.py
+│           │           __init__.py
+│           │           
+│           ├───training
+│           │   │   __init__.py
+│           │   │   
+│           │   ├───dataloading
+│           │   │       data_loader.py
+│           │   │       nnunet_dataset.py
+│           │   │       utils.py
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───data_augmentation
+│           │   │   │   compute_initial_patch_size.py
+│           │   │   │   __init__.py
+│           │   │   │   
+│           │   │   └───custom_transforms
+│           │   │           cascade_transforms.py
+│           │   │           deep_supervision_donwsampling.py
+│           │   │           masking.py
+│           │   │           region_based_training.py
+│           │   │           transforms_for_dummy_2d.py
+│           │   │           __init__.py
+│           │   │           
+│           │   ├───logging
+│           │   │       nnunet_logger.py
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───loss
+│           │   │       compound_losses.py
+│           │   │       deep_supervision.py
+│           │   │       dice.py
+│           │   │       robust_ce_loss.py
+│           │   │       __init__.py
+│           │   │       
+│           │   ├───lr_scheduler
+│           │   │       polylr.py
+│           │   │       warmup.py
+│           │   │       __init__.py
+│           │   │       
+│           │   └───nnUNetTrainer
+│           │       │   nnUNetTrainer.py
+│           │       │   __init__.py
+│           │       │   
+│           │       ├───primus
+│           │       │       primus_trainers.py
+│           │       │       __init__.py
+│           │       │       
+│           │       └───variants
+│           │           │   __init__.py
+│           │           │   
+│           │           ├───benchmarking
+│           │           │       nnUNetTrainerBenchmark_5epochs.py
+│           │           │       nnUNetTrainerBenchmark_5epochs_noDataLoading.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───competitions
+│           │           │       aortaseg24.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───data_augmentation
+│           │           │       nnUNetTrainerDA5.py
+│           │           │       nnUNetTrainerDAOrd0.py
+│           │           │       nnUNetTrainerNoDA.py
+│           │           │       nnUNetTrainerNoMirroring.py
+│           │           │       nnUNetTrainer_noDummy2DDA.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───loss
+│           │           │       nnUNetTrainerCELoss.py
+│           │           │       nnUNetTrainerDiceLoss.py
+│           │           │       nnUNetTrainerTopkLoss.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───lr_schedule
+│           │           │       nnUNetTrainerCosAnneal.py
+│           │           │       nnUNetTrainer_warmup.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───network_architecture
+│           │           │       nnUNetTrainerBN.py
+│           │           │       nnUNetTrainerNoDeepSupervision.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───optimizer
+│           │           │       nnUNetTrainerAdam.py
+│           │           │       nnUNetTrainerAdan.py
+│           │           │       __init__.py
+│           │           │       
+│           │           ├───sampling
+│           │           │       nnUNetTrainer_probabilisticOversampling.py
+│           │           │       __init__.py
+│           │           │       
+│           │           └───training_length
+│           │                   nnUNetTrainer_Xepochs.py
+│           │                   nnUNetTrainer_Xepochs_NoMirroring.py
+│           │                   __init__.py
+│           │                   
+│           └───utilities
+│               │   collate_outputs.py
+│               │   crossval_split.py
+│               │   dataset_name_id_conversion.py
+│               │   ddp_allgather.py
+│               │   default_n_proc_DA.py
+│               │   file_path_utilities.py
+│               │   find_class_by_name.py
+│               │   get_network_from_plans.py
+│               │   helpers.py
+│               │   json_export.py
+│               │   network_initialization.py
+│               │   overlay_plots.py
+│               │   utils.py
+│               │   __init__.py
+│               │   
+│               ├───label_handling
+│               │       label_handling.py
+│               │       __init__.py
+│               │       
+│               └───plans_handling
+│                       plans_handler.py
+│                       __init__.py
+│                       
+├───nature
+│   ├───cub-200-2011
+│   │       cub2011.py
+│   │       README.md
+│   │       
+│   ├───inaturalist
+│   │   │   .gitignore
+│   │   │   LICENSE
+│   │   │   README.md
+│   │   │   
+│   │   ├───2017
+│   │   │   │   README.md
+│   │   │   │   README_raw.md
+│   │   │   │   
+│   │   │   ├───assets
+│   │   │   │       banner.jpg
+│   │   │   │       inat_2017_banner.jpg
+│   │   │   │       
+│   │   │   └───svgs
+│   │   │           444adcac0c7cbb4a8419ee1484625349.svg
+│   │   │           655bedbaf4a65f397b5041d0fdecde4c.svg
+│   │   │           681a37b53b66acbc455e39ca3e6f1c41.svg
+│   │   │           6d0aa77223bd2246e5cdd2a422d9e584.svg
+│   │   │           77a3b857d53fb44e33b53e4c8b68351a.svg
+│   │   │           7a42826f81c53c77e0fef3c827238d25.svg
+│   │   │           7a45c501d5042bd031a267f008fa2ae6.svg
+│   │   │           f9c4988898e7f532b9f826a75014ed3c.svg
+│   │   │           
+│   │   ├───2018
+│   │   │   │   README.md
+│   │   │   │   README_raw.md
+│   │   │   │   
+│   │   │   ├───assets
+│   │   │   │       banner2018.jpg
+│   │   │   │       inat2018_video.png
+│   │   │   │       inat_2018_banner.jpg
+│   │   │   │       train_val_distribution.png
+│   │   │   │       
+│   │   │   └───svgs
+│   │   │           444adcac0c7cbb4a8419ee1484625349.svg
+│   │   │           655bedbaf4a65f397b5041d0fdecde4c.svg
+│   │   │           681a37b53b66acbc455e39ca3e6f1c41.svg
+│   │   │           77a3b857d53fb44e33b53e4c8b68351a.svg
+│   │   │           7a42826f81c53c77e0fef3c827238d25.svg
+│   │   │           7a45c501d5042bd031a267f008fa2ae6.svg
+│   │   │           946e592e2b2753a9272767ae3dd5b9a9.svg
+│   │   │           f9c4988898e7f532b9f826a75014ed3c.svg
+│   │   │           
+│   │   ├───2019
+│   │   │   │   README.md
+│   │   │   │   README_raw.md
+│   │   │   │   
+│   │   │   ├───assets
+│   │   │   │       banner2019.gif
+│   │   │   │       banner2019.jpg
+│   │   │   │       inat_2019_banner.jpg
+│   │   │   │       train_val_distribution2019.png
+│   │   │   │       
+│   │   │   └───svgs
+│   │   │           444adcac0c7cbb4a8419ee1484625349.svg
+│   │   │           681a37b53b66acbc455e39ca3e6f1c41.svg
+│   │   │           77a3b857d53fb44e33b53e4c8b68351a.svg
+│   │   │           7a45c501d5042bd031a267f008fa2ae6.svg
+│   │   │           bb29cf3d0decad4c2df62b08fbcb2d23.svg
+│   │   │           d04cfdb4d46bd80e8835a37572804c82.svg
+│   │   │           f9c4988898e7f532b9f826a75014ed3c.svg
+│   │   │           
+│   │   ├───2021
+│   │   │   │   README.md
+│   │   │   │   README_raw.md
+│   │   │   │   
+│   │   │   ├───assets
+│   │   │   │       inat_2021_banner.jpg
+│   │   │   │       location_distribution.png
+│   │   │   │       train_val_distribution.png
+│   │   │   │       
+│   │   │   └───svgs
+│   │   │           444adcac0c7cbb4a8419ee1484625349.svg
+│   │   │           562405af4c097c78c789a51adce04711.svg
+│   │   │           681a37b53b66acbc455e39ca3e6f1c41.svg
+│   │   │           77a3b857d53fb44e33b53e4c8b68351a.svg
+│   │   │           bb29cf3d0decad4c2df62b08fbcb2d23.svg
+│   │   │           f9c4988898e7f532b9f826a75014ed3c.svg
+│   │   │           
+│   │   └───eval
+│   │           test_top_k_accuracy.py
+│   │           top_k_accuracy.py
+│   │           
+│   ├───insectnet
+│   │   │   hubconf.py
+│   │   │   imagenet.py
+│   │   │   LICENSE
+│   │   │   README.md
+│   │   │   test.sh
+│   │   │   train.sh
+│   │   │   
+│   │   ├───ibnnet
+│   │   │       densenet_ibn.py
+│   │   │       modules.py
+│   │   │       resnet_ibn.py
+│   │   │       resnext_ibn.py
+│   │   │       se_resnet_ibn.py
+│   │   │       __init__.py
+│   │   │       
+│   │   └───utils
+│   │       │   eval.py
+│   │       │   IBNNet.png
+│   │       │   logger.py
+│   │       │   misc.py
+│   │       │   visualize.py
+│   │       │   __init__.py
+│   │       │   
+│   │       ├───images
+│   │       │       cifar.png
+│   │       │       imagenet.png
+│   │       │       
+│   │       └───progress
+│   │           │   demo.gif
+│   │           │   LICENSE
+│   │           │   MANIFEST.in
+│   │           │   README.rst
+│   │           │   setup.py
+│   │           │   test_progress.py
+│   │           │   
+│   │           └───progress
+│   │                   bar.py
+│   │                   counter.py
+│   │                   helpers.py
+│   │                   spinner.py
+│   │                   __init__.py
+│   │                   
+│   └───plantvillage
+│       │   .gitignore
+│       │   create_data_distribution.py
+│       │   create_db.py
+│       │   generate_data_color-20-80.sh
+│       │   generate_data_color-40-60.sh
+│       │   generate_data_color-50-50.sh
+│       │   generate_data_color-60-40.sh
+│       │   generate_data_color-80-20.sh
+│       │   generate_data_for_SVM.py
+│       │   generate_data_grayscale-20-80.sh
+│       │   generate_data_grayscale-40-60.sh
+│       │   generate_data_grayscale-50-50.sh
+│       │   generate_data_grayscale-60-40.sh
+│       │   generate_data_grayscale-80-20.sh
+│       │   generate_data_segmented-20-80.sh
+│       │   generate_data_segmented-40-60.sh
+│       │   generate_data_segmented-50-50.sh
+│       │   generate_data_segmented-60-40.sh
+│       │   generate_data_segmented-80-20.sh
+│       │   generate_lmdb.sh
+│       │   generate_mapstring.py
+│       │   leaf-map.json
+│       │   README.md
+│       │   run_all.sh
+│       │   slurm-476480.out
+│       │   slurm-476481.out
+│       │   slurm-476482.out
+│       │   slurm-476483.out
+│       │   slurm-476484.out
+│       │   slurm-476485.out
+│       │   slurm-476486.out
+│       │   slurm-476487.out
+│       │   slurm-476488.out
+│       │   slurm-476489.out
+│       │   slurm-476490.out
+│       │   slurm-476491.out
+│       │   slurm-476492.out
+│       │   slurm-476493.out
+│       │   slurm-476494.out
+│       │   _generate_data.sh
+│       │   
+│       ├───data_distribution_for_SVM
+│       │   │   test_mapping.txt
+│       │   │   train_mapping.txt
+│       │   │   
+│       │   ├───test
+│       │   │   ├───0
+│       │   │   │       013100cc-af7f-47eb-aaef-d46215549bc6.JPG
+│       │   │   │       025bed10-5058-4355-a2a7-b7951b9e3430.JPG
+│       │   │   │       03ff6f74-0fb6-41f2-8fb9-dedd2612eb92.JPG
+│       │   │   │       05bf461d-b333-4a47-a57f-10e7f1e5cee2.JPG
+.
+.
+.
+.
+.
+│       │   │   │       fb8e919c-72a2-4f74-adc8-c74055822aba.JPG
+│       │   │   │       fc0c3158-a2fe-4205-880d-ccf5b6c5610d.JPG
+│       │   │   │       
+│       │   │   ├───1
+│       │   │   │       012cada4-043a-42ce-843b-c1e3f54de654.JPG
+│       │   │   │       038dec47-6ec1-43e8-91d1-8b3d47c6f1e4.JPG
+│       │   │   │       0a609142-8278-484f-b67c-92a768945bd1.JPG
+│       │   │   │       f59fd565-22ec-43d7-a2b7-55fd6e5c81c5.JPG
+│       │   │   │       f609b8de-75fd-420f-af75-3ad6d74f1f6f.JPG
+│       │   │   │       
+│       │   │   ├───10
+│       │   │   │       013910ab-79f7-4c67-b46b-c7055dbd832d.JPG
+│       │   │   │       026abdec-fc1f-49bd-a4a8-f2f8cbaa10b6.JPG
+│       │   │   │       fd25d3c3-a541-4414-b436-8e39257b467a.JPG
+│       │   │   │       ffc9cd7a-0e70-4bf5-89d2-7fb5de3321ab.JPG
+│       │   │   │       
+│       │   │   ├───11
+│       │   │   │       00f01da5-d7dc-443a-8878-5606c77c9d76.JPG
+│       │   │   │       0310d052-9328-4e6a-8a70-243c818bbc08.JPG
+│       │   │   │       053fafcd-fbb1-4f89-8f68-22fc50db8860.JPG
+│       │   │   │       ff555ae5-3afc-4d18-9306-6060006d3ae4.JPG
+│       │   │   │       ff6ad42b-df54-4031-ba95-71bd9ca88bea.JPG
+│       │   │   │       
+│       │   │   ├───12
+│       │   │   │       020e3628-8965-4dc6-b924-41566f784ab8.JPG
+│       │   │   │       02ab83ba-f408-4696-bfb8-53686f6ae645.JPG
+│       │   │   │       fa5bee63-5b31-4b52-9867-64434667f339.JPG
+│       │   │   │       ffcb9ffd-d958-4025-bd59-f72755571eb2.JPG
+│       │   │   │       
+│       │   │   ├───13
+│       │   │   │       00093b06-8ce2-4b29-ab77-89bff28f04f5.JPG
+│       │   │   │       00d8329b-6621-4e08-8ec5-cf702eb3b205.JPG
+│       │   │   │       ff182720-7d1a-400f-b09a-36c435af4ea1.JPG
+│       │   │   │       ffcca193-a48f-4139-ae47-76b20499d18e.JPG
+│       │   │   │       
+│       │   │   ├───14
+│       │   │   │       021cb20b-9746-4675-b05c-800b2781fdd1.JPG
+│       │   │   │       06838d64-5a81-4755-8943-752f42f8e084.JPG
+│       │   │   │       f5169190-ca40-4702-b5b5-863f93cd3d86.JPG
+│       │   │   │       f9677f7b-1b4e-4ebe-a114-9ad051470646.JPG
+│       │   │   │       
+│       │   │   ├───15
+│       │   │   │       000a19aa-684a-4215-8ecb-a3bfbeac0497.JPG
+│       │   │   │       00f41127-5ced-42e1-8a6d-f80158477c41.JPG
+│       │   │   │       ffcb1a43-944d-4e03-8249-b3710a3c6545.JPG
+│       │   │   │       ffd2bb85-4310-4817-abe2-9e8b4eb664f7.JPG
+│       │   │   │       
+│       │   │   ├───16
+│       │   │   │       0178d353-7608-453d-bfb5-705192a528db.JPG
+│       │   │   │       01d4075a-9b39-4395-81cc-5d62ff80b8ef.JPG
+│       │   │   │       fe1b4a50-2530-4c4e-b17a-14a95df666a6.JPG
+│       │   │   │       ff18d858-2267-4eb6-8c46-1edc9b92a8cf.JPG
+│       │   │   │       
+│       │   │   ├───17
+│       │   │   │       05e66a71-d5ee-437f-a3ba-796334ce636d.JPG
+│       │   │   │       09a60b76-5edc-47e3-9351-cd54fbec9baf.JPG
+│       │   │   │       f9c43829-8140-4f84-9857-ae9b6b41f13f.JPG
+│       │   │   │       fcd71da7-da0b-4938-a751-40dae0e6f6cb.JPG
+│       │   │   │       fee7d2cc-56c0-47ad-ad52-15b60b0ee51f.JPG
+│       │   │   │       
+│       │   │   ├───18
+│       │   │   │       00dc0ff2-316a-4af1-adc1-f6004443015a.JPG
+│       │   │   │       01dbaf48-c968-4adf-b373-4c8116d2f281.JPG
+│       │   │   │       fe85b48a-8320-47a3-a7b2-55f70ba429fb.JPG
+│       │   │   │       fec140d0-641f-467b-9c1d-e81bb0f4f6c7.JPG
+│       │   │   │       
+│       │   │   ├───19
+│       │   │   │       00b68c11-4f49-4792-9ff7-28305f9f8bfd.JPG
+│       │   │   │       00c0f874-ea53-490c-8db0-1434ba76b75c.JPG
+│       │   │   │       fe621a2e-2fc5-4525-aad0-719523e00005.JPG
+│       │   │   │       ff87308c-cf78-4e44-ac20-3c04e31588dc.JPG
+│       │   │   │       
+│       │   │   ├───2
+│       │   │   │       01de6e24-61b0-4a33-90d8-0b2e7fe93305.JPG
+│       │   │   │       10b86a45-ec27-437f-ae7b-639356f745a5.JPG
+│       │   │   │       fb308807-ecea-44c2-a2ad-7ce1d3e334e6.JPG
+│       │   │   │       ff63abc0-6d14-459d-96ba-68e093495b4a.JPG
+│       │   │   │       
+│       │   │   ├───20
+│       │   │   │       019a9031-2df5-41dd-84ec-4320d8fce211.JPG
+│       │   │   │       01e6d196-7654-463e-bded-eff8e9fbff95.JPG
+│       │   │   │       fe63713a-1855-4c74-999e-cad82aebdd1e.JPG
+│       │   │   │       ff9ce788-3ab5-4993-b4f2-259a11e3b08b.JPG
+│       │   │   │       
+│       │   │   ├───21
+│       │   │   │       00775ef7-feb4-4df6-95ab-5947ca73d3b2.JPG
+│       │   │   │       010933ba-8e64-4b67-9ad3-9a1b4b8cc853.JPG
+│       │   │   │       fd9f4046-c3cc-4d2c-817f-0160227c192b.JPG
+│       │   │   │       fef8b22b-299a-4ebd-bfd1-f7ee985195f4.JPG
+│       │   │   │       fff63951-f9fb-4da2-bf38-e5d7adc93881.JPG
+│       │   │   │       
+│       │   │   ├───22
+│       │   │   │       0292ab2f-50e4-4c2e-a504-3c3e604d30e7.JPG
+│       │   │   │       0d0d3295-c894-4c48-99d0-e4d9dbe32857.JPG
+│       │   │   │       e68e28e1-3d05-4db3-a56f-84fa8b89dfba.JPG
+│       │   │   │       ebf47b03-305c-4f46-90cb-d1b85a0df4eb.JPG
+│       │   │   │       
+│       │   │   ├───23
+│       │   │   │       01143b59-582b-4d5a-8df0-f03be629788f.JPG
+│       │   │   │       0185c01e-8f62-4cac-bb94-d75ddb9bdc78.JPG
+│       │   │   │       fddb0052-9e80-4fae-a094-2e79d3c6d749.JPG
+│       │   │   │       ff028617-e846-4273-9580-43eb6fc70765.JPG
+│       │   │   │       
+│       │   │   ├───24
+│       │   │   │       00034bbf-d123-4b8d-ae7a-4f7634cd82c3.JPG  
+│       │   │   │       0057b35d-2442-479b-a950-5c60e1ed463f.JPG
+│       │   │   │       feef5612-38e9-4691-aa2a-eed31cb80cef.JPG
+│       │   │   │       ff954286-5d5b-4882-876d-66a02428d0c8.JPG
+│       │   │   │       
+│       │   │   ├───25
+│       │   │   │       000e0c44-702b-4e21-8bc7-78c4ae10da43.JPG
+│       │   │   │       00ac3b44-ddd1-444d-94b8-eb1fde55fd47.JPG
+│       │   │   │       fe2d4cc3-f851-4f74-b1e4-65b4e75dda35.JPG
+│       │   │   │       feaf9bbf-bb76-4439-ae14-a5d33f2513cb.JPG
+│       │   │   │       
+│       │   │   ├───26
+│       │   │   │       002f6bec-49b8-427b-aa66-491634295e3f.JPG
+│       │   │   │       0688ae48-f0ee-4162-a55e-b0c795934349.JPG
+│       │   │   │       fdd95515-6c7b-4a4a-8419-c7c5676151ed.JPG
+│       │   │   │       ff362e43-68f7-4203-91d1-354462580ab2.JPG
+│       │   │   │       
+│       │   │   ├───27
+│       │   │   │       009da012-172a-4ea9-a779-94a00d815bff.JPG
+│       │   │   │       0114c100-dcb4-4b15-900c-64827f2259e8.JPG
+│       │   │   │       fa922249-cbad-47b7-beba-4e6cd3f99e9b.JPG
+│       │   │   │       fe60a825-d6d0-47d8-af61-26ed470bec79.JPG
+│       │   │   │       
+│       │   │   ├───28
+│       │   │   │       00844534-96f5-4ae0-82db-fe642f632d77.JPG
+│       │   │   │       00d44d01-3bbd-4620-8df6-e1533e873eb1.JPG
+│       │   │   │       ff8118b6-e1c3-44ad-bc1f-c2501097b187.JPG
+│       │   │   │       fffff88e-57ae-47a1-bab7-3b7902eefc65.JPG
+│       │   │   │       
+│       │   │   ├───29
+│       │   │   │       0268e317-0dc3-4dc6-9747-22b3835aa5f7.JPG
+│       │   │   │       03a124b4-a417-49a8-80a9-2ff3cb0a76a2.JPG
+│       │   │   │       fb98adc5-6457-4666-8c02-a25f8c1a6ca0.JPG
+│       │   │   │       fe36bcc0-0d8e-4ad7-adcb-b20f03657061.JPG
+│       │   │   │       
+│       │   │   ├───3
+│       │   │   │       01048e87-5b3d-4f1a-8216-ba9b9fc0ccbc.JPG
+│       │   │   │       011fe59b-a107-48e3-8db6-22531395f1f0.JPG
+│       │   │   │       fe0c7095-4a08-420b-8c37-09cc69ebb77b.JPG
+│       │   │   │       fff02fed-3175-49fa-8815-89956047615f.JPG
+│       │   │   │       
+│       │   │   ├───30
+│       │   │   │       0016ce67-68e5-42c5-b047-bd6e839f9154.JPG
+│       │   │   │       00176e04-a0fb-4110-8c00-63ae227b40fb.JPG
+│       │               fb33bdbe-613b-49a9-8473-24e9ece9395c.JPG
+│       │               fdc83bd7-b426-429b-9a0c-8e73a7f1c2e2.JPG
+│       │               
+│       ├───generated_for_paper
+│       │       generate.py
+│       │       img_0_color.eps
+│       │       img_0_grayscale.eps
+│       │       img_0_segmented.eps
+│       │       img_10_color.eps
+│       │       img_10_grayscale.eps
+│       │       img_10_segmented.eps
+│       │       img_11_color.eps
+│       │       img_11_grayscale.eps
+│       │       img_11_segmented.eps
+│       │       img_12_color.eps
+│       │       img_12_grayscale.eps
+│       │       img_12_segmented.eps
+│       │       img_13_color.eps
+│       │       img_13_grayscale.eps
+│       │       img_13_segmented.eps
+│       │       img_14_color.eps
+│       │       img_14_grayscale.eps
+│       │       img_14_segmented.eps
+│       │       img_15_color.eps
+│       │       img_15_grayscale.eps
+│       │       img_15_segmented.eps
+│       │       img_16_color.eps
+│       │       img_16_grayscale.eps
+│       │       img_16_segmented.eps
+│       │       img_17_color.eps
+│       │       img_17_grayscale.eps
+│       │       img_17_segmented.eps
+│       │       img_18_color.eps
+│       │       img_18_grayscale.eps
+│       │       img_18_segmented.eps
+│       │       img_19_color.eps
+│       │       img_19_grayscale.eps
+│       │       img_19_segmented.eps
+│       │       img_1_color.eps
+│       │       img_1_grayscale.eps
+│       │       img_1_segmented.eps
+│       │       img_2_color.eps
+│       │       img_2_grayscale.eps
+│       │       img_2_segmented.eps
+│       │       img_3_color.eps
+│       │       img_3_grayscale.eps
+│       │       img_3_segmented.eps
+│       │       img_4_color.eps
+│       │       img_4_grayscale.eps
+│       │       img_4_segmented.eps
+│       │       img_5_color.eps
+│       │       img_5_grayscale.eps
+│       │       img_5_segmented.eps
+│       │       img_6_color.eps
+│       │       img_6_grayscale.eps
+│       │       img_6_segmented.eps
+│       │       img_7_color.eps
+│       │       img_7_grayscale.eps
+│       │       img_7_segmented.eps
+│       │       img_8_color.eps
+│       │       img_8_grayscale.eps
+│       │       img_8_segmented.eps
+│       │       img_9_color.eps
+│       │       img_9_grayscale.eps
+│       │       img_9_segmented.eps
+│       │       
+│       ├───leaf_grouping
+│       │   │   aggregate_map.py
+│       │   │   create_map.py
+│       │   │   Google Leaf Counts.zip
+│       │   │   leaf-map.json
+│       │   │   
+│       │   ├───filtered_leafmaps
+│       │   │       Apple_Frogeye Spot.csv
+│       │   │       Apple___Apple_scab.csv
+│       │   │       Apple___Cedar_apple_rust.csv
+│       │   │       Apple___healthy.csv
+│       │   │       Blueberry___healthy.csv
+│       │   │       Cherry_(including_sour)___healthy.csv
+│       │   │       Cherry_(including_sour)___Powdery_mildew.csv
+│       │   │       Grape___Black_rot.csv
+│       │   │       Grape___Esca_(Black_Measles).csv
+│       │   │       Grape___Leaf_blight_(Isariopsis_Leaf_Spot).csv
+│       │   │       Orange___Haunglongbing_(Citrus_greening).csv
+│       │   │       Peach___Bacterial_spot.csv
+│       │   │       Peach___healthy.csv
+│       │   │       Pepper,_bell___Bacterial_spot.csv
+│       │   │       Pepper,_bell___healthy.csv
+│       │   │       Potato___Early_blight.csv
+│       │   │       Potato___healthy.csv
+│       │   │       Potato___Late_blight.csv
+│       │   │       Raspberry___healthy.csv
+│       │   │       Soybean___healthy.csv
+│       │   │       Strawberry___healthy.csv
+│       │   │       Strawberry___Leaf_scorch.csv
+│       │   │       Tomato___Bacterial_spot.csv
+│       │   │       Tomato___Early_blight.csv
+│       │   │       Tomato___healthy.csv
+│       │   │       Tomato___Late_blight.csv
+│       │   │       Tomato___Leaf_Mold.csv
+│       │   │       Tomato___Septoria_leaf_spot.csv
+│       │   │       Tomato___Spider_mites Two-spotted_spider_mite.csv
+│       │   │       Tomato___Target_Spot.csv
+│       │   │       Tomato___Tomato_Yellow_Leaf_Curl_Virus.csv
+│       │   │       
+│       │   └───leaf_maps
+│       │           Apple Leaf Counts.xlsx
+│       │           Apple_Cedar Apple Rust.csv
+│       │           Apple_Frogeye Spot.csv
+│       │           Apple_Healthy.csv
+│       │           Apple_Scab.csv
+│       │           Blueberry Leaf Counts.xlsx
+│       │           Blueberry_Healthy.csv
+│       │           Cherry Leaf Counts.xlsx
+│       │           Cherry_Healthy.csv
+│       │           Cherry_Powdery Mildew.csv
+│       │           Citrus Leaf Counts.xlsx
+│       │           Citrus_Citrus Greening June.csv
+│       │           Citrus_Citrus Greening Oct..csv
+│       │           Grape Leaf Counts.xlsx
+│       │           Grape_Black Measles Fungus.csv
+│       │           Grape_Black Rot Fungus.csv
+│       │           Grape_Leaf Blight Fungus.csv
+│       │           Peach Leaf Counts.xlsx
+│       │           Peach_Bacterial Spot.csv
+│       │           Peach_Healthy.csv
+│       │           Pepper Leaf Counts.xlsx
+│       │           Pepper_Bac spot NREC.csv
+│       │           Pepper_Bacterial Spot JR.csv
+│       │           Pepper_Healthy.csv
+│       │           Potato Leaf Counts.xlsx
+│       │           Potato_Early Blight Fungus.csv
+│       │           Potato_Healthy Potato.csv
+│       │           Potato_Late Blight Fungus.csv
+│       │           Raspberry Leaf Counts.xlsx
+│       │           Raspberry_Sheet1.csv
+│       │           Soy Leaf Counts.xlsx
+│       │           Soy_Sheet1.csv
+│       │           Strawberry Leaf Counts.xlsx
+│       │           Strawberry_Healthy.csv
+│       │           Strawberry_Scorch.csv
+│       │           Tomato Leaf Counts.xlsx
+│       │           Tomato_Bacterial Spot Bacteria.csv
+│       │           Tomato_Early Blight Fungus.csv
+│       │           Tomato_Healthy.csv
+│       │           Tomato_Late Blight Water Mold.csv
+│       │           Tomato_Leaf Mold Fungus.csv
+│       │           Tomato_Septoria Leaf Spot Fungus.csv
+│       │           Tomato_Spider Mite Damage Insect.csv
+│       │           Tomato_Target Spot Bacteria.csv
+│       │           Tomato_YLCV Virus.csv
+│       │           
+│       ├───raw
+│       │   ├───color
+│       │   │   ├───Apple___Apple_scab
+│       │   │   │       00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG
+│       │   │   │       01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003.JPG
+│       │   │   │       01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112.JPG
+│       │   │   │       0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037.JPG
+│       │   │   │       ff8671f5-09be-49d7-8093-2707c3a32489___RS_GLSp 4620.JPG
+│       │   │   │       
+│       │   │   ├───Corn_(maize)___Common_rust_
+│       │   │   │       RS_Rust 1563.JPG
+│       │               ffe996e5-c8dc-47b7-bca2-4fc25e5ac57c___UF.GRC_YLCV_Lab 09602_final_masked.jpg
+│       │               fff42f1b-7ec4-46e3-9269-45932e63635e___YLCV_GCREC 2436_final_masked.jpg
+│       │               fff6bf83-797c-4de4-83f7-39b74786fec4___UF.GRC_YLCV_Lab 03179_final_masked.jpg
+│       │               
+│       └───utils
+│               image_processor.py
+│               image_processor.pyc
+│               __init__.py
+│               __init__.pyc
+│               
+├───object
+│   ├───detr
+│   │   │   .gitattributes
+│   │   │   config.json
+│   │   │   model.safetensors
+│   │   │   preprocessor_config.json
+│   │   │   pytorch_model.bin
+│   │   │   README.md
+│   │   │   
+│   │   └───.cache
+│   │       └───huggingface
+│   │           │   .gitignore
+│   │           │   
+│   │           └───download
+│   │                   .gitattributes.metadata
+│   │                   config.json.metadata
+│   │                   model.safetensors.metadata
+│   │                   preprocessor_config.json.metadata
+│   │                   pytorch_model.bin.metadata
+│   │                   README.md.metadata
+│   │                   
+│   ├───GroundingDINO
+│   │   │   .gitignore
+│   │   │   Dockerfile
+│   │   │   docker_test.py
+│   │   │   environment.yaml
+│   │   │   LICENSE
+│   │   │   README.md
+│   │   │   requirements.txt
+│   │   │   setup.py
+│   │   │   test.ipynb
+│   │   │   
+│   │   ├───.asset
+│   │   │       arch.png
+│   │   │       cats.png
+│   │   │       cat_dog.jpeg
+│   │   │       COCO.png
+│   │   │       GD_GLIGEN.png
+│   │   │       GD_SD.png
+│   │   │       grounding_dino_logo.png
+│   │   │       hero_figure.png
+│   │   │       model_explan1.PNG
+│   │   │       model_explan2.PNG
+│   │   │       ODinW.png
+│   │   │       
+│   │   ├───demo
+│   │   │       create_coco_dataset.py
+│   │   │       gradio_app.py
+│   │   │       image_editing_with_groundingdino_gligen.ipynb
+│   │   │       image_editing_with_groundingdino_stablediffusion.ipynb
+│   │   │       inference_on_a_image.py
+│   │   │       test_ap_on_coco.py
+│   │   │       
+│   │   └───groundingdino
+│   │       │   __init__.py
+│   │       │   
+│   │       ├───config
+│   │       │       GroundingDINO_SwinB_cfg.py
+│   │       │       GroundingDINO_SwinT_OGC.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───datasets
+│   │       │       cocogrounding_eval.py
+│   │       │       transforms.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───models
+│   │       │   │   registry.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───GroundingDINO
+│   │       │       │   bertwarper.py
+│   │       │       │   fuse_modules.py
+│   │       │       │   groundingdino.py
+│   │       │       │   ms_deform_attn.py
+│   │       │       │   transformer.py
+│   │       │       │   transformer_vanilla.py
+│   │       │       │   utils.py
+│   │       │       │   __init__.py
+│   │       │       │   
+│   │       │       ├───backbone
+│   │       │       │       backbone.py
+│   │       │       │       position_encoding.py
+│   │       │       │       swin_transformer.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       └───csrc
+│   │       │           │   cuda_version.cu
+│   │       │           │   vision.cpp
+│   │       │           │   
+│   │       │           └───MsDeformAttn
+│   │       │                   ms_deform_attn.h
+│   │       │                   ms_deform_attn_cpu.cpp
+│   │       │                   ms_deform_attn_cpu.h
+│   │       │                   ms_deform_attn_cuda.cu
+│   │       │                   ms_deform_attn_cuda.h
+│   │       │                   ms_deform_im2col_cuda.cuh
+│   │       │                   
+│   │       └───util
+│   │               box_ops.py
+│   │               get_tokenlizer.py
+│   │               inference.py
+│   │               logger.py
+│   │               misc.py
+│   │               slconfig.py
+│   │               slio.py
+│   │               time_counter.py
+│   │               utils.py
+│   │               visualizer.py
+│   │               vl_utils.py
+│   │               __init__.py
+│   │               
+│   ├───segment-anything
+│   │   │   .flake8
+│   │   │   .gitattributes
+│   │   │   .gitignore
+│   │   │   CODE_OF_CONDUCT.md
+│   │   │   config.json
+│   │   │   CONTRIBUTING.md
+│   │   │   LICENSE
+│   │   │   linter.sh
+│   │   │   preprocessor_config.json
+│   │   │   pytorch_model.bin
+│   │   │   README.md
+│   │   │   sam_vit_h_4b8939.pth
+│   │   │   setup.cfg
+│   │   │   setup.py
+│   │   │   
+│   │   ├───.cache
+│   │   │   └───huggingface
+│   │   │       │   .gitignore
+│   │   │       │   
+│   │   │       └───download
+│   │   │               .gitattributes.metadata
+│   │   │               a7eHxRFT3OeMBIFg52k2nfj5m7w=.a53881d671f1900f5d4890c00f3f27819fdc94323c012b648ca1bb0b3b1f0a60.incomplete
+│   │   │               config.json.metadata
+│   │   │               preprocessor_config.json.metadata
+│   │   │               pytorch_model.bin.metadata
+│   │   │               README.md.metadata
+│   │   │               xGOKKLRSlIhH692hSVvI1-gpoa8=.edfb0462392541fca9af44ff039bfb32dbd0c939997f3abb77a26e23af7afd7c.incomplete
+│   │   │               
+│   │   ├───assets
+│   │   │       masks1.png
+│   │   │       masks2.jpg
+│   │   │       minidemo.gif
+│   │   │       model_diagram.png
+│   │   │       notebook1.png
+│   │   │       notebook2.png
+│   │   │       
+│   │   ├───demo
+│   │   │   │   package.json
+│   │   │   │   postcss.config.js
+│   │   │   │   README.md
+│   │   │   │   tailwind.config.js
+│   │   │   │   tsconfig.json
+│   │   │   │   
+│   │   │   ├───configs
+│   │   │   │   └───webpack
+│   │   │   │           common.js
+│   │   │   │           dev.js
+│   │   │   │           prod.js
+│   │   │   │           
+│   │   │   └───src
+│   │   │       │   App.tsx
+│   │   │       │   index.tsx
+│   │   │       │   
+│   │   │       ├───assets
+│   │   │       │   │   index.html
+│   │   │       │   │   
+│   │   │       │   ├───data
+│   │   │       │   │       dogs.jpg
+│   │   │       │   │       
+│   │   │       │   └───scss
+│   │   │       │           App.scss
+│   │   │       │           
+│   │   │       └───components
+│   │   │           │   Stage.tsx
+│   │   │           │   Tool.tsx
+│   │   │           │   
+│   │   │           ├───helpers
+│   │   │           │       Interfaces.tsx
+│   │   │           │       maskUtils.tsx
+│   │   │           │       onnxModelAPI.tsx
+│   │   │           │       scaleHelper.tsx
+│   │   │           │       
+│   │   │           └───hooks
+│   │   │                   context.tsx
+│   │   │                   createContext.tsx
+│   │   │                   
+│   │   ├───notebooks
+│   │   │   │   automatic_mask_generator_example.ipynb
+│   │   │   │   onnx_model_example.ipynb
+│   │   │   │   predictor_example.ipynb
+│   │   │   │   
+│   │   │   └───images
+│   │   │           dog.jpg
+│   │   │           groceries.jpg
+│   │   │           truck.jpg
+│   │   │           
+│   │   ├───scripts
+│   │   │       amg.py
+│   │   │       export_onnx_model.py
+│   │   │       
+│   │   └───segment_anything
+│   │       │   automatic_mask_generator.py
+│   │       │   build_sam.py
+│   │       │   predictor.py
+│   │       │   __init__.py
+│   │       │   
+│   │       ├───modeling
+│   │       │       common.py
+│   │       │       image_encoder.py
+│   │       │       mask_decoder.py
+│   │       │       prompt_encoder.py
+│   │       │       sam.py
+│   │       │       transformer.py
+│   │       │       __init__.py
+│   │       │       
+│   │       └───utils
+│   │               amg.py
+│   │               onnx.py
+│   │               transforms.py
+│   │               __init__.py
+│   │               
+│   ├───ultralytics
+│   │   │   .dockerignore
+│   │   │   .gitignore
+│   │   │   CITATION.cff
+│   │   │   CONTRIBUTING.md
+│   │   │   LICENSE
+│   │   │   mkdocs.yml
+│   │   │   pyproject.toml
+│   │   │   README.md
+│   │   │   README.zh-CN.md
+│   │   │   
+│   │   ├───.github
+│   │   │   │   dependabot.yml
+│   │   │   │   
+│   │   │   ├───ISSUE_TEMPLATE
+│   │   │   │       bug-report.yml
+│   │   │   │       config.yml
+│   │   │   │       feature-request.yml
+│   │   │   │       question.yml
+│   │   │   │       
+│   │   │   └───workflows
+│   │   │           ci.yml
+│   │   │           cla.yml
+│   │   │           docker.yml
+│   │   │           docs.yml
+│   │   │           format.yml
+│   │   │           links.yml
+│   │   │           merge-main-into-prs.yml
+│   │   │           mirror.yml
+│   │   │           publish.yml
+│   │   │           stale.yml
+│   │   │           
+│   │   ├───docker
+│   │   │       Dockerfile
+│   │   │       Dockerfile-arm64
+│   │   │       Dockerfile-conda
+│   │   │       Dockerfile-cpu
+│   │   │       Dockerfile-export
+│   │   │       Dockerfile-jetson-jetpack4
+│   │   │       Dockerfile-jetson-jetpack5
+│   │   │       Dockerfile-jetson-jetpack6
+│   │   │       Dockerfile-jupyter
+│   │   │       Dockerfile-python
+│   │   │       Dockerfile-python-export
+│   │   │       Dockerfile-runner
+│   │   │       
+│   │   ├───docs
+│   │   │   │   build_docs.py
+│   │   │   │   build_reference.py
+│   │   │   │   coming_soon_template.md
+│   │   │   │   mkdocs_github_authors.yaml
+│   │   │   │   model_data.py
+│   │   │   │   README.md
+│   │   │   │   
+│   │   │   ├───en
+│   │   │   │   │   CNAME
+│   │   │   │   │   index.md
+│   │   │   │   │   quickstart.md
+│   │   │   │   │   robots.txt
+│   │   │   │   │   
+│   │   │   │   ├───datasets
+│   │   │   │   │   │   index.md
+│   │   │   │   │   │   
+│   │   │   │   │   ├───classify
+│   │   │   │   │   │       caltech101.md
+│   │   │   │   │   │       caltech256.md
+│   │   │   │   │   │       cifar10.md
+│   │   │   │   │   │       cifar100.md
+│   │   │   │   │   │       fashion-mnist.md
+│   │   │   │   │   │       imagenet.md
+│   │   │   │   │   │       imagenet10.md
+│   │   │   │   │   │       imagenette.md
+│   │   │   │   │   │       imagewoof.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       mnist.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───detect
+│   │   │   │   │   │       african-wildlife.md
+│   │   │   │   │   │       argoverse.md
+│   │   │   │   │   │       brain-tumor.md
+│   │   │   │   │   │       coco.md
+│   │   │   │   │   │       coco128.md
+│   │   │   │   │   │       coco8-grayscale.md
+│   │   │   │   │   │       coco8-multispectral.md
+│   │   │   │   │   │       coco8.md
+│   │   │   │   │   │       construction-ppe.md
+│   │   │   │   │   │       globalwheat2020.md
+│   │   │   │   │   │       homeobjects-3k.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       lvis.md
+│   │   │   │   │   │       medical-pills.md
+│   │   │   │   │   │       objects365.md
+│   │   │   │   │   │       open-images-v7.md
+│   │   │   │   │   │       roboflow-100.md
+│   │   │   │   │   │       signature.md
+│   │   │   │   │   │       sku-110k.md
+│   │   │   │   │   │       visdrone.md
+│   │   │   │   │   │       voc.md
+│   │   │   │   │   │       xview.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───explorer
+│   │   │   │   │   │       api.md
+│   │   │   │   │   │       dashboard.md
+│   │   │   │   │   │       explorer.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───obb
+│   │   │   │   │   │       dota-v2.md
+│   │   │   │   │   │       dota8.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───pose
+│   │   │   │   │   │       coco.md
+│   │   │   │   │   │       coco8-pose.md
+│   │   │   │   │   │       dog-pose.md
+│   │   │   │   │   │       hand-keypoints.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       tiger-pose.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───segment
+│   │   │   │   │   │       carparts-seg.md
+│   │   │   │   │   │       coco.md
+│   │   │   │   │   │       coco128-seg.md
+│   │   │   │   │   │       coco8-seg.md
+│   │   │   │   │   │       crack-seg.md
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       package-seg.md
+│   │   │   │   │   │       
+│   │   │   │   │   └───track
+│   │   │   │   │           index.md
+│   │   │   │   │           
+│   │   │   │   ├───guides
+│   │   │   │   │       analytics.md
+│   │   │   │   │       azureml-quickstart.md
+│   │   │   │   │       conda-quickstart.md
+│   │   │   │   │       coral-edge-tpu-on-raspberry-pi.md
+│   │   │   │   │       data-collection-and-annotation.md
+│   │   │   │   │       deepstream-nvidia-jetson.md
+│   │   │   │   │       defining-project-goals.md
+│   │   │   │   │       distance-calculation.md
+│   │   │   │   │       docker-quickstart.md
+│   │   │   │   │       heatmaps.md
+│   │   │   │   │       hyperparameter-tuning.md
+│   │   │   │   │       index.md
+│   │   │   │   │       instance-segmentation-and-tracking.md
+│   │   │   │   │       isolating-segmentation-objects.md
+│   │   │   │   │       kfold-cross-validation.md
+│   │   │   │   │       model-deployment-options.md
+│   │   │   │   │       model-deployment-practices.md
+│   │   │   │   │       model-evaluation-insights.md
+│   │   │   │   │       model-monitoring-and-maintenance.md
+│   │   │   │   │       model-testing.md
+│   │   │   │   │       model-training-tips.md
+│   │   │   │   │       model-yaml-config.md
+│   │   │   │   │       nvidia-jetson.md
+│   │   │   │   │       object-blurring.md
+│   │   │   │   │       object-counting.md
+│   │   │   │   │       object-cropping.md
+│   │   │   │   │       optimizing-openvino-latency-vs-throughput-modes.md
+│   │   │   │   │       parking-management.md
+│   │   │   │   │       preprocessing_annotated_data.md
+│   │   │   │   │       queue-management.md
+│   │   │   │   │       raspberry-pi.md
+│   │   │   │   │       region-counting.md
+│   │   │   │   │       ros-quickstart.md
+│   │   │   │   │       sahi-tiled-inference.md
+│   │   │   │   │       security-alarm-system.md
+│   │   │   │   │       similarity-search.md
+│   │   │   │   │       speed-estimation.md
+│   │   │   │   │       steps-of-a-cv-project.md
+│   │   │   │   │       streamlit-live-inference.md
+│   │   │   │   │       trackzone.md
+│   │   │   │   │       triton-inference-server.md
+│   │   │   │   │       vertex-ai-deployment-with-docker.md
+│   │   │   │   │       view-results-in-terminal.md
+│   │   │   │   │       vision-eye.md
+│   │   │   │   │       workouts-monitoring.md
+│   │   │   │   │       yolo-common-issues.md
+│   │   │   │   │       yolo-data-augmentation.md
+│   │   │   │   │       yolo-performance-metrics.md
+│   │   │   │   │       yolo-thread-safe-inference.md
+│   │   │   │   │       
+│   │   │   │   ├───help
+│   │   │   │   │       CI.md
+│   │   │   │   │       CLA.md
+│   │   │   │   │       code-of-conduct.md
+│   │   │   │   │       contributing.md
+│   │   │   │   │       environmental-health-safety.md
+│   │   │   │   │       FAQ.md
+│   │   │   │   │       index.md
+│   │   │   │   │       minimum-reproducible-example.md
+│   │   │   │   │       privacy.md
+│   │   │   │   │       security.md
+│   │   │   │   │       
+│   │   │   │   ├───hub
+│   │   │   │   │   │   cloud-training.md
+│   │   │   │   │   │   datasets.md
+│   │   │   │   │   │   index.md
+│   │   │   │   │   │   inference-api.md
+│   │   │   │   │   │   integrations.md
+│   │   │   │   │   │   models.md
+│   │   │   │   │   │   pro.md
+│   │   │   │   │   │   projects.md
+│   │   │   │   │   │   quickstart.md
+│   │   │   │   │   │   teams.md
+│   │   │   │   │   │   
+│   │   │   │   │   ├───api
+│   │   │   │   │   │       index.md
+│   │   │   │   │   │       
+│   │   │   │   │   └───app
+│   │   │   │   │           android.md
+│   │   │   │   │           index.md
+│   │   │   │   │           ios.md
+│   │   │   │   │           
+│   │   │   │   ├───integrations
+│   │   │   │   │       albumentations.md
+│   │   │   │   │       amazon-sagemaker.md
+│   │   │   │   │       clearml.md
+│   │   │   │   │       comet.md
+│   │   │   │   │       coreml.md
+│   │   │   │   │       dvc.md
+│   │   │   │   │       edge-tpu.md
+│   │   │   │   │       google-colab.md
+│   │   │   │   │       gradio.md
+│   │   │   │   │       ibm-watsonx.md
+│   │   │   │   │       index.md
+│   │   │   │   │       jupyterlab.md
+│   │   │   │   │       kaggle.md
+│   │   │   │   │       mlflow.md
+│   │   │   │   │       mnn.md
+│   │   │   │   │       ncnn.md
+│   │   │   │   │       neural-magic.md
+│   │   │   │   │       onnx.md
+│   │   │   │   │       openvino.md
+│   │   │   │   │       paddlepaddle.md
+│   │   │   │   │       paperspace.md
+│   │   │   │   │       ray-tune.md
+│   │   │   │   │       roboflow.md
+│   │   │   │   │       rockchip-rknn.md
+│   │   │   │   │       seeedstudio-recamera.md
+│   │   │   │   │       sony-imx500.md
+│   │   │   │   │       tensorboard.md
+│   │   │   │   │       tensorrt.md
+│   │   │   │   │       tf-graphdef.md
+│   │   │   │   │       tf-savedmodel.md
+│   │   │   │   │       tfjs.md
+│   │   │   │   │       tflite.md
+│   │   │   │   │       torchscript.md
+│   │   │   │   │       vscode.md
+│   │   │   │   │       weights-biases.md
+│   │   │   │   │       
+│   │   │   │   ├───macros
+│   │   │   │   │       augmentation-args.md
+│   │   │   │   │       export-args.md
+│   │   │   │   │       export-table.md
+│   │   │   │   │       predict-args.md
+│   │   │   │   │       sam-auto-annotate.md
+│   │   │   │   │       solutions-args.md
+│   │   │   │   │       track-args.md
+│   │   │   │   │       train-args.md
+│   │   │   │   │       validation-args.md
+│   │   │   │   │       visualization-args.md
+│   │   │   │   │       yolo-cls-perf.md
+│   │   │   │   │       yolo-det-perf.md
+│   │   │   │   │       yolo-obb-perf.md
+│   │   │   │   │       yolo-pose-perf.md
+│   │   │   │   │       yolo-seg-perf.md
+│   │   │   │   │       
+│   │   │   │   ├───models
+│   │   │   │   │       fast-sam.md
+│   │   │   │   │       index.md
+│   │   │   │   │       mobile-sam.md
+│   │   │   │   │       rtdetr.md
+│   │   │   │   │       sam-2.md
+│   │   │   │   │       sam.md
+│   │   │   │   │       yolo-nas.md
+│   │   │   │   │       yolo-world.md
+│   │   │   │   │       yolo11.md
+│   │   │   │   │       yolo12.md
+│   │   │   │   │       yoloe.md
+│   │   │   │   │       yolov10.md
+│   │   │   │   │       yolov3.md
+│   │   │   │   │       yolov4.md
+│   │   │   │   │       yolov5.md
+│   │   │   │   │       yolov6.md
+│   │   │   │   │       yolov7.md
+│   │   │   │   │       yolov8.md
+│   │   │   │   │       yolov9.md
+│   │   │   │   │       
+│   │   │   │   ├───modes
+│   │   │   │   │       benchmark.md
+│   │   │   │   │       export.md
+│   │   │   │   │       index.md
+│   │   │   │   │       predict.md
+│   │   │   │   │       track.md
+│   │   │   │   │       train.md
+│   │   │   │   │       val.md
+│   │   │   │   │       
+│   │   │   │   ├───reference
+│   │   │   │   │   │   __init__.md
+│   │   │   │   │   │   
+│   │   │   │   │   ├───cfg
+│   │   │   │   │   │       __init__.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───data
+│   │   │   │   │   │       annotator.md
+│   │   │   │   │   │       augment.md
+│   │   │   │   │   │       base.md
+│   │   │   │   │   │       build.md
+│   │   │   │   │   │       converter.md
+│   │   │   │   │   │       dataset.md
+│   │   │   │   │   │       loaders.md
+│   │   │   │   │   │       split.md
+│   │   │   │   │   │       split_dota.md
+│   │   │   │   │   │       utils.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───engine
+│   │   │   │   │   │       exporter.md
+│   │   │   │   │   │       model.md
+│   │   │   │   │   │       predictor.md
+│   │   │   │   │   │       results.md
+│   │   │   │   │   │       trainer.md
+│   │   │   │   │   │       tuner.md
+│   │   │   │   │   │       validator.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───hub
+│   │   │   │   │   │   │   auth.md
+│   │   │   │   │   │   │   session.md
+│   │   │   │   │   │   │   utils.md
+│   │   │   │   │   │   │   __init__.md
+│   │   │   │   │   │   │   
+│   │   │   │   │   │   └───google
+│   │   │   │   │   │           __init__.md
+│   │   │   │   │   │           
+│   │   │   │   │   ├───models
+│   │   │   │   │   │   ├───fastsam
+│   │   │   │   │   │   │       model.md
+│   │   │   │   │   │   │       predict.md
+│   │   │   │   │   │   │       utils.md
+│   │   │   │   │   │   │       val.md
+│   │   │   │   │   │   │       
+│   │   │   │   │   │   ├───nas
+│   │   │   │   │   │   │       model.md
+│   │   │   │   │   │   │       predict.md
+│   │   │   │   │   │   │       val.md
+│   │   │   │   │   │   │       
+│   │   │   │   │   │   ├───rtdetr
+│   │   │   │   │   │   │       model.md
+│   │   │   │   │   │   │       predict.md
+│   │   │   │   │   │   │       train.md
+│   │   │   │   │   │   │       val.md
+│   │   │   │   │   │   │       
+│   │   │   │   │   │   ├───sam
+│   │   │   │   │   │   │   │   amg.md
+│   │   │   │   │   │   │   │   build.md
+│   │   │   │   │   │   │   │   model.md
+│   │   │   │   │   │   │   │   predict.md
+│   │   │   │   │   │   │   │   
+│   │   │   │   │   │   │   └───modules
+│   │   │   │   │   │   │           blocks.md
+│   │   │   │   │   │   │           decoders.md
+│   │   │   │   │   │   │           encoders.md
+│   │   │   │   │   │   │           memory_attention.md
+│   │   │   │   │   │   │           sam.md
+│   │   │   │   │   │   │           tiny_encoder.md
+│   │   │   │   │   │   │           transformer.md
+│   │   │   │   │   │   │           utils.md
+│   │   │   │   │   │   │           
+│   │   │   │   │   │   ├───utils
+│   │   │   │   │   │   │       loss.md
+│   │   │   │   │   │   │       ops.md
+│   │   │   │   │   │   │       
+│   │   │   │   │   │   └───yolo
+│   │   │   │   │   │       │   model.md
+│   │   │   │   │   │       │   
+│   │   │   │   │   │       ├───classify
+│   │   │   │   │   │       │       predict.md
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       val.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       ├───detect
+│   │   │   │   │   │       │       predict.md
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       val.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       ├───obb
+│   │   │   │   │   │       │       predict.md
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       val.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       ├───pose
+│   │   │   │   │   │       │       predict.md
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       val.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       ├───segment
+│   │   │   │   │   │       │       predict.md
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       val.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       ├───world
+│   │   │   │   │   │       │       train.md
+│   │   │   │   │   │       │       train_world.md
+│   │   │   │   │   │       │       
+│   │   │   │   │   │       └───yoloe
+│   │   │   │   │   │               predict.md
+│   │   │   │   │   │               train.md
+│   │   │   │   │   │               train_seg.md
+│   │   │   │   │   │               val.md
+│   │   │   │   │   │               
+│   │   │   │   │   ├───nn
+│   │   │   │   │   │   │   autobackend.md
+│   │   │   │   │   │   │   tasks.md
+│   │   │   │   │   │   │   text_model.md
+│   │   │   │   │   │   │   
+│   │   │   │   │   │   └───modules
+│   │   │   │   │   │           activation.md
+│   │   │   │   │   │           block.md
+│   │   │   │   │   │           conv.md
+│   │   │   │   │   │           head.md
+│   │   │   │   │   │           transformer.md
+│   │   │   │   │   │           utils.md
+│   │   │   │   │   │           
+│   │   │   │   │   ├───solutions
+│   │   │   │   │   │       ai_gym.md
+│   │   │   │   │   │       analytics.md
+│   │   │   │   │   │       config.md
+│   │   │   │   │   │       distance_calculation.md
+│   │   │   │   │   │       heatmap.md
+│   │   │   │   │   │       instance_segmentation.md
+│   │   │   │   │   │       object_blurrer.md
+│   │   │   │   │   │       object_counter.md
+│   │   │   │   │   │       object_cropper.md
+│   │   │   │   │   │       parking_management.md
+│   │   │   │   │   │       queue_management.md
+│   │   │   │   │   │       region_counter.md
+│   │   │   │   │   │       security_alarm.md
+│   │   │   │   │   │       similarity_search.md
+│   │   │   │   │   │       solutions.md
+│   │   │   │   │   │       speed_estimation.md
+│   │   │   │   │   │       streamlit_inference.md
+│   │   │   │   │   │       trackzone.md
+│   │   │   │   │   │       vision_eye.md
+│   │   │   │   │   │       
+│   │   │   │   │   ├───trackers
+│   │   │   │   │   │   │   basetrack.md
+│   │   │   │   │   │   │   bot_sort.md
+│   │   │   │   │   │   │   byte_tracker.md
+│   │   │   │   │   │   │   track.md
+│   │   │   │   │   │   │   
+│   │   │   │   │   │   └───utils
+│   │   │   │   │   │           gmc.md
+│   │   │   │   │   │           kalman_filter.md
+│   │   │   │   │   │           matching.md
+│   │   │   │   │   │           
+│   │   │   │   │   └───utils
+│   │   │   │   │       │   autobatch.md
+│   │   │   │   │       │   autodevice.md
+│   │   │   │   │       │   benchmarks.md
+│   │   │   │   │       │   checks.md
+│   │   │   │   │       │   cpu.md
+│   │   │   │   │       │   dist.md
+│   │   │   │   │       │   downloads.md
+│   │   │   │   │       │   errors.md
+│   │   │   │   │       │   events.md
+│   │   │   │   │       │   files.md
+│   │   │   │   │       │   git.md
+│   │   │   │   │       │   instance.md
+│   │   │   │   │       │   logger.md
+│   │   │   │   │       │   loss.md
+│   │   │   │   │       │   metrics.md
+│   │   │   │   │       │   nms.md
+│   │   │   │   │       │   ops.md
+│   │   │   │   │       │   patches.md
+│   │   │   │   │       │   plotting.md
+│   │   │   │   │       │   tal.md
+│   │   │   │   │       │   torch_utils.md
+│   │   │   │   │       │   tqdm.md
+│   │   │   │   │       │   triton.md
+│   │   │   │   │       │   tuner.md
+│   │   │   │   │       │   __init__.md
+│   │   │   │   │       │   
+│   │   │   │   │       ├───callbacks
+│   │   │   │   │       │       base.md
+│   │   │   │   │       │       clearml.md
+│   │   │   │   │       │       comet.md
+│   │   │   │   │       │       dvc.md
+│   │   │   │   │       │       hub.md
+│   │   │   │   │       │       mlflow.md
+│   │   │   │   │       │       neptune.md
+│   │   │   │   │       │       platform.md
+│   │   │   │   │       │       raytune.md
+│   │   │   │   │       │       tensorboard.md
+│   │   │   │   │       │       wb.md
+│   │   │   │   │       │       
+│   │   │   │   │       └───export
+│   │   │   │   │               imx.md
+│   │   │   │   │               __init__.md
+│   │   │   │   │               
+│   │   │   │   ├───solutions
+│   │   │   │   │       index.md
+│   │   │   │   │       
+│   │   │   │   ├───tasks
+│   │   │   │   │       classify.md
+│   │   │   │   │       detect.md
+│   │   │   │   │       index.md
+│   │   │   │   │       obb.md
+│   │   │   │   │       pose.md
+│   │   │   │   │       segment.md
+│   │   │   │   │       
+│   │   │   │   ├───usage
+│   │   │   │   │       callbacks.md
+│   │   │   │   │       cfg.md
+│   │   │   │   │       cli.md
+│   │   │   │   │       engine.md
+│   │   │   │   │       python.md
+│   │   │   │   │       simple-utilities.md
+│   │   │   │   │       
+│   │   │   │   └───yolov5
+│   │   │   │       │   index.md
+│   │   │   │       │   quickstart_tutorial.md
+│   │   │   │       │   
+│   │   │   │       ├───environments
+│   │   │   │       │       aws_quickstart_tutorial.md
+│   │   │   │       │       azureml_quickstart_tutorial.md
+│   │   │   │       │       docker_image_quickstart_tutorial.md
+│   │   │   │       │       google_cloud_quickstart_tutorial.md
+│   │   │   │       │       
+│   │   │   │       └───tutorials
+│   │   │   │               architecture_description.md
+│   │   │   │               clearml_logging_integration.md
+│   │   │   │               comet_logging_integration.md
+│   │   │   │               hyperparameter_evolution.md
+│   │   │   │               model_ensembling.md
+│   │   │   │               model_export.md
+│   │   │   │               model_pruning_and_sparsity.md
+│   │   │   │               multi_gpu_training.md
+│   │   │   │               neural_magic_pruning_quantization.md
+│   │   │   │               pytorch_hub_model_loading.md
+│   │   │   │               test_time_augmentation.md
+│   │   │   │               tips_for_best_training_results.md
+│   │   │   │               train_custom_data.md
+│   │   │   │               transfer_learning_with_frozen_layers.md
+│   │   │   │               
+│   │   │   └───overrides
+│   │   │       │   main.html
+│   │   │       │   
+│   │   │       ├───javascript
+│   │   │       │       benchmark.js
+│   │   │       │       chart-widget.js
+│   │   │       │       extra.js
+│   │   │       │       giscus.js
+│   │   │       │       tablesort.js
+│   │   │       │       
+│   │   │       ├───partials
+│   │   │       │       comments.html
+│   │   │       │       
+│   │   │       └───stylesheets
+│   │   │               style.css
+│   │   │               
+│   │   ├───examples
+│   │   │   │   heatmaps.ipynb
+│   │   │   │   hub.ipynb
+│   │   │   │   object_counting.ipynb
+│   │   │   │   object_tracking.ipynb
+│   │   │   │   README.md
+│   │   │   │   tutorial.ipynb
+│   │   │   │   
+│   │   │   ├───RTDETR-ONNXRuntime-Python
+│   │   │   │       main.py
+│   │   │   │       README.md
+│   │   │   │       requirements.txt
+│   │   │   │       
+│   │   │   ├───YOLO-Interactive-Tracking-UI
+│   │   │   │       interactive_tracker.py
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLO-Series-ONNXRuntime-Rust
+│   │   │   │   │   Cargo.toml
+│   │   │   │   │   README.md
+│   │   │   │   │   
+│   │   │   │   └───src
+│   │   │   │           main.rs
+│   │   │   │           
+│   │   │   ├───YOLO11-Triton-CPP
+│   │   │   │       CMakeLists.txt
+│   │   │   │       inference.cpp
+│   │   │   │       inference.hpp
+│   │   │   │       main.cpp
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-Action-Recognition
+│   │   │   │       action_recognition.py
+│   │   │   │       README.md
+│   │   │   │       requirements.txt
+│   │   │   │       
+│   │   │   ├───YOLOv8-CPP-Inference
+│   │   │   │       CMakeLists.txt
+│   │   │   │       inference.cpp
+│   │   │   │       inference.h
+│   │   │   │       main.cpp
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-LibTorch-CPP-Inference
+│   │   │   │       CMakeLists.txt
+│   │   │   │       main.cc
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-MNN-CPP
+│   │   │   │       CMakeLists.txt
+│   │   │   │       main.cpp
+│   │   │   │       main_interpreter.cpp
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-ONNXRuntime
+│   │   │   │       main.py
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-ONNXRuntime-CPP
+│   │   │   │       CMakeLists.txt
+│   │   │   │       inference.cpp
+│   │   │   │       inference.h
+│   │   │   │       main.cpp
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-ONNXRuntime-Rust
+│   │   │   │   │   Cargo.toml
+│   │   │   │   │   README.md
+│   │   │   │   │   
+│   │   │   │   └───src
+│   │   │   │           cli.rs
+│   │   │   │           lib.rs
+│   │   │   │           main.rs
+│   │   │   │           model.rs
+│   │   │   │           ort_backend.rs
+│   │   │   │           yolo_result.rs
+│   │   │   │           
+│   │   │   ├───YOLOv8-OpenCV-ONNX-Python
+│   │   │   │       main.py
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-OpenVINO-CPP-Inference
+│   │   │   │       CMakeLists.txt
+│   │   │   │       inference.cc
+│   │   │   │       inference.h
+│   │   │   │       main.cc
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   ├───YOLOv8-Region-Counter
+│   │   │   │       README.md
+│   │   │   │       yolov8_region_counter.py
+│   │   │   │       
+│   │   │   ├───YOLOv8-SAHI-Inference-Video
+│   │   │   │       README.md
+│   │   │   │       yolov8_sahi.py
+│   │   │   │       
+│   │   │   ├───YOLOv8-Segmentation-ONNXRuntime-Python
+│   │   │   │       main.py
+│   │   │   │       README.md
+│   │   │   │       
+│   │   │   └───YOLOv8-TFLite-Python
+│   │   │           main.py
+│   │   │           README.md
+│   │   │           
+│   │   ├───tests
+│   │   │       conftest.py
+│   │   │       test_cli.py
+│   │   │       test_cuda.py
+│   │   │       test_engine.py
+│   │   │       test_exports.py
+│   │   │       test_integrations.py
+│   │   │       test_python.py
+│   │   │       test_solutions.py
+│   │   │       __init__.py
+│   │   │       
+│   │   └───ultralytics
+│   │       │   py.typed
+│   │       │   __init__.py
+│   │       │   
+│   │       ├───assets
+│   │       │       bus.jpg
+│   │       │       zidane.jpg
+│   │       │       
+│   │       ├───cfg
+│   │       │   │   default.yaml
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───datasets
+│   │       │   │       african-wildlife.yaml
+│   │       │   │       Argoverse.yaml
+│   │       │   │       brain-tumor.yaml
+│   │       │   │       carparts-seg.yaml
+│   │       │   │       coco-pose.yaml
+│   │       │   │       coco.yaml
+│   │       │   │       coco128-seg.yaml
+│   │       │   │       coco128.yaml
+│   │       │   │       coco8-grayscale.yaml
+│   │       │   │       coco8-multispectral.yaml
+│   │       │   │       coco8-pose.yaml
+│   │       │   │       coco8-seg.yaml
+│   │       │   │       coco8.yaml
+│   │       │   │       construction-ppe.yaml
+│   │       │   │       crack-seg.yaml
+│   │       │   │       dog-pose.yaml
+│   │       │   │       dota8-multispectral.yaml
+│   │       │   │       dota8.yaml
+│   │       │   │       DOTAv1.5.yaml
+│   │       │   │       DOTAv1.yaml
+│   │       │   │       GlobalWheat2020.yaml
+│   │       │   │       hand-keypoints.yaml
+│   │       │   │       HomeObjects-3K.yaml
+│   │       │   │       ImageNet.yaml
+│   │       │   │       lvis.yaml
+│   │       │   │       medical-pills.yaml
+│   │       │   │       Objects365.yaml
+│   │       │   │       open-images-v7.yaml
+│   │       │   │       package-seg.yaml
+│   │       │   │       signature.yaml
+│   │       │   │       SKU-110K.yaml
+│   │       │   │       tiger-pose.yaml
+│   │       │   │       VisDrone.yaml
+│   │       │   │       VOC.yaml
+│   │       │   │       xView.yaml
+│   │       │   │       
+│   │       │   ├───models
+│   │       │   │   │   README.md
+│   │       │   │   │   
+│   │       │   │   ├───11
+│   │       │   │   │       yolo11-cls-resnet18.yaml
+│   │       │   │   │       yolo11-cls.yaml
+│   │       │   │   │       yolo11-obb.yaml
+│   │       │   │   │       yolo11-pose.yaml
+│   │       │   │   │       yolo11-seg.yaml
+│   │       │   │   │       yolo11.yaml
+│   │       │   │   │       yoloe-11-seg.yaml
+│   │       │   │   │       yoloe-11.yaml
+│   │       │   │   │       
+│   │       │   │   ├───12
+│   │       │   │   │       yolo12-cls.yaml
+│   │       │   │   │       yolo12-obb.yaml
+│   │       │   │   │       yolo12-pose.yaml
+│   │       │   │   │       yolo12-seg.yaml
+│   │       │   │   │       yolo12.yaml
+│   │       │   │   │       
+│   │       │   │   ├───rt-detr
+│   │       │   │   │       rtdetr-l.yaml
+│   │       │   │   │       rtdetr-resnet101.yaml
+│   │       │   │   │       rtdetr-resnet50.yaml
+│   │       │   │   │       rtdetr-x.yaml
+│   │       │   │   │       
+│   │       │   │   ├───v10
+│   │       │   │   │       yolov10b.yaml
+│   │       │   │   │       yolov10l.yaml
+│   │       │   │   │       yolov10m.yaml
+│   │       │   │   │       yolov10n.yaml
+│   │       │   │   │       yolov10s.yaml
+│   │       │   │   │       yolov10x.yaml
+│   │       │   │   │       
+│   │       │   │   ├───v3
+│   │       │   │   │       yolov3-spp.yaml
+│   │       │   │   │       yolov3-tiny.yaml
+│   │       │   │   │       yolov3.yaml
+│   │       │   │   │       
+│   │       │   │   ├───v5
+│   │       │   │   │       yolov5-p6.yaml
+│   │       │   │   │       yolov5.yaml
+│   │       │   │   │       
+│   │       │   │   ├───v6
+│   │       │   │   │       yolov6.yaml
+│   │       │   │   │       
+│   │       │   │   ├───v8
+│   │       │   │   │       yoloe-v8-seg.yaml
+│   │       │   │   │       yoloe-v8.yaml
+│   │       │   │   │       yolov8-cls-resnet101.yaml
+│   │       │   │   │       yolov8-cls-resnet50.yaml
+│   │       │   │   │       yolov8-cls.yaml
+│   │       │   │   │       yolov8-ghost-p2.yaml
+│   │       │   │   │       yolov8-ghost-p6.yaml
+│   │       │   │   │       yolov8-ghost.yaml
+│   │       │   │   │       yolov8-obb.yaml
+│   │       │   │   │       yolov8-p2.yaml
+│   │       │   │   │       yolov8-p6.yaml
+│   │       │   │   │       yolov8-pose-p6.yaml
+│   │       │   │   │       yolov8-pose.yaml
+│   │       │   │   │       yolov8-rtdetr.yaml
+│   │       │   │   │       yolov8-seg-p6.yaml
+│   │       │   │   │       yolov8-seg.yaml
+│   │       │   │   │       yolov8-world.yaml
+│   │       │   │   │       yolov8-worldv2.yaml
+│   │       │   │   │       yolov8.yaml
+│   │       │   │   │       
+│   │       │   │   └───v9
+│   │       │   │           yolov9c-seg.yaml
+│   │       │   │           yolov9c.yaml
+│   │       │   │           yolov9e-seg.yaml
+│   │       │   │           yolov9e.yaml
+│   │       │   │           yolov9m.yaml
+│   │       │   │           yolov9s.yaml
+│   │       │   │           yolov9t.yaml
+│   │       │   │           
+│   │       │   └───trackers
+│   │       │           botsort.yaml
+│   │       │           bytetrack.yaml
+│   │       │           
+│   │       ├───data
+│   │       │   │   annotator.py
+│   │       │   │   augment.py
+│   │       │   │   base.py
+│   │       │   │   build.py
+│   │       │   │   converter.py
+│   │       │   │   dataset.py
+│   │       │   │   loaders.py
+│   │       │   │   split.py
+│   │       │   │   split_dota.py
+│   │       │   │   utils.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───scripts
+│   │       │           download_weights.sh
+│   │       │           get_coco.sh
+│   │       │           get_coco128.sh
+│   │       │           get_imagenet.sh
+│   │       │           
+│   │       ├───engine
+│   │       │       exporter.py
+│   │       │       model.py
+│   │       │       predictor.py
+│   │       │       results.py
+│   │       │       trainer.py
+│   │       │       tuner.py
+│   │       │       validator.py
+│   │       │       __init__.py
+│   │       │       
+│   │       ├───hub
+│   │       │   │   auth.py
+│   │       │   │   session.py
+│   │       │   │   utils.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───google
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───models
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   ├───fastsam
+│   │       │   │       model.py
+│   │       │   │       predict.py
+│   │       │   │       utils.py
+│   │       │   │       val.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───nas
+│   │       │   │       model.py
+│   │       │   │       predict.py
+│   │       │   │       val.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───rtdetr
+│   │       │   │       model.py
+│   │       │   │       predict.py
+│   │       │   │       train.py
+│   │       │   │       val.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   ├───sam
+│   │       │   │   │   amg.py
+│   │       │   │   │   build.py
+│   │       │   │   │   model.py
+│   │       │   │   │   predict.py
+│   │       │   │   │   __init__.py
+│   │       │   │   │   
+│   │       │   │   └───modules
+│   │       │   │           blocks.py
+│   │       │   │           decoders.py
+│   │       │   │           encoders.py
+│   │       │   │           memory_attention.py
+│   │       │   │           sam.py
+│   │       │   │           tiny_encoder.py
+│   │       │   │           transformer.py
+│   │       │   │           utils.py
+│   │       │   │           __init__.py
+│   │       │   │           
+│   │       │   ├───utils
+│   │       │   │       loss.py
+│   │       │   │       ops.py
+│   │       │   │       __init__.py
+│   │       │   │       
+│   │       │   └───yolo
+│   │       │       │   model.py
+│   │       │       │   __init__.py
+│   │       │       │   
+│   │       │       ├───classify
+│   │       │       │       predict.py
+│   │       │       │       train.py
+│   │       │       │       val.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       ├───detect
+│   │       │       │       predict.py
+│   │       │       │       train.py
+│   │       │       │       val.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       ├───obb
+│   │       │       │       predict.py
+│   │       │       │       train.py
+│   │       │       │       val.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       ├───pose
+│   │       │       │       predict.py
+│   │       │       │       train.py
+│   │       │       │       val.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       ├───segment
+│   │       │       │       predict.py
+│   │       │       │       train.py
+│   │       │       │       val.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       ├───world
+│   │       │       │       train.py
+│   │       │       │       train_world.py
+│   │       │       │       __init__.py
+│   │       │       │       
+│   │       │       └───yoloe
+│   │       │               predict.py
+│   │       │               train.py
+│   │       │               train_seg.py
+│   │       │               val.py
+│   │       │               __init__.py
+│   │       │               
+│   │       ├───nn
+│   │       │   │   autobackend.py
+│   │       │   │   tasks.py
+│   │       │   │   text_model.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───modules
+│   │       │           activation.py
+│   │       │           block.py
+│   │       │           conv.py
+│   │       │           head.py
+│   │       │           transformer.py
+│   │       │           utils.py
+│   │       │           __init__.py
+│   │       │           
+│   │       ├───solutions
+│   │       │   │   ai_gym.py
+│   │       │   │   analytics.py
+│   │       │   │   config.py
+│   │       │   │   distance_calculation.py
+│   │       │   │   heatmap.py
+│   │       │   │   instance_segmentation.py
+│   │       │   │   object_blurrer.py
+│   │       │   │   object_counter.py
+│   │       │   │   object_cropper.py
+│   │       │   │   parking_management.py
+│   │       │   │   queue_management.py
+│   │       │   │   region_counter.py
+│   │       │   │   security_alarm.py
+│   │       │   │   similarity_search.py
+│   │       │   │   solutions.py
+│   │       │   │   speed_estimation.py
+│   │       │   │   streamlit_inference.py
+│   │       │   │   trackzone.py
+│   │       │   │   vision_eye.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───templates
+│   │       │           similarity-search.html
+│   │       │           
+│   │       ├───trackers
+│   │       │   │   basetrack.py
+│   │       │   │   bot_sort.py
+│   │       │   │   byte_tracker.py
+│   │       │   │   README.md
+│   │       │   │   track.py
+│   │       │   │   __init__.py
+│   │       │   │   
+│   │       │   └───utils
+│   │       │           gmc.py
+│   │       │           kalman_filter.py
+│   │       │           matching.py
+│   │       │           __init__.py
+│   │       │           
+│   │       └───utils
+│   │           │   autobatch.py
+│   │           │   autodevice.py
+│   │           │   benchmarks.py
+│   │           │   checks.py
+│   │           │   cpu.py
+│   │           │   dist.py
+│   │           │   downloads.py
+│   │           │   errors.py
+│   │           │   events.py
+│   │           │   files.py
+│   │           │   git.py
+│   │           │   instance.py
+│   │           │   logger.py
+│   │           │   loss.py
+│   │           │   metrics.py
+│   │           │   nms.py
+│   │           │   ops.py
+│   │           │   patches.py
+│   │           │   plotting.py
+│   │           │   tal.py
+│   │           │   torch_utils.py
+│   │           │   tqdm.py
+│   │           │   triton.py
+│   │           │   tuner.py
+│   │           │   __init__.py
+│   │           │   
+│   │           ├───callbacks
+│   │           │       base.py
+│   │           │       clearml.py
+│   │           │       comet.py
+│   │           │       dvc.py
+│   │           │       hub.py
+│   │           │       mlflow.py
+│   │           │       neptune.py
+│   │           │       platform.py
+│   │           │       raytune.py
+│   │           │       tensorboard.py
+│   │           │       wb.py
+│   │           │       __init__.py
+│   │           │       
+│   │           └───export
+│   │                   imx.py
+│   │                   __init__.py
+│   │                   
+│   ├───yolov11
+│   └───yolov8
+│           yolov8l.pt
+│           yolov8m.pt
+│           yolov8n.pt
+│           yolov8s.pt
+│           yolov8x.pt
+│           
+├───output_gate
+│   ├───blip-2
+│   │   │   .gitattributes
+│   │   │   added_tokens.json
+│   │   │   config.json
+│   │   │   generation_config.json
+│   │   │   merges.txt
+│   │   │   model-00001-of-00002.safetensors
+│   │   │   model-00002-of-00002.safetensors
+│   │   │   model.safetensors.index.json
+│   │   │   preprocessor_config.json
+│   │   │   processor_config.json
+│   │   │   pytorch_model-00001-of-00002.bin
+│   │   │   pytorch_model-00002-of-00002.bin
+│   │   │   pytorch_model.bin.index.json
+│   │   │   README.md
+│   │   │   special_tokens_map.json
+│   │   │   tokenizer.json
+│   │   │   tokenizer_config.json
+│   │   │   vocab.json
+│   │   │   
+│   │   └───.cache
+│   │       └───huggingface
+│   │           │   .gitignore
+│   │           │   
+│   │           └───download
+│   │                   .gitattributes.metadata
+│   │                   added_tokens.json.metadata
+│   │                   config.json.metadata
+│   │                   generation_config.json.metadata
+│   │                   merges.txt.metadata
+│   │                   model-00001-of-00002.safetensors.metadata
+│   │                   model-00002-of-00002.safetensors.metadata
+│   │                   model.safetensors.index.json.metadata
+│   │                   preprocessor_config.json.metadata
+│   │                   processor_config.json.metadata
+│   │                   pytorch_model-00001-of-00002.bin.metadata
+│   │                   pytorch_model-00002-of-00002.bin.metadata
+│   │                   pytorch_model.bin.index.json.metadata
+│   │                   README.md.metadata
+│   │                   special_tokens_map.json.metadata
+│   │                   tokenizer.json.metadata
+│   │                   tokenizer_config.json.metadata
+│   │                   vocab.json.metadata
+│   │                   
+│   └───llava
+│       │   .gitattributes
+│       │   config.json
+│       │   generation_config.json
+│       │   mm_projector.bin
+│       │   pytorch_model-00001-of-00002.bin
+│       │   pytorch_model-00002-of-00002.bin
+│       │   pytorch_model.bin.index.json
+│       │   README.md
+│       │   special_tokens_map.json
+│       │   tokenizer.model
+│       │   tokenizer_config.json
+│       │   
+│       └───.cache
+│           └───huggingface
+│               │   .gitignore
+│               │   
+│               └───download
+│                       .gitattributes.metadata
+│                       config.json.metadata
+│                       generation_config.json.metadata
+│                       mm_projector.bin.metadata
+│                       pytorch_model-00001-of-00002.bin.metadata
+│                       pytorch_model-00002-of-00002.bin.metadata
+│                       pytorch_model.bin.index.json.metadata
+│                       README.md.metadata
+│                       special_tokens_map.json.metadata
+│                       tokenizer.model.metadata
+│                       tokenizer_config.json.metadata
+│                       
+├───satellite
+│   └───spacenet-maskrcnn
+│       │   approach_table.png
+│       │   LICENSE
+│       │   performance_table.png
+│       │   README.md
+│       │   sn_logo.png
+│       │   
+│       ├───1-zbigniewwojna
+│       │   │   base.py
+│       │   │   Dockerfile
+│       │   │   flags.txt
+│       │   │   folds.csv
+│       │   │   gt_fold_0_csv
+│       │   │   gt_fold_1_csv
+│       │   │   gt_fold_2_csv
+│       │   │   gt_fold_3_csv
+│       │   │   gt_fold_4_csv
+│       │   │   gt_fold_5_csv
+│       │   │   gt_fold_6_csv
+│       │   │   gt_fold_7_csv
+│       │   │   gt_fold_8_csv
+│       │   │   gt_fold_9_csv
+│       │   │   main.py
+│       │   │   README.md
+│       │   │   SAR_orientations.csv
+│       │   │   SAR_orientations.txt
+│       │   │   test.sh
+│       │   │   train.sh
+│       │   │   
+│       │   ├───geffnet
+│       │   │   │   config.py
+│       │   │   │   conv2d_layers.py
+│       │   │   │   efficientnet_builder.py
+│       │   │   │   gen_efficientnet.py
+│       │   │   │   helpers.py
+│       │   │   │   mobilenetv3.py
+│       │   │   │   model_factory.py
+│       │   │   │   version.py
+│       │   │   │   __init__.py
+│       │   │   │   
+│       │   │   ├───activations
+│       │   │   │   │   activations.py
+│       │   │   │   │   activations_autofn.py
+│       │   │   │   │   activations_jit.py
+│       │   │   │   │   __init__.py
+│       │   │   │   │   
+│       │   │   │   └───__pycache__
+│       │   │   │           activations.cpython-37.pyc
+│       │   │   │           activations_autofn.cpython-37.pyc
+│       │   │   │           activations_jit.cpython-37.pyc
+│       │   │   │           __init__.cpython-37.pyc
+│       │   │   │           
+│       │   │   └───__pycache__
+│       │   │           config.cpython-37.pyc
+│       │   │           conv2d_layers.cpython-37.pyc
+│       │   │           efficientnet_builder.cpython-37.pyc
+│       │   │           gen_efficientnet.cpython-37.pyc
+│       │   │           helpers.cpython-37.pyc
+│       │   │           mobilenetv3.cpython-37.pyc
+│       │   │           model_factory.cpython-37.pyc
+│       │   │           __init__.cpython-37.pyc
+│       │   │           
+│       │   └───media
+│       │           image1.png
+│       │           image2.png
+│       │           image3.png
+│       │           image4.png
+│       │           image5.png
+│       │           image6.png
+│       │           image8.png
+│       │           
+│       ├───2-MaksimovKA
+│       │   │   Dockerfile
+│       │   │   flags.txt
+│       │   │   README.md
+│       │   │   requirements.txt
+│       │   │   test.sh
+│       │   │   train.sh
+│       │   │   
+│       │   ├───configs
+│       │   │       senet154_gcc_fold1.py
+│       │   │       senet154_gcc_fold2.py
+│       │   │       senet154_gcc_fold3.py
+│       │   │       senet154_gcc_fold4.py
+│       │   │       senet154_gcc_fold5.py
+│       │   │       senet154_gcc_fold6.py
+│       │   │       senet154_gcc_fold7.py
+│       │   │       senet154_gcc_fold8.py
+│       │   │       
+│       │   ├───dataset
+│       │   │       semseg_dataset.py
+│       │   │       
+│       │   ├───models
+│       │   │       model_factory.py
+│       │   │       
+│       │   ├───predict
+│       │   │       predict.py
+│       │   │       submit.py
+│       │   │       tta.py
+│       │   │       
+│       │   ├───train
+│       │   │       Adam.py
+│       │   │       callbacks.py
+│       │   │       losses.py
+│       │   │       optimizers.py
+│       │   │       radam.py
+│       │   │       train_segmentation.py
+│       │   │       
+│       │   └───utils
+│       │           create_folds.py
+│       │           create_masks.py
+│       │           helpers.py
+│       │           
+│       ├───3-SatShipAI
+│       │   │   baseline.py
+│       │   │   datagen.py
+│       │   │   Dockerfile
+│       │   │   epoch.py
+│       │   │   evaluator.py
+│       │   │   experiments.py
+│       │   │   flags.txt
+│       │   │   LICENSE.txt
+│       │   │   logs.py
+│       │   │   loss.py
+│       │   │   MAX_DICT_v2
+│       │   │   MIN_DICT_v2
+│       │   │   nasios.py
+│       │   │   nasiosdataprocess.py
+│       │   │   nasiosprepare.py
+│       │   │   nasiostrain1.py
+│       │   │   nasiostrain2.py
+│       │   │   pairs_D
+│       │   │   pairs_D_v2
+│       │   │   pairs_L
+│       │   │   pairs_L_v2
+│       │   │   productmaxesAllBoth.npy
+│       │   │   productminesAllBoth.npy
+│       │   │   README.md
+│       │   │   requirements.txt
+│       │   │   SAR_orientations.txt
+│       │   │   settings.sh
+│       │   │   solaris_eval.py
+│       │   │   test.py
+│       │   │   test.sh
+│       │   │   train.py
+│       │   │   train.sh
+│       │   │   __init__.py
+│       │   │   
+│       │   ├───media
+│       │   │       image1.png
+│       │   │       
+│       │   └───solaris
+│       │       │   __init__.py
+│       │       │   
+│       │       ├───eval
+│       │       │       base.py
+│       │       │       challenges.py
+│       │       │       iou.py
+│       │       │       pixel.py
+│       │       │       __init__.py
+│       │       │       
+│       │       ├───raster
+│       │       │       image.py
+│       │       │       __init__.py
+│       │       │       
+│       │       ├───tile
+│       │       │       raster_tile.py
+│       │       │       vector_tile.py
+│       │       │       __init__.py
+│       │       │       
+│       │       ├───utils
+│       │       │       cli.py
+│       │       │       config.py
+│       │       │       core.py
+│       │       │       data.py
+│       │       │       geo.py
+│       │       │       io.py
+│       │       │       log.py
+│       │       │       raster.py
+│       │       │       tile.py
+│       │       │       __init__.py
+│       │       │       
+│       │       └───vector
+│       │               graph.py
+│       │               mask.py
+│       │               polygon.py
+│       │               __init__.py
+│       │               
+│       ├───4-motokimura
+│       │   │   Dockerfile
+│       │   │   flags.txt
+│       │   │   INSTRUCTION.md
+│       │   │   README.md
+│       │   │   settings.sh
+│       │   │   test.sh
+│       │   │   train.sh
+│       │   │   
+│       │   ├───configs
+│       │   │   │   fpn_efficientnet-b7_v_01.yml
+│       │   │   │   pan_efficientnet-b7_v_01.yml
+│       │   │   │   test_to_val_images.yml
+│       │   │   │   unet-scse_densenet161_v_01.yml
+│       │   │   │   unet-scse_efficientnet-b6_v_01.yml
+│       │   │   │   unet-scse_efficientnet-b6_v_02.yml
+│       │   │   │   unet-scse_efficientnet-b7_ps-rgbnir_v_01.yml
+│       │   │   │   unet-scse_efficientnet-b7_ps-rgbnir_v_02.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_01.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_02.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_03.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_04.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_05.yml
+│       │   │   │   unet-scse_efficientnet-b7_v_06.yml
+│       │   │   │   unet-scse_timm-efficientnet-b7_ps-rgbnir_v_01.yml
+│       │   │   │   unet-scse_timm-efficientnet-b7_v_01.yml
+│       │   │   │   unet-scse_timm-efficientnet-b8_v_01.yml
+│       │   │   │   unet_efficientnet-b5_v_01.yml
+│       │   │   │   unet_efficientnet-b6_v_01.yml
+│       │   │   │   unet_efficientnet-b7_v_01.yml
+│       │   │   │   unet_efficientnet-b7_v_02.yml
+│       │   │   │   
+│       │   │   └───deploy
+│       │   │           unet-scse_efficientnet-b7_ps-rgbnir_v_01.yml
+│       │   │           unet-scse_efficientnet-b7_v_01.yml
+│       │   │           unet-scse_efficientnet-b7_v_03.yml
+│       │   │           unet-scse_timm-efficientnet-b7_v_01.yml
+│       │   │           unet-scse_timm-efficientnet-b8_v_01.yml
+│       │   │           
+│       │   ├───docker
+│       │   │       build.sh
+│       │   │       Dockerfile.dev
+│       │   │       exec.sh
+│       │   │       jupyter.sh
+│       │   │       run.sh
+│       │   │       tensorboard.sh
+│       │   │       
+│       │   ├───media
+│       │   │       image2.png
+│       │   │       image3.png
+│       │   │       
+│       │   ├───notebooks
+│       │   │       geojson_to_mask.ipynb
+│       │   │       test_spacenet6.ipynb
+│       │   │       train_camvid.ipynb
+│       │   │       train_spacenet6_model.ipynb
+│       │   │       utils.py
+│       │   │       val_spacenet6.ipynb
+│       │   │       
+│       │   ├───scripts
+│       │   │   ├───test
+│       │   │   │       postprocess.sh
+│       │   │   │       test_cnns.sh
+│       │   │   │       
+│       │   │   └───train
+│       │   │           preprocess.sh
+│       │   │           train_cnns.sh
+│       │   │           train_lgbm.sh
+│       │   │           
+│       │   ├───spacenet6_model
+│       │   │   ├───configs
+│       │   │   │       defaults.py
+│       │   │   │       load_config.py
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   ├───datasets
+│       │   │   │       spacenet6.py
+│       │   │   │       utils.py
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   ├───evaluations
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   ├───models
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   ├───solvers
+│       │   │   │       losses.py
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   ├───transforms
+│       │   │   │       augmentations.py
+│       │   │   │       preprocesses.py
+│       │   │   │       __init__.py
+│       │   │   │       
+│       │   │   └───utils
+│       │   │           checkpoint.py
+│       │   │           lgbm.py
+│       │   │           utils.py
+│       │   │           __init__.py
+│       │   │           
+│       │   ├───static
+│       │   │       SAR_orientations.txt
+│       │   │       
+│       │   └───tools
+│       │       │   compute_mean_std.py
+│       │       │   ensemble_models.py
+│       │       │   geojson_to_mask.py
+│       │       │   pred_array_to_poly.py
+│       │       │   separate_val_images.py
+│       │       │   separate_val_labels.py
+│       │       │   split_dataset.py
+│       │       │   test_lgbm.py
+│       │       │   test_spacenet6_model.py
+│       │       │   train_lgbm.py
+│       │       │   train_spacenet6_model.py
+│       │       │   _init_path.py
+│       │       │   
+│       │       └───__pycache__
+│       │               _init_path.cpython-37.pyc
+│       │               
+│       └───5-selim_sef
+│           │   coordinates.csv
+│           │   create_folds.py
+│           │   Dockerfile
+│           │   ensemble.py
+│           │   folds.csv
+│           │   generate_4folds.py
+│           │   generate_folds.py
+│           │   generate_polygons.py
+│           │   generate_submission.py
+│           │   generate_tiles.py
+│           │   losses.py
+│           │   predict_test.py
+│           │   README.md
+│           │   sar_orientations.txt
+│           │   spacenet_dataset.py
+│           │   test.sh
+│           │   train.py
+│           │   train.sh
+│           │   transforms.py
+│           │   
+│           ├───configs
+│           │       b5.json
+│           │       d92.json
+│           │       rx101.json
+│           │       
+│           ├───media
+│           │       image1.png
+│           │       image2.png
+│           │       
+│           ├───preprocessing
+│           │       prepare_masks.py
+│           │       water_masks.py
+│           │       
+│           ├───tools
+│           │       adamw.py
+│           │       config.py
+│           │       instance_label.py
+│           │       meters.py
+│           │       metrics.py
+│           │       schedulers.py
+│           │       utils.py
+│           │       
+│           ├───visualizer
+│           │       visualizer.jar
+│           │       
+│           └───zoo
+│                   densenet.py
+│                   dpn.py
+│                   efficient.py
+│                   irv.py
+│                   resnet.py
+│                   senet.py
+│                   unet.py
+│                   __init__.py
+│                   
+└───weather
+    ├───ClimaX
+    │   │   .gitignore
+    │   │   .pre-commit-config.yaml
+    │   │   CODE_OF_CONDUCT.md
+    │   │   LICENSE
+    │   │   mkdocs.yml
+    │   │   pyproject.toml
+    │   │   README.md
+    │   │   SECURITY.md
+    │   │   SUPPORT.md
+    │   │   
+    │   ├───.github
+    │   │   └───workflows
+    │   │           mkdocs.yml
+    │   │           
+    │   ├───configs
+    │   │       climate_projection.yaml
+    │   │       global_forecast_climax.yaml
+    │   │       pretrain_climax.yaml
+    │   │       regional_forecast_climax.yaml
+    │   │       
+    │   ├───docker
+    │   │       Dockerfile
+    │   │       environment.yml
+    │   │       
+    │   ├───docs
+    │   │   │   index.md
+    │   │   │   install.md
+    │   │   │   usage.md
+    │   │   │   
+    │   │   ├───assets
+    │   │   │   └───images
+    │   │   │       │   climax-coverfigure.png
+    │   │   │       │   climax-icon.png
+    │   │   │       │   climax-logo.png
+    │   │   │       │   
+    │   │   │       ├───gifs
+    │   │   │       │       t2m.gif
+    │   │   │       │       t850.gif
+    │   │   │       │       u10.gif
+    │   │   │       │       v10.gif
+    │   │   │       │       z500.gif
+    │   │   │       │       
+    │   │   │       └───icons
+    │   │   │               github-white.svg
+    │   │   │               
+    │   │   ├───overrides
+    │   │   │       home.html
+    │   │   │       
+    │   │   ├───reference
+    │   │   │       global_forecast.md
+    │   │   │       pretrain.md
+    │   │   │       
+    │   │   └───stylesheets
+    │   │           extra.css
+    │   │           
+    │   ├───snakemake_configs
+    │   │   ├───AWI-ESM
+    │   │   │       config_10m_u_component_of_wind.yml
+    │   │   │       config_10m_v_component_of_wind.yml
+    │   │   │       config_2m_temperature.yml
+    │   │   │       config_geopotential.yml
+    │   │   │       config_specific_humidity.yml
+    │   │   │       config_temperature.yml
+    │   │   │       config_u_component_of_wind.yml
+    │   │   │       config_v_component_of_wind.yml
+    │   │   │       Snakefile
+    │   │   │       
+    │   │   ├───CMCC
+    │   │   │       config_geopotential.yml
+    │   │   │       config_temperature.yml
+    │   │   │       config_u_component_of_wind.yml
+    │   │   │       config_v_component_of_wind.yml
+    │   │   │       Snakefile
+    │   │   │       
+    │   │   ├───HAMMOZ
+    │   │   │       config_10m_u_component_of_wind.yml
+    │   │   │       config_10m_v_component_of_wind.yml
+    │   │   │       config_2m_temperature.yml
+    │   │   │       config_geopotential.yml
+    │   │   │       config_specific_humidity.yml
+    │   │   │       config_temperature.yml
+    │   │   │       config_u_component_of_wind.yml
+    │   │   │       config_v_component_of_wind.yml
+    │   │   │       Snakefile
+    │   │   │       
+    │   │   ├───MPI-ESM
+    │   │   │       config_10m_u_component_of_wind.yml
+    │   │   │       config_10m_v_component_of_wind.yml
+    │   │   │       config_2m_temperature.yml
+    │   │   │       config_geopotential.yml
+    │   │   │       config_specific_humidity.yml
+    │   │   │       config_temperature.yml
+    │   │   │       config_u_component_of_wind.yml
+    │   │   │       config_v_component_of_wind.yml
+    │   │   │       Snakefile
+    │   │   │       
+    │   │   └───TaiESM1
+    │   │           config_2m_temperature.yml
+    │   │           config_geopotential.yml
+    │   │           config_specific_humidity.yml
+    │   │           config_temperature.yml
+    │   │           config_u_component_of_wind.yml
+    │   │           config_v_component_of_wind.yml
+    │   │           Snakefile
+    │   │           
+    │   ├───src
+    │   │   ├───climax
+    │   │   │   │   arch.py
+    │   │   │   │   parallelpatchembed.py
+    │   │   │   │   __init__.py
+    │   │   │   │   
+    │   │   │   ├───climate_projection
+    │   │   │   │       arch.py
+    │   │   │   │       datamodule.py
+    │   │   │   │       dataset.py
+    │   │   │   │       module.py
+    │   │   │   │       train.py
+    │   │   │   │       __init__.py
+    │   │   │   │       
+    │   │   │   ├───global_forecast
+    │   │   │   │       datamodule.py
+    │   │   │   │       module.py
+    │   │   │   │       train.py
+    │   │   │   │       __init__.py
+    │   │   │   │       
+    │   │   │   ├───pretrain
+    │   │   │   │       datamodule.py
+    │   │   │   │       dataset.py
+    │   │   │   │       module.py
+    │   │   │   │       train.py
+    │   │   │   │       __init__.py
+    │   │   │   │       
+    │   │   │   ├───regional_forecast
+    │   │   │   │       arch.py
+    │   │   │   │       datamodule.py
+    │   │   │   │       module.py
+    │   │   │   │       train.py
+    │   │   │   │       __init__.py
+    │   │   │   │       
+    │   │   │   └───utils
+    │   │   │           data_utils.py
+    │   │   │           lr_scheduler.py
+    │   │   │           metrics.py
+    │   │   │           pos_embed.py
+    │   │   │           
+    │   │   └───data_preprocessing
+    │   │           nc2np_equally_cmip6.py
+    │   │           nc2np_equally_era5.py
+    │   │           regrid.py
+    │   │           regrid_climatebench.py
+    │   │           
+    │   └───tests
+    │           test_parallel_patch_embed.py
+    │           
+    ├───satmae
+    │   │   .gitattributes
+    │   │   config.json
+    │   │   config.yaml
+    │   │   GFM.png
+    │   │   inference.py
+    │   │   Prithvi_100M.pt
+    │   │   Prithvi_EO_V1_100M.pt
+    │   │   prithvi_mae.py
+    │   │   README.md
+    │   │   requirements.txt
+    │   │   
+    │   ├───.cache
+    │   │   └───huggingface
+    │   │       │   .gitignore
+    │   │       │   
+    │   │       └───download
+    │   │           │   .gitattributes.metadata
+    │   │           │   config.json.metadata
+    │   │           │   config.yaml.metadata
+    │   │           │   GFM.png.metadata
+    │   │           │   inference.py.metadata
+    │   │           │   Prithvi_100M.pt.metadata
+    │   │           │   Prithvi_EO_V1_100M.pt.metadata
+    │   │           │   prithvi_mae.py.metadata
+    │   │           │   README.md.metadata
+    │   │           │   requirements.txt.metadata
+    │   │           │   
+    │   │           └───examples
+    │   │                   HLS.L30.T13REN.2018013T172747.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif.metadata
+    │   │                   HLS.L30.T13REN.2018029T172738.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif.metadata
+    │   │                   HLS.L30.T13REN.2018061T172724.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif.metadata
+    │   │                   
+    │   └───examples
+    │           HLS.L30.T13REN.2018013T172747.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif
+    │           HLS.L30.T13REN.2018029T172738.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif
+    │           HLS.L30.T13REN.2018061T172724.v2.0.B02.B03.B04.B05.B06.B07_cropped.tif
+    │           
+    └───WeatherBench
+        │   environment.yml
+        │   LICENSE
+        │   quickstart.ipynb
+        │   README.md
+        │   Snakefile
+        │   
+        ├───figures
+        │       acc.pdf
+        │       examples.pdf
+        │       examples_edit.pdf
+        │       logo_no_text.png
+        │       logo_text_left.png
+        │       logo_text_underneath.png
+        │       mae.pdf
+        │       rmse.pdf
+        │       rmse2.pdf
+        │       WeatherBench-Schematic.pdf
+        │       
+        ├───notebooks
+        │   │   1-climatology-persistence.ipynb
+        │   │   2-linear-regression-baseline.ipynb
+        │   │   3-cnn-example.ipynb
+        │   │   4-evaluation.ipynb
+        │   │   Weyn2020-scores.ipynb
+        │   │   
+        │   └───src
+        │       │   add_lat_lon_2d.py
+        │       │   download.py
+        │       │   extract_level.py
+        │       │   regrid.py
+        │       │   score.py
+        │       │   train_nn.py
+        │       │   __init__.py
+        │       │   
+        │       └───nn_configs
+        │               fccnn_3d.yml
+        │               fccnn_5d.yml
+        │               fccnn_6h_iter.yml
+        │               
+        ├───scripts
+        │       config_10m_u_component_of_wind.yml
+        │       config_10m_v_component_of_wind.yml
+        │       config_2m_temperature.yml
+        │       config_default.yml
+        │       config_geopotential.yml
+        │       config_potential_vorticity.yml
+        │       config_relative_humidity.yml
+        │       config_specific_humidity.yml
+        │       config_temperature.yml
+        │       config_toa_incident_solar_radiation.yml
+        │       config_total_cloud_cover.yml
+        │       config_total_precipitation.yml
+        │       config_u_component_of_wind.yml
+        │       config_vorticity.yml
+        │       config_v_component_of_wind.yml
+        │       convert_and_regrid_IFS_TXX.sh
+        │       convert_and_regrid_tigge.sh
+        │       download_and_regrid_constants.sh
+        │       download_tigge.py
+        │       
+        ├───snakemake_configs_CMIP
+        │   └───MPI-ESM
+        │           config_geopotential.yml
+        │           config_specific_humidity.yml
+        │           config_temperature.yml
+        │           config_u_component_of_wind.yml
+        │           config_v_component_of_wind.yml
+        │           Snakefile
+        │           
+        └───src
+            │   add_lat_lon_2d.py
+            │   download.py
+            │   extract_level.py
+            │   regrid.py
+            │   score.py
+            │   train_nn.py
+            │   __init__.py
+            │   
+            └───nn_configs
+                    fccnn_3d.yml
+                    fccnn_5d.yml
+                    fccnn_6h_iter.yml
+                    

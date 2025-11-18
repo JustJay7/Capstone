@@ -1,0 +1,4 @@
+# Force Python + Pip to use research_env
+$env:Path = "D:\Capstone_research\research_env\Scripts;" + $env:Path
+Set-Alias python "D:\Capstone_research\research_env\Scripts\python.exe"
+Set-Alias pip "D:\Capstone_research\research_env\Scripts\pip.exe"

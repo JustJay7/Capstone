@@ -1,0 +1,381 @@
+{
+  "intents": [
+    {
+      "intent_id": "infrastructure-building-damage-xbd",
+      "display_name": "Post-Disaster Building Damage Assessment (xBD)",
+      "domain": "infrastructure",
+      "description": "Aerial or satellite imagery showing buildings with visible damage after disasters: collapsed roofs, debris, rubble, or structural deformation.",
+      "primary_models": ["xBD"],
+      "alternate_models": ["YOLOv8", "DETR"],
+      "clip_text_prompts": [
+        "aerial photograph of damaged buildings with collapsed roofs and debris scattered around",
+        "overhead view of disaster zone showing destroyed buildings, rubble piles, and structural failures",
+        "satellite image of post-earthquake building damage with missing roofs and walls",
+        "drone image of flattened structures and demolished buildings after natural disaster",
+        "orthophoto of damaged urban area with visible building destruction and emergency response",
+        "aerial disaster monitoring image showing rooftop damage and debris fields",
+        "high-altitude reconnaissance of post-disaster building destruction"
+      ],
+      "florence_positive_markers": [
+        "collapsed",
+        "damaged",
+        "debris",
+        "rubble",
+        "disaster",
+        "destroyed",
+        "wreckage",
+        "building",
+        "from above",
+        "aerial view",
+        "roof",
+        "broken",
+        "ruins",
+        "earthquake"
+      ],
+      "florence_negative_markers": [
+        "x-ray",
+        "ct scan",
+        "forest",
+        "animal",
+        "person close-up",
+        "indoor",
+        "road crack",
+        "medical",
+        "vehicle interior",
+        "weather map"
+      ],
+      "object_markers": [
+        "building",
+        "truck",
+        "car",
+        "person",
+        "debris"
+      ],
+      "user_hint_keywords": [
+        "disaster",
+        "building damage",
+        "collapsed building",
+        "earthquake damage",
+        "flood damage",
+        "disaster assessment",
+        "emergency response",
+        "post-disaster",
+        "rubble",
+        "debris",
+        "satellite damage",
+        "building collapse",
+        "urban damage",
+        "infrastructure failure"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.20,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.35,
+          "florence": 0.30,
+          "yolo": 0.20,
+          "bart": 0.15
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["disaster", "earthquake", "collapsed", "damage", "rubble"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["collapsed", "debris", "rubble", "disaster", "building"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "negative_boost_rules": [
+          {
+            "if_caption_contains_any": ["intact building", "undamaged", "normal cityscape", "medical", "forest"],
+            "reduce_intent_by": 2.0
+          }
+        ],
+        "tie_breaker": [
+          "has_primary_model",
+          "higher_clip_conf",
+          "higher_positive_hits"
+        ]
+      },
+      "disambiguation": {
+        "often_confused_with": [
+          "satellite-environmental-analysis",
+          "generic-object-detection"
+        ],
+        "separators": {
+          "this_intent_visual_traits": [
+            "buildings visibly damaged or collapsed",
+            "debris, rubble, or missing roofs",
+            "aerial or overhead perspective",
+            "clear signs of disaster impact"
+          ],
+          "other_intent_visual_traits": [
+            "intact structures or undamaged landscapes",
+            "generic satellite imagery without destruction",
+            "environmental or vegetation scenes"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png", "tif"],
+        "notes": "Typically aerial or satellite RGB images; may include pre/post disaster comparisons."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Per-building damage class: no damage, minor, major, destroyed; may include bounding boxes or polygons."
+      }
+    },
+    {
+      "intent_id": "medical-chest-xray-chexnet",
+      "display_name": "Chest X-ray (CheXNet)",
+      "domain": "medical",
+      "description": "Detects thoracic diseases and abnormalities from chest X-ray images using the CheXNet deep CNN model.",
+      "primary_models": ["CheXNet"],
+      "alternate_models": ["BioMedCLIP", "MedSAM"],
+      "clip_text_prompts": [
+        "chest x-ray showing lungs and heart",
+        "radiograph of human chest",
+        "medical x-ray scan of lungs",
+        "x-ray image showing pneumonia or lung opacity",
+        "thoracic x-ray with visible ribs and lungs",
+        "medical imaging of thoracic cavity",
+        "x-ray depicting lung abnormality or infection"
+      ],
+      "florence_positive_markers": [
+        "x-ray",
+        "radiograph",
+        "lungs",
+        "thoracic",
+        "chest",
+        "rib",
+        "pneumonia",
+        "opacity",
+        "medical image",
+        "radiology",
+        "scan",
+        "hospital",
+        "doctor",
+        "patient"
+      ],
+      "florence_negative_markers": [
+        "satellite",
+        "forest",
+        "building",
+        "road",
+        "bird",
+        "crack",
+        "vegetation",
+        "disaster",
+        "microscope",
+        "weather map"
+      ],
+      "object_markers": [
+        "person",
+        "human",
+        "lungs",
+        "chest"
+      ],
+      "user_hint_keywords": [
+        "x-ray",
+        "radiograph",
+        "chest",
+        "lungs",
+        "pneumonia",
+        "thoracic disease",
+        "radiology",
+        "medical scan",
+        "infection",
+        "opacity",
+        "covid",
+        "respiratory"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.22,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.25,
+          "florence": 0.25,
+          "yolo": 0.10,
+          "bart": 0.40
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["x-ray", "radiograph", "chest", "lungs", "pneumonia", "thoracic"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["x-ray", "radiograph", "thoracic", "lungs", "chest"],
+            "boost_intent_by": 1.6
+          }
+        ],
+        "negative_boost_rules": [
+          {
+            "if_caption_contains_any": ["building", "forest", "road", "bird", "crack"],
+            "reduce_intent_by": 2.0
+          }
+        ],
+        "tie_breaker": [
+          "higher_bart_score",
+          "higher_clip_conf"
+        ]
+      },
+      "disambiguation": {
+        "often_confused_with": [
+          "medical-biomedclip-embedding",
+          "medical-medsam-segmentation"
+        ],
+        "separators": {
+          "this_intent_visual_traits": [
+            "black-and-white radiograph",
+            "lungs and ribs clearly visible",
+            "medical scan layout with patient ID overlay",
+            "thoracic cavity centered view"
+          ],
+          "other_intent_visual_traits": [
+            "colored medical microscope images",
+            "segmentations with masks or contours",
+            "3D volumetric renderings"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "grayscale or rgb",
+        "formats": ["jpg", "png", "jpeg", "dicom"],
+        "notes": "Single frontal or lateral chest X-ray images."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Probability scores for thoracic pathologies such as pneumonia, infiltration, effusion, atelectasis, cardiomegaly, etc."
+      }
+    },
+  
+    {
+      "intent_id": "satellite-environmental-analysis",
+      "display_name": "Environmental Satellite Analysis",
+      "domain": "satellite",
+      "description": "Aerial or satellite imagery used to detect and classify environmental features such as vegetation, water bodies, deforestation, pollution, and land-use changes.",
+      "primary_models": ["SatEnvNet"],
+      "alternate_models": ["YOLOv8", "DETR", "Florence-2"],
+      "clip_text_prompts": [
+        "satellite image showing forests, rivers, and terrain features",
+        "aerial photo of agricultural fields and vegetation",
+        "top-down satellite view of mixed land cover: forest, farmland, and water",
+        "remote sensing image for environmental monitoring",
+        "drone image showing natural landscape with trees and water",
+        "satellite photo capturing deforestation or land-use changes",
+        "overhead view of natural ecosystems from space"
+      ],
+      "florence_positive_markers": [
+        "forest",
+        "vegetation",
+        "river",
+        "mountain",
+        "lake",
+        "field",
+        "tree",
+        "green",
+        "terrain",
+        "satellite",
+        "aerial",
+        "drone",
+        "environment",
+        "land cover"
+      ],
+      "florence_negative_markers": [
+        "x-ray",
+        "ct scan",
+        "person",
+        "building interior",
+        "microscope",
+        "road crack",
+        "car close-up",
+        "urban skyline",
+        "medical",
+        "document",
+        "text overlay"
+      ],
+      "object_markers": [
+        "tree",
+        "river",
+        "mountain",
+        "field",
+        "lake",
+        "forest"
+      ],
+      "user_hint_keywords": [
+        "environmental",
+        "satellite",
+        "aerial",
+        "land use",
+        "deforestation",
+        "vegetation",
+        "forest cover",
+        "pollution",
+        "remote sensing",
+        "terrain",
+        "natural landscape"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.20,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.35,
+          "florence": 0.35,
+          "yolo": 0.20,
+          "bart": 0.10
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["satellite", "environment", "vegetation", "forest", "terrain", "aerial"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["forest", "river", "vegetation", "mountain", "field", "satellite"],
+            "boost_intent_by": 1.6
+          }
+        ],
+        "negative_boost_rules": [
+          {
+            "if_caption_contains_any": ["building", "x-ray", "road", "person", "vehicle", "indoor"],
+            "reduce_intent_by": 2.0
+          }
+        ],
+        "tie_breaker": [
+          "higher_florence_hits",
+          "higher_clip_conf"
+        ]
+      },
+      "disambiguation": {
+        "often_confused_with": [
+          "infrastructure-building-damage-xbd",
+          "nature-ecology-wildlife-detection"
+        ],
+        "separators": {
+          "this_intent_visual_traits": [
+            "top-down aerial or satellite view",
+            "natural features like forests, rivers, or farmland",
+            "broad landscape-level perspective",
+            "no visible human structures or vehicles"
+          ],
+          "other_intent_visual_traits": [
+            "urban scenes with buildings or debris",
+            "wildlife or close-up natural imagery",
+            "medical or synthetic visuals"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb or multispectral",
+        "formats": ["jpg", "png", "tif"],
+        "notes": "Satellite or drone-captured imagery suitable for environmental or land-use analysis."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Labels environmental classes such as vegetation, water, barren land, or urban cover; optionally supports segmentation masks."
+      }
+    }
+  ]
+}
+

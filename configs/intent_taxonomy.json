@@ -1,0 +1,1468 @@
+{
+  "version": "1.0",
+  "intents": [
+    {
+      "intent_id": "infrastructure-crack-detection",
+      "display_name": "Infrastructure Crack Detection",
+      "domain": "infrastructure",
+      "description": "Visible linear fractures, fissures, or cracks in concrete, asphalt, pavement, walls, or bridges.",
+      "primary_models": ["yolov8_crack"],
+      "alternate_models": ["CrackFormer-II", "DeepCrack_CT260_FT1", "SDNet"],
+      "clip_text_prompts": [
+        "a close-up photograph of cracked asphalt pavement showing linear fractures and surface deterioration",
+        "concrete surface with visible hairline cracks and fissures spreading across the structure",
+        "damaged road pavement with dark branching crack patterns and weathered texture",
+        "infrastructure inspection image showing structural cracks in a bridge or wall surface",
+        "gray concrete slab with visible split lines, gaps, and surface discontinuities",
+        "deteriorated sidewalk or parking lot surface displaying multiple crack networks",
+        "close-up view of aged cement or asphalt showing thermal cracks and load-induced damage",
+        "road surface damage with pothole edges, expansion joint cracks, and linear fractures"
+      ],
+      "florence_positive_markers": [
+        "crack",
+        "concrete",
+        "asphalt",
+        "pavement",
+        "road",
+        "fracture",
+        "surface",
+        "damage",
+        "gray surface",
+        "line",
+        "fissure",
+        "deterioration",
+        "infrastructure"
+      ],
+      "florence_negative_markers": [
+        "person",
+        "face",
+        "medical",
+        "x-ray",
+        "building facade",
+        "satellite",
+        "aerial view",
+        "forest",
+        "animal",
+        "indoor room",
+        "furniture",
+        "sky",
+        "clouds"
+      ],
+      "object_markers": ["road", "pavement", "bridge", "wall"],
+      "user_hint_keywords": [
+        "crack",
+        "fracture",
+        "fissure",
+        "pavement",
+        "concrete",
+        "asphalt",
+        "road damage",
+        "infrastructure",
+        "structural damage",
+        "bridge inspection",
+        "building defect",
+        "wall crack",
+        "floor crack",
+        "surface damage",
+        "civil engineering",
+        "maintenance",
+        "deterioration",
+        "fault line",
+        "split",
+        "break",
+        "construction defect",
+        "aging infrastructure",
+        "pothole",
+        "expansion joint",
+        "thermal crack"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["crack", "fracture", "pavement", "concrete", "infrastructure"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["crack", "fracture", "concrete", "asphalt", "pavement"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["generic-object-detection", "indoor-outdoor-scene"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "linear or branching dark lines on uniform surfaces",
+            "geometric patterns on concrete or asphalt",
+            "texture discontinuities in built materials",
+            "narrow gaps or openings in solid surfaces"
+          ],
+          "other_intent_visual_traits": [
+            "distinct object boundaries with diverse shapes",
+            "recognizable scene elements like furniture or vegetation",
+            "coherent objects rather than surface defects"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png", "tif"],
+        "notes": "Typically high-resolution images of infrastructure surfaces; may be grayscale but often stored as RGB."
+      },
+      "expected_output": {
+        "type": "detection",
+        "schema_notes": "Bounding boxes [x1,y1,x2,y2] or pixel masks indicating crack regions; confidence scores per detection."
+      }
+    },
+    {
+      "intent_id": "post-disaster-building-damage",
+      "display_name": "Post-Disaster Building Damage Assessment",
+      "domain": "post_disaster",
+      "description": "Aerial or satellite imagery showing buildings with visible damage after disasters: collapsed roofs, debris, rubble, structural deformation.",
+      "primary_models": ["xBD"],
+      "alternate_models": ["YOLOv8", "DETR"],
+      "clip_text_prompts": [
+        "aerial photograph of damaged buildings with collapsed roofs and debris scattered around the structures",
+        "overhead view of disaster zone showing destroyed buildings, rubble piles, and structural failures",
+        "satellite image of post-earthquake or post-hurricane building damage with missing roofs and walls",
+        "drone imagery capturing flattened structures and demolished buildings from above",
+        "bird's eye view of damaged urban area with visible building destruction and emergency response",
+        "orthophoto showing building damage assessment with intact versus collapsed structures",
+        "aerial disaster monitoring image displaying rooftop damage, debris fields, and structural deformation",
+        "overhead building damage classification imagery with visible catastrophic impact on infrastructure"
+      ],
+      "florence_positive_markers": [
+        "damaged building",
+        "collapsed",
+        "debris",
+        "rubble",
+        "aerial view",
+        "overhead",
+        "destroyed",
+        "roof",
+        "disaster",
+        "wreckage",
+        "ruins",
+        "from above"
+      ],
+      "florence_negative_markers": [
+        "person close-up",
+        "medical",
+        "x-ray",
+        "indoor room",
+        "furniture",
+        "crack close-up",
+        "pavement surface",
+        "forest",
+        "animal",
+        "weather map",
+        "chart",
+        "graph"
+      ],
+      "object_markers": ["building", "truck", "car", "person", "debris"],
+      "user_hint_keywords": [
+        "disaster",
+        "damage",
+        "building damage",
+        "xBD",
+        "aerial damage",
+        "collapsed building",
+        "earthquake damage",
+        "hurricane damage",
+        "tornado damage",
+        "flood damage",
+        "disaster assessment",
+        "emergency response",
+        "damage classification",
+        "post-disaster",
+        "structural damage",
+        "disaster monitoring",
+        "damage mapping",
+        "catastrophe",
+        "destruction",
+        "rubble",
+        "debris",
+        "overhead imagery",
+        "drone damage",
+        "satellite disaster",
+        "building collapse"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["disaster", "xBD", "damage", "collapsed", "earthquake"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["damaged", "collapsed", "aerial", "debris", "disaster"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["satellite-remote-sensing", "generic-object-detection"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "buildings with visible structural damage or collapse",
+            "debris, rubble, or missing roofs",
+            "aerial or overhead perspective of damaged structures",
+            "contextual signs of disaster impact"
+          ],
+          "other_intent_visual_traits": [
+            "intact satellite imagery of land use or vegetation",
+            "generic objects without damage context",
+            "clear, undamaged structures"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png", "tif"],
+        "notes": "Typically aerial or satellite RGB images; may include multi-temporal pairs (pre/post)."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Per-building damage class: no damage, minor, major, destroyed; may include bounding boxes or polygons."
+      }
+    },
+    {
+      "intent_id": "generic-object-detection",
+      "display_name": "Generic Object Detection",
+      "domain": "object",
+      "description": "Everyday objects, people, animals, vehicles, furniture in natural or urban scenes; general purpose detection.",
+      "primary_models": ["YOLOv8"],
+      "alternate_models": ["DETR", "GroundingDINO"],
+      "clip_text_prompts": [
+        "a photograph of people, cars, and everyday objects in an urban street scene",
+        "indoor scene with furniture, laptops, books, and household items on tables and shelves",
+        "outdoor park setting showing dogs, bicycles, benches, and people walking around",
+        "typical living room or office environment with chairs, desks, computers, and various objects",
+        "street photography capturing vehicles like cars, buses, trucks, and motorcycles on the road",
+        "everyday photo with recognizable objects such as bottles, cups, phones, backpacks, and bags",
+        "natural scene with animals like cats, dogs, birds, or horses in their typical environments",
+        "common indoor or outdoor setting featuring multiple object categories and everyday items"
+      ],
+      "florence_positive_markers": [
+        "person",
+        "car",
+        "dog",
+        "cat",
+        "chair",
+        "table",
+        "vehicle",
+        "animal",
+        "street",
+        "indoor",
+        "outdoor",
+        "object",
+        "everyday"
+      ],
+      "florence_negative_markers": [
+        "crack",
+        "fracture",
+        "x-ray",
+        "medical scan",
+        "satellite view",
+        "aerial overhead",
+        "disaster damage",
+        "collapsed building",
+        "weather map",
+        "tissue",
+        "microscope"
+      ],
+      "object_markers": ["person", "car", "dog", "cat", "bicycle", "chair", "table", "laptop", "phone", "bottle", "cup", "book", "backpack", "bird", "horse", "train", "bus", "truck", "motorcycle"],
+      "user_hint_keywords": [
+        "object detection",
+        "yolo",
+        "detect objects",
+        "find objects",
+        "person",
+        "car",
+        "dog",
+        "cat",
+        "vehicle",
+        "animal",
+        "everyday objects",
+        "coco classes",
+        "general detection",
+        "bounding box",
+        "localize objects",
+        "identify objects",
+        "object localization",
+        "recognition",
+        "classification",
+        "detection",
+        "scene objects",
+        "photo objects",
+        "street scene",
+        "indoor objects",
+        "outdoor objects"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["object detection", "yolo", "detect", "localize"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["person", "car", "dog", "cat", "object"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["infrastructure-crack-detection", "object-segmentation", "indoor-outdoor-scene"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "distinct objects with clear boundaries",
+            "people, animals, vehicles, furniture",
+            "everyday items in typical contexts",
+            "multiple object categories visible"
+          ],
+          "other_intent_visual_traits": [
+            "surface defects without object semantics (cracks)",
+            "pixel-level masks without category boxes (segmentation)",
+            "holistic scene classification without object focus"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png"],
+        "notes": "Standard RGB images; no volumetric or medical formats."
+      },
+      "expected_output": {
+        "type": "detection",
+        "schema_notes": "Bounding boxes [x1,y1,x2,y2], class labels, confidence scores per detected object."
+      }
+    },
+    {
+      "intent_id": "object-segmentation",
+      "display_name": "Object Segmentation",
+      "domain": "segmentation",
+      "description": "Pixel-level masks for objects; instance or semantic segmentation of anything in the image with precise boundaries.",
+      "primary_models": ["SAM"],
+      "alternate_models": ["GroundingDINO", "YOLOv8"],
+      "clip_text_prompts": [
+        "pixel-perfect segmentation masks showing precise object boundaries and silhouettes in the image",
+        "instance segmentation with detailed contours separating foreground objects from background",
+        "semantic segmentation map displaying pixel-level classification of all regions in the scene",
+        "fine-grained object masks with exact outlines for people, vehicles, furniture, and other items",
+        "segmentation output showing individual object instances with accurate boundary delineation",
+        "pixel-wise labeling that precisely partitions the image into object regions and background areas",
+        "detailed object extraction masks capturing the exact shape and area of each element",
+        "panoptic segmentation combining instance and semantic masks for comprehensive scene understanding"
+      ],
+      "florence_positive_markers": [
+        "segmentation",
+        "mask",
+        "boundary",
+        "contour",
+        "outline",
+        "region",
+        "foreground",
+        "background",
+        "object",
+        "precise",
+        "instance",
+        "semantic"
+      ],
+      "florence_negative_markers": [
+        "crack",
+        "x-ray",
+        "medical volume",
+        "satellite",
+        "weather map",
+        "disaster damage",
+        "collapsed",
+        "tissue slice",
+        "microscope",
+        "brain scan",
+        "aerial overhead"
+      ],
+      "object_markers": ["person", "car", "furniture", "animal", "building", "tree", "sky", "road"],
+      "user_hint_keywords": [
+        "segmentation",
+        "segment",
+        "mask",
+        "SAM",
+        "segment anything",
+        "instance segmentation",
+        "semantic segmentation",
+        "pixel mask",
+        "object mask",
+        "boundary",
+        "contour",
+        "outline",
+        "foreground",
+        "background",
+        "pixel-level",
+        "fine-grained",
+        "precise mask",
+        "cut out",
+        "extract object",
+        "isolate object",
+        "panoptic",
+        "region",
+        "area",
+        "silhouette",
+        "object extraction"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["segmentation", "mask", "SAM", "segment", "contour"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["mask", "segmentation", "boundary", "contour", "region"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["generic-object-detection", "medical-segmentation"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "pixel-level masks for everyday objects",
+            "natural scenes, people, vehicles, furniture",
+            "RGB images without medical or volumetric context",
+            "instance or semantic masks for general objects"
+          ],
+          "other_intent_visual_traits": [
+            "bounding boxes without pixel masks (detection)",
+            "medical imagery with organs or tissues (medical segmentation)",
+            "volumetric data or DICOM/NIfTI formats"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png"],
+        "notes": "Standard RGB images; SAM can operate with or without prompts (points, boxes)."
+      },
+      "expected_output": {
+        "type": "segmentation",
+        "schema_notes": "Pixel masks (binary or multi-class), instance IDs, confidence scores, polygon contours."
+      }
+    },
+    {
+      "intent_id": "indoor-outdoor-scene",
+      "display_name": "Indoor/Outdoor Scene Classification",
+      "domain": "scene",
+      "description": "Classify the type of scene or place: indoor rooms, outdoor landscapes, urban environments, natural settings, specific places.",
+      "primary_models": ["Places365"],
+      "alternate_models": ["DINOv2", "ConvNeXt-XL-22k"],
+      "clip_text_prompts": [
+        "interior photograph of a living room, bedroom, kitchen, or office space with recognizable furnishings",
+        "outdoor landscape scene showing natural environments like parks, forests, beaches, or mountains",
+        "urban street scene with city buildings, roads, sidewalks, and architectural elements",
+        "indoor public space such as a restaurant, library, museum, or shopping mall interior",
+        "countryside or rural outdoor setting featuring fields, gardens, or natural landscapes",
+        "architectural scene showing building exteriors, plazas, bridges, or constructed environments",
+        "natural outdoor environment with trees, water bodies, sky, and landscape features",
+        "identifiable place or location category with distinct spatial context and scene layout"
+      ],
+      "florence_positive_markers": [
+        "indoor",
+        "outdoor",
+        "room",
+        "living room",
+        "bedroom",
+        "kitchen",
+        "street",
+        "park",
+        "forest",
+        "beach",
+        "city",
+        "urban",
+        "landscape",
+        "building"
+      ],
+      "florence_negative_markers": [
+        "crack",
+        "x-ray",
+        "medical",
+        "satellite",
+        "aerial overhead",
+        "disaster damage",
+        "tissue",
+        "microscope",
+        "close-up object",
+        "bounding box",
+        "weather map"
+      ],
+      "object_markers": ["chair", "table", "bed", "couch", "tree", "building", "car", "person", "sky"],
+      "user_hint_keywords": [
+        "scene",
+        "place",
+        "indoor",
+        "outdoor",
+        "room type",
+        "location",
+        "environment",
+        "setting",
+        "places365",
+        "scene classification",
+        "scene recognition",
+        "place recognition",
+        "landscape",
+        "urban",
+        "nature",
+        "interior",
+        "exterior",
+        "living room",
+        "bedroom",
+        "kitchen",
+        "street",
+        "park",
+        "beach",
+        "mountain",
+        "city"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["scene", "place", "indoor", "outdoor", "places365"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["indoor", "outdoor", "room", "street", "park", "city"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["generic-object-detection", "nature-ecology"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "holistic scene view with spatial context",
+            "identifiable place or room type",
+            "architectural or environmental layout",
+            "no focus on individual object detection"
+          ],
+          "other_intent_visual_traits": [
+            "close-ups of individual objects with bounding boxes",
+            "wildlife or species identification focus",
+            "fine-grained natural details without scene context"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png"],
+        "notes": "Standard RGB images; typically wide field-of-view capturing scene context."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Scene category label (e.g., bedroom, park), confidence scores across 365 place classes."
+      }
+    },
+    {
+      "intent_id": "nature-ecology",
+      "display_name": "Nature & Ecology / Wildlife",
+      "domain": "nature",
+      "description": "Wildlife, plants, natural textures, species identification, biodiversity, flora and fauna in natural habitats.",
+      "primary_models": ["OpenCLIP-iNat"],
+      "alternate_models": ["DINOv2", "ConvNeXt-XL-22k"],
+      "clip_text_prompts": [
+        "wildlife photograph showing wild animals, birds, or insects in their natural habitat",
+        "close-up botanical image of plant species, flowers, leaves, or natural vegetation textures",
+        "field guide style photograph for species identification of flora or fauna",
+        "nature macro photography capturing fine details of organisms, bark patterns, or natural structures",
+        "biodiversity documentation image showing organisms in forest, wetland, or natural ecosystems",
+        "naturalist photograph of rare or common species with taxonomic or conservation relevance",
+        "ecological field photograph featuring animals like deer, birds, butterflies, or aquatic life",
+        "natural history image showing organisms, habitats, or biological specimens for scientific study"
+      ],
+      "florence_positive_markers": [
+        "animal",
+        "bird",
+        "plant",
+        "flower",
+        "tree",
+        "wildlife",
+        "species",
+        "nature",
+        "forest",
+        "habitat",
+        "ecosystem",
+        "insect",
+        "natural"
+      ],
+      "florence_negative_markers": [
+        "person",
+        "car",
+        "building",
+        "indoor room",
+        "furniture",
+        "crack",
+        "medical",
+        "satellite",
+        "aerial",
+        "disaster",
+        "pavement",
+        "urban"
+      ],
+      "object_markers": ["bird", "cat", "dog", "horse", "sheep", "cow", "bear"],
+      "user_hint_keywords": [
+        "wildlife",
+        "nature",
+        "ecology",
+        "species",
+        "bird",
+        "plant",
+        "animal",
+        "flora",
+        "fauna",
+        "biodiversity",
+        "iNaturalist",
+        "iNat",
+        "species identification",
+        "naturalist",
+        "field guide",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "natural history",
+        "organism",
+        "taxonomy",
+        "biology",
+        "zoology",
+        "botany",
+        "entomology"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["wildlife", "species", "iNat", "nature", "ecology"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["animal", "bird", "plant", "wildlife", "species"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["indoor-outdoor-scene", "generic-object-detection"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "focus on organisms: animals, plants, insects",
+            "natural habitats, fine-grained species details",
+            "biodiversity context, field guide aesthetics",
+            "macro shots of natural textures or small organisms"
+          ],
+          "other_intent_visual_traits": [
+            "holistic scene classification without organism focus",
+            "generic objects like cars, furniture, people without nature context"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png"],
+        "notes": "Standard RGB; often macro or field photography; iNat embeddings support fine-grained classification."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Species or taxon label, confidence scores; may include embedding vectors for similarity search."
+      }
+    },
+    {
+      "intent_id": "chest-xray-multilabel",
+      "display_name": "Chest X-ray Multi-Label Classification",
+      "domain": "medical",
+      "description": "Frontal or lateral chest X-ray; detect multiple pathologies (pneumonia, effusion, cardiomegaly, etc.) in grayscale or pseudo-RGB radiograph.",
+      "primary_models": ["CheXNet"],
+      "alternate_models": ["BiomedCLIP"],
+      "clip_text_prompts": [
+        "frontal chest x-ray radiograph showing lung fields, rib cage, and heart silhouette in grayscale",
+        "medical chest radiograph displaying thoracic anatomy with potential pathology findings",
+        "grayscale x-ray image of the chest cavity showing lungs, mediastinum, and skeletal structures",
+        "clinical chest x-ray for diagnostic evaluation of pneumonia, effusion, or cardiomegaly",
+        "anteroposterior or lateral view chest radiograph with visible lung fields and cardiac border",
+        "black and white chest x-ray imaging showing pulmonary and cardiac structures",
+        "thoracic radiograph for multi-label pathology detection in a clinical radiology setting",
+        "chest x-ray with visible anatomical landmarks like clavicles, ribs, spine, and diaphragm"
+      ],
+      "florence_positive_markers": [
+        "chest",
+        "x-ray",
+        "lung",
+        "rib",
+        "heart",
+        "radiograph",
+        "grayscale",
+        "thoracic",
+        "mediastinum",
+        "black and white",
+        "radiology",
+        "pathology"
+      ],
+      "florence_negative_markers": [
+        "ct scan",
+        "mri",
+        "brain",
+        "abdomen",
+        "outdoor",
+        "person face",
+        "car",
+        "building",
+        "satellite",
+        "crack",
+        "disaster",
+        "volume",
+        "3d"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "chest x-ray",
+        "CXR",
+        "chest radiograph",
+        "CheXNet",
+        "thoracic x-ray",
+        "lung x-ray",
+        "pneumonia detection",
+        "cardiomegaly",
+        "pleural effusion",
+        "chest pathology",
+        "radiology",
+        "chest imaging",
+        "x-ray classification",
+        "multi-label chest",
+        "chest abnormality",
+        "chest disease",
+        "pulmonary x-ray",
+        "chest diagnosis",
+        "chest screening",
+        "chest findings",
+        "thorax",
+        "radiograph",
+        "frontal x-ray",
+        "lateral x-ray",
+        "pa view"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["chest x-ray", "CXR", "CheXNet", "pneumonia", "radiograph"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["chest", "x-ray", "lung", "radiograph", "thoracic"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["medical-ct-mri-volume-brain", "medical-segmentation"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "2D frontal or lateral view of chest",
+            "grayscale radiograph with rib cage, lung fields, heart silhouette",
+            "single projection image, not volumetric slices",
+            "typical chest X-ray DICOM or JPEG/PNG format"
+          ],
+          "other_intent_visual_traits": [
+            "axial/sagittal/coronal slices from CT or MRI",
+            "volumetric data in NIfTI/NRRD formats",
+            "3D segmentation masks of organs"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "grayscale",
+        "formats": ["jpg", "png", "dcm"],
+        "notes": "Typically DICOM or PNG/JPEG; may be stored as single-channel or pseudo-RGB (grayscale replicated); standard chest X-ray resolution."
+      },
+      "expected_output": {
+        "type": "classification",
+        "schema_notes": "Multi-label probabilities for 14 pathologies (atelectasis, cardiomegaly, effusion, infiltration, mass, nodule, pneumonia, pneumothorax, consolidation, edema, emphysema, fibrosis, pleural thickening, hernia)."
+      }
+    },
+    {
+      "intent_id": "medical-image-text-embedding",
+      "display_name": "Medical Image-Text Embedding",
+      "domain": "medical",
+      "description": "Medical images (radiology, pathology, dermatology) paired with clinical text; embedding for retrieval, zero-shot classification, or similarity search.",
+      "primary_models": ["BiomedCLIP"],
+      "alternate_models": [],
+      "clip_text_prompts": [
+        "medical imaging modality for clinical diagnosis including radiology, pathology, or dermatology photographs",
+        "biomedical image suitable for multimodal vision-language embedding and retrieval tasks",
+        "clinical photograph or scan paired with diagnostic text for medical research or education",
+        "radiology image, pathology slide, or medical scan for zero-shot classification and similarity search",
+        "medical dataset image showing anatomical structures, lesions, or clinical findings",
+        "histopathology, dermoscopy, or radiological image for medical image-text matching",
+        "clinical imaging study requiring semantic embedding for medical literature or case retrieval",
+        "biomedical photograph or scan used in medical AI, diagnostic support, or clinical reference"
+      ],
+      "florence_positive_markers": [
+        "medical",
+        "radiology",
+        "pathology",
+        "clinical",
+        "diagnosis",
+        "scan",
+        "tissue",
+        "lesion",
+        "x-ray",
+        "ct",
+        "mri",
+        "microscope",
+        "biomedical"
+      ],
+      "florence_negative_markers": [
+        "outdoor",
+        "street",
+        "park",
+        "building",
+        "car",
+        "person face",
+        "selfie",
+        "satellite",
+        "crack",
+        "disaster",
+        "furniture",
+        "animal",
+        "plant"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "medical",
+        "BiomedCLIP",
+        "medical embedding",
+        "medical retrieval",
+        "medical search",
+        "radiology",
+        "pathology",
+        "clinical image",
+        "medical text",
+        "medical vision-language",
+        "medical multimodal",
+        "medical zero-shot",
+        "medical similarity",
+        "biomedical",
+        "medical CLIP",
+        "medical AI",
+        "medical dataset",
+        "medical imaging",
+        "medical diagnosis",
+        "medical reference",
+        "medical case",
+        "medical literature",
+        "medical education",
+        "medical research"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["BiomedCLIP", "medical embedding", "medical retrieval", "medical search"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["medical", "radiology", "pathology", "clinical", "diagnosis"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["chest-xray-multilabel", "medical-segmentation"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "general medical imaging without specific task focus",
+            "used for embedding, retrieval, or zero-shot tasks",
+            "may include various modalities (X-ray, CT, MRI, pathology, dermoscopy)",
+            "often paired with text or reports"
+          ],
+          "other_intent_visual_traits": [
+            "chest X-ray with specific multi-label pathology classification (CheXNet)",
+            "volumetric segmentation tasks (nnUNet, MedSAM)",
+            "single-modality-specific workflows"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "rgb",
+        "formats": ["jpg", "png", "dcm"],
+        "notes": "Accepts diverse medical imaging modalities; typically 2D images; may include text for embedding."
+      },
+      "expected_output": {
+        "type": "embedding",
+        "schema_notes": "High-dimensional embedding vectors for image and/or text; used for retrieval, similarity, or zero-shot classification."
+      }
+    },
+    {
+      "intent_id": "medical-segmentation",
+      "display_name": "Medical Segmentation (2D)",
+      "domain": "medical",
+      "description": "Pixel-level segmentation of medical structures in 2D slices or images: organs, lesions, cells; uses MedSAM for 2D medical images.",
+      "primary_models": ["MedSAM"],
+      "alternate_models": ["SAM"],
+      "clip_text_prompts": [
+        "medical image requiring pixel-level segmentation of organs, lesions, or anatomical structures",
+        "2D medical slice from x-ray, CT, MRI, or pathology slide needing region-of-interest delineation",
+        "clinical imaging for precise boundary annotation and medical structure extraction",
+        "radiology or pathology image requiring segmentation masks for diagnostic regions",
+        "medical photograph or scan for pixel-wise labeling of tumors, tissues, or cells",
+        "2D medical imaging modality needing contour extraction and anatomical region segmentation",
+        "histopathology slide or radiological image for clinical segmentation and annotation tasks",
+        "grayscale or pseudo-color medical image requiring precise medical structure delineation"
+      ],
+      "florence_positive_markers": [
+        "medical",
+        "segmentation",
+        "organ",
+        "lesion",
+        "tumor",
+        "tissue",
+        "mask",
+        "roi",
+        "radiology",
+        "pathology",
+        "clinical",
+        "slice",
+        "2d"
+      ],
+      "florence_negative_markers": [
+        "outdoor",
+        "street",
+        "car",
+        "building",
+        "person face",
+        "satellite",
+        "crack",
+        "disaster",
+        "furniture",
+        "animal",
+        "plant",
+        "volume",
+        "3d stack"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "medical segmentation",
+        "MedSAM",
+        "medical mask",
+        "organ segmentation",
+        "lesion segmentation",
+        "tumor segmentation",
+        "medical roi",
+        "medical annotation",
+        "medical boundary",
+        "medical contour",
+        "medical structure",
+        "medical region",
+        "medical pixel",
+        "medical 2d",
+        "medical slice",
+        "pathology segmentation",
+        "radiology segmentation",
+        "cell segmentation",
+        "tissue segmentation",
+        "medical image mask",
+        "clinical segmentation",
+        "diagnostic segmentation",
+        "medical delineation",
+        "medical outline",
+        "medical labeling"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["MedSAM", "medical segmentation", "medical mask", "organ segmentation"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["medical", "segmentation", "mask", "organ", "lesion"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["object-segmentation", "medical-ct-mri-volume-brain"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "2D medical images (X-ray, CT slice, MRI slice, pathology slide)",
+            "medical structures: organs, lesions, tumors, cells",
+            "clinical or diagnostic context",
+            "grayscale or pseudo-color medical imaging"
+          ],
+          "other_intent_visual_traits": [
+            "everyday objects in natural scenes (generic segmentation)",
+            "volumetric 3D data requiring nnUNet (CT/MRI volumes)",
+            "non-medical RGB photos"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "grayscale",
+        "formats": ["jpg", "png", "dcm"],
+        "notes": "2D medical images; MedSAM accepts single slices; may require prompts (points, boxes); typically DICOM or PNG/JPEG."
+      },
+      "expected_output": {
+        "type": "segmentation",
+        "schema_notes": "Pixel masks (binary or multi-class) for medical structures; contours, ROI coordinates, confidence scores."
+      }
+    },
+    {
+      "intent_id": "medical-ct-mri-volume-brain",
+      "display_name": "Medical CT/MRI Volume - Brain",
+      "domain": "medical",
+      "description": "3D volumetric brain imaging (CT or MRI); tasks include brain tumor, hippocampus segmentation; nnUNet Task001/Task004.",
+      "primary_models": ["nnUNet"],
+      "alternate_models": [],
+      "clip_text_prompts": [
+        "3D brain MRI or CT volume with axial, sagittal, or coronal slices showing neurological structures",
+        "volumetric brain imaging in NIfTI or NRRD format for tumor or hippocampus segmentation",
+        "multimodal brain MRI (T1, T2, FLAIR) for glioma or structural brain analysis",
+        "neuroimaging volume displaying brain anatomy, ventricles, lesions, or tumor regions",
+        "3D medical brain scan requiring volumetric segmentation of anatomical or pathological structures",
+        "brain radiology volume with multiple slice orientations for neurological diagnosis",
+        "volumetric CT or MRI of the brain showing gray matter, white matter, and pathology",
+        "medical imaging stack of brain slices for 3D reconstruction and segmentation tasks"
+      ],
+      "florence_positive_markers": [
+        "brain",
+        "mri",
+        "ct",
+        "volume",
+        "3d",
+        "nifti",
+        "tumor",
+        "hippocampus",
+        "neuroimaging",
+        "axial",
+        "sagittal",
+        "coronal",
+        "slice stack"
+      ],
+      "florence_negative_markers": [
+        "outdoor",
+        "street",
+        "car",
+        "building",
+        "satellite",
+        "crack",
+        "disaster",
+        "furniture",
+        "animal",
+        "chest",
+        "abdomen",
+        "liver",
+        "kidney"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "brain",
+        "brain tumor",
+        "hippocampus",
+        "nnUNet",
+        "Task001",
+        "Task004",
+        "brain mri",
+        "brain ct",
+        "neuroimaging",
+        "brain volume",
+        "brain segmentation",
+        "brain 3d",
+        "nifti",
+        "nrrd",
+        "mha",
+        "brain imaging",
+        "brain scan",
+        "brain lesion",
+        "glioma",
+        "brain anatomy",
+        "brain radiology",
+        "brain slice",
+        "brain stack",
+        "volumetric brain"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["brain", "Task001", "Task004", "nnUNet", "hippocampus"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["brain", "mri", "ct", "volume", "tumor", "hippocampus"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["medical-ct-mri-volume-abdominal", "chest-xray-multilabel"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "3D brain imaging with axial/sagittal/coronal slices",
+            "brain anatomy: ventricles, hippocampus, tumor regions",
+            "volumetric NIfTI/NRRD/MHA format",
+            "MRI or CT modality focused on brain"
+          ],
+          "other_intent_visual_traits": [
+            "abdominal organs (liver, kidney, pancreas, spleen)",
+            "2D chest X-ray without volumetric data",
+            "non-brain anatomical regions"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "volume",
+        "formats": ["nii", "nrrd", "mha"],
+        "notes": "3D volumetric data; nnUNet expects NIfTI or NRRD; may require resampling to standard spacing; multi-modal MRI (T1, T2, FLAIR) for brain tumor."
+      },
+      "expected_output": {
+        "type": "segmentation",
+        "schema_notes": "3D segmentation masks (volumes) for brain structures (tumor, edema, necrosis, hippocampus); NIfTI/NRRD output; multi-class labels."
+      }
+    },
+    {
+      "intent_id": "medical-ct-mri-volume-abdominal",
+      "display_name": "Medical CT/MRI Volume - Abdominal Organs",
+      "domain": "medical",
+      "description": "3D volumetric abdominal CT or MRI; liver, kidney, pancreas, spleen, colon segmentation; nnUNet Task003/005/007/009/010/017/029/048.",
+      "primary_models": ["nnUNet"],
+      "alternate_models": [],
+      "clip_text_prompts": [
+        "3D abdominal CT or MRI volume showing liver, kidney, pancreas, spleen, or colon structures",
+        "volumetric abdominal imaging in NIfTI or NRRD format for organ segmentation tasks",
+        "abdominal radiology volume with axial slices displaying hepatic, renal, or pancreatic anatomy",
+        "3D medical scan of the abdomen requiring volumetric segmentation of organs and lesions",
+        "contrast-enhanced CT or MRI of abdominal organs for tumor or vessel segmentation",
+        "volumetric imaging stack of abdominal region for multi-organ segmentation and analysis",
+        "medical imaging volume showing abdominal anatomy including liver vessels, kidney cysts, or tumors",
+        "3D abdominal scan for clinical diagnosis and organ delineation in radiology workflows"
+      ],
+      "florence_positive_markers": [
+        "abdominal",
+        "liver",
+        "kidney",
+        "pancreas",
+        "spleen",
+        "colon",
+        "ct",
+        "mri",
+        "volume",
+        "3d",
+        "organ",
+        "axial",
+        "hepatic"
+      ],
+      "florence_negative_markers": [
+        "outdoor",
+        "street",
+        "car",
+        "building",
+        "satellite",
+        "crack",
+        "disaster",
+        "furniture",
+        "animal",
+        "brain",
+        "chest",
+        "lung",
+        "heart"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "abdominal",
+        "liver",
+        "kidney",
+        "pancreas",
+        "spleen",
+        "colon",
+        "nnUNet",
+        "Task003",
+        "Task005",
+        "Task007",
+        "Task009",
+        "Task010",
+        "Task017",
+        "Task029",
+        "Task048",
+        "abdominal segmentation",
+        "abdominal volume",
+        "abdominal ct",
+        "abdominal mri",
+        "liver segmentation",
+        "kidney segmentation",
+        "pancreas segmentation",
+        "spleen segmentation",
+        "colon segmentation"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["liver", "kidney", "pancreas", "spleen", "colon", "abdominal", "nnUNet"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["liver", "kidney", "pancreas", "spleen", "abdominal", "volume"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["medical-ct-mri-volume-brain", "medical-ct-mri-volume-thoracic"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "3D abdominal CT or MRI with liver, kidney, pancreas, spleen, colon",
+            "abdominal anatomy visible in axial slices",
+            "volumetric NIfTI/NRRD/MHA format",
+            "focus on abdominal organs, not brain or chest"
+          ],
+          "other_intent_visual_traits": [
+            "brain structures (ventricles, hippocampus, brain tumor)",
+            "thoracic organs (heart, lung, esophagus)",
+            "2D medical images without volumetric context"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "volume",
+        "formats": ["nii", "nrrd", "mha"],
+        "notes": "3D volumetric CT or MRI; nnUNet expects NIfTI or NRRD; may require contrast-enhanced phases for liver/kidney; standard spacing resampling."
+      },
+      "expected_output": {
+        "type": "segmentation",
+        "schema_notes": "3D segmentation masks (volumes) for abdominal organs (liver, kidney, pancreas, spleen, colon, vessels, tumors); NIfTI/NRRD output; multi-class labels."
+      }
+    },
+    {
+      "intent_id": "medical-ct-mri-volume-thoracic",
+      "display_name": "Medical CT/MRI Volume - Thoracic Organs",
+      "domain": "medical",
+      "description": "3D volumetric thoracic CT or MRI; heart, lung segmentation; nnUNet Task002/Task006/Task055.",
+      "primary_models": ["nnUNet"],
+      "alternate_models": [],
+      "clip_text_prompts": [
+        "3D thoracic CT or MRI volume showing heart chambers, lung lobes, or cardiovascular structures",
+        "volumetric cardiac or pulmonary imaging in NIfTI format for thoracic organ segmentation",
+        "chest CT or MRI volume with axial slices displaying heart, lungs, aorta, and esophagus",
+        "3D medical imaging of the thorax requiring segmentation of cardiac or pulmonary structures",
+        "volumetric heart MRI or lung CT for clinical analysis of thoracic anatomy and pathology",
+        "thoracic radiology volume for multi-structure segmentation including ventricles, atria, and vessels",
+        "3D chest scan showing pulmonary nodules, lung lobes, or cardiac chamber anatomy",
+        "medical imaging stack of thoracic region for volumetric reconstruction and organ delineation"
+      ],
+      "florence_positive_markers": [
+        "thoracic",
+        "heart",
+        "lung",
+        "cardiac",
+        "pulmonary",
+        "ct",
+        "mri",
+        "volume",
+        "3d",
+        "chest",
+        "axial",
+        "chamber",
+        "lobe"
+      ],
+      "florence_negative_markers": [
+        "outdoor",
+        "street",
+        "car",
+        "building",
+        "satellite",
+        "crack",
+        "disaster",
+        "furniture",
+        "animal",
+        "brain",
+        "abdomen",
+        "liver",
+        "kidney"
+      ],
+      "object_markers": ["none"],
+      "user_hint_keywords": [
+        "thoracic",
+        "heart",
+        "lung",
+        "cardiac",
+        "pulmonary",
+        "nnUNet",
+        "Task002",
+        "Task006",
+        "Task055",
+        "thoracic segmentation",
+        "heart segmentation",
+        "lung segmentation",
+        "thoracic volume",
+        "cardiac mri",
+        "pulmonary ct",
+        "chest volume",
+        "thoracic imaging",
+        "heart chamber",
+        "lung lobe",
+        "thoracic radiology",
+        "cardiovascular",
+        "thorax",
+        "mediastinum"
+      ],
+      "routing_policy": {
+        "min_clip_conf": 0.18,
+        "min_florence_hits": 2,
+        "fusion_weights": {
+          "clip": 0.5,
+          "florence": 0.3,
+          "yolo": 0.2
+        },
+        "boost_rules": [
+          {
+            "if_hint_contains_any": ["thoracic", "heart", "lung", "cardiac", "pulmonary", "nnUNet"],
+            "boost_intent_by": 2.0
+          },
+          {
+            "if_caption_contains_any": ["thoracic", "heart", "lung", "cardiac", "volume", "chest"],
+            "boost_intent_by": 1.5
+          }
+        ],
+        "tie_breaker": ["has_primary_model", "higher_clip_conf", "higher_positive_hits"]
+      },
+      "disambiguation": {
+        "often_confused_with": ["medical-ct-mri-volume-brain", "medical-ct-mri-volume-abdominal"],
+        "separators": {
+          "this_intent_visual_traits": [
+            "3D thoracic imaging with heart, lung, or chest structures",
+            "cardiac chambers, pulmonary lobes, or cardiovascular anatomy",
+            "volumetric NIfTI/NRRD/MHA format for chest region",
+            "focus on thoracic organs, not brain or abdomen"
+          ],
+          "other_intent_visual_traits": [
+            "brain structures (ventricles, hippocampus, tumor)",
+            "abdominal organs (liver, kidney, pancreas, spleen)",
+            "2D chest X-ray without volumetric slices"
+          ]
+        }
+      },
+      "input_requirements": {
+        "modality": "volume",
+        "formats": ["nii", "nrrd", "mha"],
+        "notes": "3D volumetric CT or MRI; nnUNet expects NIfTI or NRRD; may require cardiac gating for heart MRI; standard spacing resampling."
+      },
+      "expected_output": {
+        "type": "segmentation",
+        "schema_notes": "3D segmentation masks (volumes) for thoracic structures (heart chambers, lung lobes, vessels, esophagus); NIfTI/NRRD output; multi-class labels."
+      }
+    }
+  ],
+  "model_registry": {
+    "florence-2": {"role": "input_gate|output_gate"},
+    "clip": {"role": "input_gate"},
+    "yolov8_crack": {"role": "specialist"},
+    "CrackFormer-II": {"role": "specialist"},
+    "DeepCrack_CT260_FT1": {"role": "specialist"},
+    "SDNet": {"role": "specialist"},
+    "xBD": {"role": "specialist"},
+    "DETR": {"role": "specialist"},
+    "GroundingDINO": {"role": "specialist"},
+    "SAM": {"role": "specialist"},
+    "YOLOv8": {"role": "specialist"},
+    "Places365": {"role": "specialist"},
+    "DINOv2": {"role": "specialist"},
+    "ConvNeXt-XL-22k": {"role": "specialist"},
+    "OpenCLIP-iNat": {"role": "specialist"},
+    "CheXNet": {"role": "specialist"},
+    "nnUNet": {"role": "specialist"},
+    "MedSAM": {"role": "specialist"},
+    "BiomedCLIP": {"role": "specialist"},
+    "Prithvi-EO-V1-100M": {"role": "specialist"},
+    "SatCLIP": {"role": "specialist"},
+    "ClimaX": {"role": "specialist"},
+    "SatMAE": {"role": "specialist"},
+    "BLIP-2": {"role": "output_gate"},
+    "LLaVA": {"role": "output_gate"}
+  }
+}
