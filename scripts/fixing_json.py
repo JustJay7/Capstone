@@ -1,5 +1,5 @@
 import json
-p = r"D:\Capstone_research\configs\intent_taxonomy.json"
+p = "/Users/jay/Desktop/Projects/Capstone/configs/intent_taxonomy.json"
 data = json.load(open(p, "r", encoding="utf-8"))
 
 for intent in data["intents"]:

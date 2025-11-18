@@ -3,13 +3,13 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # Absolute target path
-target_dir = r"D:\Capstone_research\models\model weights\generalist model weights\BART-Large-MNLI"
+target_dir = "/Volumes/Expansion/Models/models/generalist/bart-large-mnli"
 os.makedirs(target_dir, exist_ok=True)
 
 # Hard-lock all HF caches to D:
-os.environ["HF_HOME"] = r"D:\Capstone_research\.huggingface"
-os.environ["TRANSFORMERS_CACHE"] = r"D:\Capstone_research\.huggingface"
-os.environ["HUGGINGFACE_HUB_CACHE"] = r"D:\Capstone_research\.huggingface"
+os.environ["HF_HOME"] = "/Volumes/Expansion/Models/models/.huggingface"
+os.environ["TRANSFORMERS_CACHE"] = "/Volumes/Expansion/Models/models/.huggingface"
+os.environ["HUGGINGFACE_HUB_CACHE"] = "/Volumes/Expansion/Models/models/.huggingface"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "0"   # allow download once
 

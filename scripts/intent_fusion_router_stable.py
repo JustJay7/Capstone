@@ -26,18 +26,17 @@ from ultralytics import YOLO
 # ----------------------------
 # PATHS
 # ----------------------------
-ROOT = Path(r"D:\Capstone_research")
+ROOT = Path("/Volumes/Expansion/Models")
 CLIP_CACHE = ROOT / ".clip_cache"
 HF_CACHE = ROOT / ".huggingface"
 TORCH_HOME = ROOT / ".torch_cache"
 
 TAXONOMY_JSON = ROOT / "configs" / "gpt.json"
-FLORENCE_DIR  = ROOT / "models" / "model weights" / "generalist model weights" / "florence-2"
-CLIP_PT       = CLIP_CACHE / "ViT-B-32.pt"
-YOLO_PT       = ROOT / "models" / "model weights" / "generalist model weights" / "yolov8" / "yolov8s.pt"
+FLORENCE_DIR  = ROOT / "models" / "generalist" / "florence-2"
+CLIP_PT       = ROOT / "models" / "generalist" / "clip" / "pytorch_model.bin"
+YOLO_PT       = ROOT / "models" / "object" / "yolov8" / "yolov8s.pt"
 
-BART_BASE = ROOT / "models" / "model weights" / "generalist model weights" / \
-            "BART-Large-MNLI" / "models--facebook--bart-large-mnli" / "snapshots"
+BART_BASE = ROOT / "models" / "generalist" / "bart-large-mnli" / "models--facebook--bart-large-mnli" / "snapshots"
 
 # ----------------------------
 # ENV + VALIDATION

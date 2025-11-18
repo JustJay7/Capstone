@@ -1,7 +1,7 @@
 import os
 
 # Base directory
-base_dir = r"D:\Capstone_research\models"
+base_dir = "/Users/jay/Desktop/Projects/Capstone/models"
 
 # Expected models and common weight files
 expected_models = {

@@ -4,7 +4,7 @@ from ultralytics import YOLO
 from scripts.train_yolov8_crack_final import inject_custom_blocks  # must exist in PYTHONPATH
 
 # ======= EDIT THIS TO YOUR CHECKPOINT =======
-CRACK_WEIGHTS = r"F:\test_yolo_crack_detection\checkpoints\checkpoint_map10\yolov8_crack_epoch_44.pt"
+CRACK_WEIGHTS = "/Volumes/Expansion/Models/models/infrastructure_models/yolov8_crack/model.pt"
 # ============================================
 
 class CrackDetector:
